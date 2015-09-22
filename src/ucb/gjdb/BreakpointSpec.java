@@ -132,17 +132,17 @@ class BreakpointSpec extends EventRequestSpec {
 
     public String toString() {
         Formatter buffer = new Formatter ();
-		buffer.format ("BP [%d] %s", getId (), refSpec);
+        buffer.format ("BP [%d] %s", getId (), refSpec);
         if (isMethodBreakpoint()) {
-			buffer.format (".%s", methodId);
+            buffer.format (".%s", methodId);
             if (methodArgs != null) {
-				String prefix;
+                String prefix;
                 Iterator iter = methodArgs.iterator();
-				buffer.format ("(");
-				prefix = "";
+                buffer.format ("(");
+                prefix = "";
                 for (String formal : methodArgs) {
-					buffer.format ("%s%s", prefix, formal);
-					prefix = ",";
+                    buffer.format ("%s%s", prefix, formal);
+                    prefix = ",";
                 }
                 buffer.format (")");
             }
@@ -152,9 +152,13 @@ class BreakpointSpec extends EventRequestSpec {
             buffer.format (" if %s", getCondition ());
         if (resolved () == null)
             buffer.format (" [deferred]");
+        if (!isEnabled ())
+            buffer.format (" [disabled]");
+        else if (ignored ())
+            buffer.format (" [ignored]");
         if (getCommands () != null && ! getCommands ().equals ("")) {
             buffer.format ("%n    Commands:%n        %s%n",
-						   getCommands ().replaceAll ("\r\n?|\n", Env.endl));
+                           getCommands ().replaceAll ("\r\n?|\n", Env.endl));
         }
         return buffer.toString();
     }
@@ -345,11 +349,11 @@ class BreakpointSpec extends EventRequestSpec {
                     .value ();
             } catch (CommandException e) {
                 Env.noticeln ("Error in breakpoint condition %s: %s",
-							  getCondition (), e.getMessage());
+                              getCondition (), e.getMessage());
                 return true;
             } catch (ClassCastException e) {
                 Env.noticeln ("Breakpoint condition does not yield boolean: %s",
-							  getCondition ());
+                              getCondition ());
                 return true;
             } catch (Exception e) {
                 Env.noticeln ("Evaluating breakpoint condition causes "

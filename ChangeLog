@@ -1,3 +1,63 @@
+2014-11-05  Paul Hilfinger  <hilfingr@tully.CS.Berkeley.EDU>
+
+	Version 6.4.0
+	* src/ucb/gjdb/ExceptionSpec.java (toString): Add disabled and ignored
+	information.
+	* src/ucb/gjdb/BreakpointSpec.java (toString): Ditto.
+	* src/ucb/gjdb/WatchpointSpec.java (toString): Ditto.
+	* src/ucb/gjdb/CommandLexer.jf: Add "enable", "disable", catch" keywords.
+	* src/ucb/gjdb/CommandParser.y: Add "enable", "disable" command syntax.
+	* src/ucb/gjdb/GJDB.y: Add usage messages for "enable", "disable",
+	and "info catch".
+	* src/ucb/gjdb/EventRequestSpec.java (constructor): Initialize enabled.
+	(resolve): Check disabled status.
+	(resetCount): Enable event spec. Remove COUNT_MARKER when ignore count
+	at -1.
+	(ignored): New method.
+	(isEnabled): New method.
+	(setEnabled): New method.
+	* src/ucb/gjdb/Commands.java (commandEnable): New method.
+
+	Version 6.3.1
+	* src/ucb/gjdb/VMConnection.java (containsClass): Fix to properly
+	prefix with directories in path (currently ignores path).
+
+2014-11-04  Paul Hilfinger  <hilfingr@tully.CS.Berkeley.EDU>
+
+	* Version 6.3.0
+	Add 'set prefix' command.
+
+	* src/ucb/gjdb/GJDB.java (helpMsgs): Add documentation for
+	"set print prefix".
+	* src/ucb/gjdb/Env.java (printHeaderFormat): Add variable for print
+	prefix format.
+	* src/ucb/gjdb/Commands.java (commandSet): Add set print prefix
+	command.
+	(doPrint): Implement print prefix.
+	* src/ucb/gjdb/CommandParser.y: Add 'set print prefix' syntax.
+	* src/ucb/gjdb/CommandLexer.jf: Add 'set print prefix' keywords.
+
+2014-09-09  Paul Hilfinger  <hilfingr@tully.CS.Berkeley.EDU>
+
+	Fixes to long-standing assignment problem.  Previously, the command
+	    set var X = EXPR
+	would work only for EXPRs that did not involve restarting the thread.
+	If EXPR contained a method call or the 'new' operator, in particular,
+	the assignment would fail, because evaluation of the local variable
+	X into an lvalue would save the frame at the time of that evaluation
+	in the LValueLocal object representing the variable. Then EXPR would 
+	be evaluated, invalidating the frame, and only then did the assignment
+	take place.  The fix is to save the frame-getter (type GetFrame) instead
+	of the frame.
+
+	* Version 6.2.7
+	* src/ucb/gjdb/LValue.java: (LValueLocal.LValueLocal, .getValue, and
+	.setValue0): Save a GetFrame rather than a StackFrame and regenerate
+	the StackFrame for each use.
+	(makeName): Use new API for LValueLocal.
+
+	* Reindent most source files in ucb.gjdb.
+
 2013-12-22  Paul Hilfinger  <hilfingr@tully.CS.Berkeley.EDU>
 
 	* Version 6.2.6

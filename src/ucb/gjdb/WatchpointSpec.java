@@ -75,9 +75,9 @@ class WatchpointSpec extends EventRequestSpec {
     }
 
     public String toString () { 
-		Formatter result = new Formatter ();
-		result.format ("WP [%d] %s for %s.%s", 
-					   getId (), getTypeDescription (), refSpec, fieldId);
+        Formatter result = new Formatter ();
+        result.format ("WP [%d] %s for %s.%s", 
+                       getId (), getTypeDescription (), refSpec, fieldId);
         if (obj != null)
             try {
                 result.format (" on object id %s", obj.uniqueID ());
@@ -86,6 +86,10 @@ class WatchpointSpec extends EventRequestSpec {
             }
         else if (resolved == null)
             result.format (" [deferred]");
+        if (!isEnabled ())
+            result.format (" [disabled]");
+        else if (ignored ())
+            result.format (" [ignored]");
         return result.toString ();
     }
 
