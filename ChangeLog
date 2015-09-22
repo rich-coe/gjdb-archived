@@ -1,3 +1,97 @@
+2009-08-03  Paul Hilfinger  <hilfingr@syracuse>
+
+	* Release version 6.2.1.
+	
+	* src/ucb/gjdb/GJDB.java (usageError): Use noticeln properly.
+
+2009-06-23  Paul Hilfinger  <hilfingr@tully.CS.Berkeley.EDU>
+
+	* src/ucb/gjdb/Commands.java (shutdown): Clear the pendingStepRequests
+	so as not to use requests from old vms.
+
+2009-06-22  Paul Hilfinger  <hilfingr@tully.CS.Berkeley.EDU>
+
+	* src/ucb/gjdb/CommandLexer.jf: Add "return" keyword.
+	* src/ucb/gjdb/CommandParser.y: Add 'set print return on|off'.
+	(execute): Handle VMDisconnectedException.
+
+	* src/ucb/gjdb/GJDB.java (helpMsgs): Document 'set print return on|off'.
+	* src/ucb/gjdb/Commands.java (commandSet): Implement 
+	'set print return'.
+	(commandStep): Ditto.
+	(methodExitEvent): Don't print void return values.
+
+	* src/ucb/gjdb/VMConnection.java (returnValue): New method.
+	(saveValue): Don't try to preserve values against GC.  Update comments
+	accordingly.
+	(disposeVM): Synchronize, since there seem to be races.
+	(pruneHistory): Ditto.
+	(clearHistory): Ditto.
+	(preserve): Remove.
+	(retrieveHistory): Report when history value is GCed.
+	* src/ucb/gjdb/Env.java	(printReturnValues): New parameter.
+
+	* src/ucb/gjdb/Commands.java (clearPreviousStep): Clean up.
+	(commandStep): Improve comment.
+	(commandMethods): Clean up.
+	(printThreadGroup, commandCommand, commandByteCodes): 
+	StringBuffer => StringBuilder.
+	(clearPreviousStep): Remove thread argument and re-implement.
+	(commandStep): Add return-value capturing machinery.
+	(commandCond): Use printf style in call to ERROR.
+	(methodExitEvent): Capture and report return value, if possible.
+	(pendingStepRequests, stepTargetFrameCount): New fields for value
+	capturing.
+
+	* src/ucb/gjdb/Commands.java: Remove potential format insertions 
+	in calls to notice, noticeln, error, errorln.
+	* src/ucb/gjdb/VMConnection.java: Ditto.
+	* src/ucb/gjdb/PatternReferenceTypeSpec.java: Ditto.
+	* src/ucb/gjdb/EventHandler.java: Ditto.
+	* src/ucb/gjdb/Env.java: Ditto.
+	(printReturnValues): 
+
+	* src/ucb/gjdb/EventRequestSpecList.java: Ditto.
+	* src/ucb/gjdb/GJDB.java: Ditto.
+	* src/ucb/gjdb/CommandParser.y: Ditto.
+	
+
+2009-06-21  Paul Hilfinger  <hilfingr@tully.CS.Berkeley.EDU>
+
+	* Release version 6.2.0.
+	
+	* Update NEWS.
+	
+	* src/ucb/gjdb/VMConnection.java: Move value history here:
+	(clearHistory, saveValue, retrieveHistory, getSaveKeys, preserve):
+	New functions.
+	* src/ucb/gjdb/Env.java: Remove value history from here:
+	(getSaveKeys, getSavedValue, setSavedValue): Remove.
+	(historyRetention): New parameter.
+	* src/ucb/gjdb/Commands.java (doPrint): Keep value history.
+	(doSave): Check for connectedness. 
+	Use VMConnection.saveValue.
+	(commandSave): Check for connectedness.
+	Use VMConnection.retrieveHistory.
+	* src/ucb/gjdb/CommandParser.y: Check for connection in 'save'
+	commands.
+	Add "set history <n>"
+	* src/ucb/gjdb/CommandLexer.jf: Add "history" keyword.
+	* usr/ucb/gjdb/GJDB.java (helpMsgs): Document "set history <n>".
+	* src/ucb/gjdb/ExpressionParser.y: For INTERNALVAR, use
+	VMConnection.retrieveHistory.
+	Add HISTORYVAR.
+	* src/ucb/gjdb/ExpressionLexer.jf: Add HISTORYVAR.
+	
+
+	* lib/emacs/lisp/gjdb.el: Change string-to-int => string-to-number.
+
+	* Makefile.in (VERSION): Bump to 6.2.0.
+	
+	* src/ucb/gjdb/Env.java (description): Use standard Java 
+	string-formatting methods.
+	(toHex,fromHex): Remove unused methods.
+
 2008-12-10  Paul Hilfinger  <hilfingr@tully.CS.Berkeley.EDU>
 
 	* Makefile.in (VERSION): Bump to 6.1.2.
@@ -6,6 +100,7 @@
 	exception, not throw it.
 	* src/ucb/gjdb/CommandParser.y (execute): Split into two, one of which
 	allows for passing up CommandExceptions.
+	(syntax): Use check_connect in more places.
 	* src/ucb/gjdb/Commands.java (commandRepeat): Allow exception to halt
 	repetitions.
 

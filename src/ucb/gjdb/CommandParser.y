@@ -109,11 +109,11 @@ command:
 		{ evaluator.commandUp (-$2); }
 	| "frame" intlit _check_connect
 		{ evaluator.commandFrame ($2); }
-	| "save"
+	| "save" _check_connect
 		{ evaluator.commandSave (); 
 		  showPrompt = false; }
-	| "save" WORD expr
-		{  evaluator.commandSave ($2, $3);
+	| "save" _check_connect WORD expr
+		{  evaluator.commandSave ($3, $4);
 		   showPrompt = false; }
 	| "ptype" expr
 		{ evaluator.commandPtype ($2); }
@@ -135,12 +135,18 @@ command:
 		{ evaluator.commandSet ("print", "elements", $4); }
 	| "set" "print" "max-frames" intlit
 		{ evaluator.commandSet ("print", "max-frames", $4); }
+	| "set" "print" "return" "on"
+	  	{ evaluator.commandSet ("print", "return", 1); }
+	| "set" "print" "return" "off"
+	  	{ evaluator.commandSet ("print", "return", 0); }
 	| "set" "stdin" "on"
 		{ evaluator.commandSet ("stdin", "on", 0); }
 	| "set" "stdin" "off"
 		{ evaluator.commandSet ("stdin", "off", 0); }
 	| "set" "variable" expr
 		{ evaluator.commandPrint ($3, evaluator.PRINT, ' ', false); }
+	| "set" "history" intlit
+	        { evaluator.commandSet ("history", "save", $3); }
 	| "set" WORD _collect_all_mode TEXT
 		{ evaluator.commandPrint ($2 + " " + $4,
 					  evaluator.PRINT, ' ', false); }
@@ -242,7 +248,7 @@ command:
 	| "enablegc" _check_connect expr
 		{ evaluator.commandEnableGC ($3, true); 
 		  showPrompt = false; }
-	| "info" "locals"
+	| "info" "locals" _check_connect
 		{ evaluator.commandLocals (); }
 	| "info" "classes"
 		{ evaluator.commandClasses (); }
@@ -254,20 +260,20 @@ command:
 		{ evaluator.commandMethods ($4); }
 	| "info" "fields" _break_mode class_id
 		{ evaluator.commandFields ($4); }
-	| "info" "threads" 
+	| "info" "threads" _check_connect
 		{ evaluator.commandThreads (); }
-	| "info" "threads" WORD
-		{ evaluator.commandThreads ($3); }
-	| "info" "threadgroups" 
+	| "info" "threads" _check_connect WORD
+		{ evaluator.commandThreads ($4); }
+	| "info" "threadgroups" _check_connect
 		{ evaluator.commandThreadGroups (); }
 	| "info" "classpath" _check_connect
 		{ evaluator.commandClasspathInfo (); }
-	| "info" "threadlocks" 
+	| "info" "threadlocks" _check_connect
 		{ evaluator.commandThreadlocks (); }
-	| "info" "threadlocks" "all"
+	| "info" "threadlocks" _check_connect "all"
 		{ evaluator.commandThreadlocksAll (); }
-	| "info" "threadlocks" thread_id
-		{ evaluator.commandThreadlocks ($3); }
+	| "info" "threadlocks" _check_connect thread_id
+		{ evaluator.commandThreadlocks ($4); }
 	| "info" "run"
 		{ evaluator.commandInfoRun (); }
 	| "info" "break"
@@ -595,13 +601,18 @@ static void execute (String src, Commands evaluator, BufferedReader reader,
 	    throw ERROR ("Command is not supported on the target VM");
 	} catch (VMNotConnectedException vmnse) {
 	    throw ERROR ("Command is not valid until the program is started or attached");
+        } catch (CommandException e) {
+	    throw e;
+	} catch (VMDisconnectedException e) {
+	    Env.shutdown (null);
+	    throw ERROR ("Debugged process has disconnected.");
 	} catch (Exception e) {
 	    throw ERROR ("Unknown error in command: %s", e);
         }
     } catch (CommandException e) {
 	if (passException) 
 	    throw e;
-	Env.errorln (e.getMessage ());
+	Env.errorln ("%s", e.getMessage ());
     }
 	    
     if (parser.showPrompt)

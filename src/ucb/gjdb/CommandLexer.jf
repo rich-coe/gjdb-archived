@@ -278,6 +278,7 @@ CMDSTRCHR = (\\[\"\\]|[^\\\"\n\r])
     "compressed"	{ return symbol ("compressed"); }
     "elements"		{ return symbol ("elements"); }
     "fields"		{ return symbol ("fields"); }
+    "history"		{ return symbol ("history"); }
     "locals"		{ return symbol ("locals"); }
     "max-frames"	{ return symbol ("max-frames"); }
     "methods"		{ return symbol ("methods"); }
@@ -285,6 +286,7 @@ CMDSTRCHR = (\\[\"\\]|[^\\\"\n\r])
     "on"		{ return symbol ("on"); }
     "pretty"		{ return symbol ("pretty"); }
     "print"		{ return symbol ("print"); }
+    "return"		{ return symbol ("return"); }
     "stack"		{ return symbol ("stack"); }
     "stdin"		{ return symbol ("stdin"); }
     "threadgroups"	{ return symbol ("threadgroups"); }

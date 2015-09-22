@@ -19,6 +19,12 @@ import java.util.*;
 import java.io.*;
 import java.util.jar.*;
 
+import java.lang.reflect.Method;
+import java.lang.reflect.InvocationTargetException;
+import com.sun.jdi.event.MethodExitEvent;
+
+import static ucb.gjdb.CommandException.ERROR;
+
 class VMConnection {
 
     static final int DUMPSTREAM_BUFFER_SIZE = 256;
@@ -30,6 +36,15 @@ class VMConnection {
     private int outputCompleteCount = 0;
     private Writer remote_System_in;
     private QuiescenceMonitor activeIOMonitor = new QuiescenceMonitor (1000);
+
+    /** Mapping of positive integer or string identifiers to values in the
+     *  value history. */
+    private HashMap<Object, Value> valueHistory = new HashMap<Object, Value> ();
+    /** The integer identifier of the last saved Value (if >0). */
+    private int currentValueId;
+    /** The integer identifier of the last Value removed from the value 
+     *  history (if > 0). */
+    private int lastClearedValueId;
 
     private final Connector connector;
     private final Map connectorArgs;
@@ -128,6 +143,7 @@ class VMConnection {
     }
         
     synchronized VirtualMachine open() {
+        clearHistory ();
         if (connector instanceof LaunchingConnector) {
             vm = launchTarget();
         } else if (connector instanceof AttachingConnector) {
@@ -142,6 +158,14 @@ class VMConnection {
             throw new InternalError("Invalid connect type");
         }
         if (vm != null) {
+            returnValuesAvailable = false;
+            try {
+                if (returnValueTestMethod != null && 
+                    (Boolean) returnValueTestMethod.invoke (vm))
+                    returnValuesAvailable = true;
+            } catch (IllegalAccessException e) {
+            } catch (InvocationTargetException e) {
+            }
             vm.setDebugTraceMode(traceFlags);
             if (vm instanceof PathSearchingVirtualMachine) {
                 PathSearchingVirtualMachine vm1 = 
@@ -210,7 +234,8 @@ class VMConnection {
         return inputFileName != null;
     }
 
-    public void disposeVM() {
+    public synchronized void disposeVM() {
+        clearHistory ();
         activeIOMonitor.done ();
         try {
             closeOutputToRemote ();
@@ -229,6 +254,64 @@ class VMConnection {
         }
     }
 
+    /** Add V to the value history. Returns ID of V in the value history. */
+    int saveValue (Value v) {
+        currentValueId += 1;
+        saveValue (currentValueId, v);
+        pruneHistory (Math.max (Env.historyRetention, 1));
+        return currentValueId;
+    }
+
+    /** Save V in the value history under KEY. */
+    void saveValue (Object key, Value v) {
+        valueHistory.put (key, v);        
+    }
+
+    /** If K>0, the Value labeled K in the value history.  K<=0 refers
+     *  to the Kth last-saved value.  Null if the value is not present
+     *  or has been collected. */
+    Value retrieveHistory (int k) {
+        if (k <= 0)
+            k += currentValueId;
+        if (k <= 0)
+            return null;
+        return retrieveHistory ((Object) k);
+    }
+
+    Value retrieveHistory (Object key) {
+        if (!valueHistory.containsKey (key))
+            throw ERROR ("No saved value $%s", key);
+        Value v = valueHistory.get (key);
+        try {
+            if (v instanceof ObjectReference 
+                && ((ObjectReference) v).isCollected ()) {
+                Env.noticeln ("$%s was collected.", key);
+                valueHistory.remove (key);
+                return null;
+            }
+        }catch (VMCannotBeModifiedException e) {
+            /* Be optimistic */
+        }
+        return v;
+    }
+
+    Set<Object> getSaveKeys () {
+        return valueHistory.keySet();
+    }
+
+    /** Discard all but the N highest-numbered values in the value history. */
+    private void pruneHistory (int n) {
+        while (lastClearedValueId <= currentValueId - n) {
+            Value v = valueHistory.remove (lastClearedValueId);
+            lastClearedValueId += 1;
+        }
+    }
+                
+    private void clearHistory () {
+        valueHistory.clear ();
+        lastClearedValueId = currentValueId;
+    }
+
 	/** Enable all requests to be notified of ClassPrepareEvents (normally, 
 	 *  there is only one) if VAL, else disable them.  */
 	void setClassPrepareEnabled (boolean val) {
@@ -240,6 +323,21 @@ class VMConnection {
 		for (ClassPrepareRequest req : erm.classPrepareRequests ())
 			req.setEnabled (val);
 	}
+
+    /** True iff current VM can intercept method return values. */
+    boolean canGetMethodReturnValues () {
+        return vm != null && returnValuesAvailable;
+    }
+
+    /** The return value associated with EXITEVENT. */
+    Value returnValue (MethodExitEvent exitEvent) {
+        try {
+            return (Value) returnValueMethod.invoke (exitEvent);
+        } catch (IllegalAccessException e) {
+        } catch (InvocationTargetException e) {
+        }
+        return null;
+    }
 
 	/** Enable all permanent event requests.  Currently, we are notified
 	 *  of 
@@ -363,7 +461,7 @@ class VMConnection {
                 inputReader 
                     = new BufferedReader (new FileReader (inputFileName));
             } catch (FileNotFoundException e) {
-                Env.errorln ("Could not read file " + inputFileName);
+                Env.errorln ("Could not read file %s", inputFileName);
                 return null;
             }
         }
@@ -374,8 +472,8 @@ class VMConnection {
                     new PrintStream (new BufferedOutputStream 
                                      (new FileOutputStream (outputFileName)));
             } catch (FileNotFoundException f) {
-                Env.errorln ("Could not open file " + outputFileName + 
-                             " for output.");
+                Env.errorln ("Could not open file %s for output.", 
+                             outputFileName);
                 return null;
             }
         }
@@ -388,8 +486,8 @@ class VMConnection {
                         new PrintStream (new BufferedOutputStream 
                                          (new FileOutputStream (errorFileName)));
                 } catch (FileNotFoundException f) {
-                    Env.errorln ("Could not open file " + errorFileName + 
-                                 " for output.");
+                    Env.errorln ("Could not open file %s for output.",
+                                 errorFileName);
                     return null;
                 }
         }       
@@ -538,5 +636,25 @@ class VMConnection {
         }
     }
 
+    /** The Method for extracting a return value from a
+     *  MethodExitEvent, or null if not implemented in this version of
+     *  Java. */
+    private static Method returnValueMethod;
+    /** The Method for testing a VirtualMachine to see whether it can
+     *  extract return values from MethodExitEvents, or null if not
+     *  implemented in this version of Java. */
+    private static Method returnValueTestMethod;
+    private boolean returnValuesAvailable;
+    
+    static {
+        returnValueTestMethod = returnValueMethod = null;
+        try {
+            returnValueTestMethod = 
+                VirtualMachine.class.getMethod ("canGetMethodReturnValues");
+            returnValueMethod = 
+                MethodExitEvent.class.getMethod ("returnValue");
+        } catch (NoSuchMethodException e) {
+        }
+    }
 
 }

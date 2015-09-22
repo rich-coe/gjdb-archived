@@ -33,9 +33,6 @@ class Env {
     private static final int SOURCE_CACHE_SIZE = 5;
     private static List sourceCache = new LinkedList();
 
-    private static HashMap<String,Value> savedValues = 
-		new HashMap<String,Value> ();
-
 	static boolean annotate;
     static String connectSpec;
     static String classPath;
@@ -54,6 +51,11 @@ class Env {
     static boolean noStdin = false;
     /** Maximum # of stack frames to print. */
     static int maxStackFrames = 20;
+    /** Maximum number of values to store in value history. */
+    static int historyRetention = 10;
+    /** True iff we should print values of functions that return after 
+     *  'finish' command. */
+    static boolean printReturnValues = true;
 
     static void init() {
         String spec;
@@ -133,7 +135,7 @@ class Env {
             }
         }
         if (message != null)
-            noticeln(message);
+            noticeln("%s", message);
         ThreadInfo.current = null;
         connection = null;
     }
@@ -330,57 +332,12 @@ class Env {
     static String description(ObjectReference ref) {
         ReferenceType clazz = ref.referenceType();
         long id = ref.uniqueID();  
-        if (clazz == null) {
-            return toHex(id);
-        } else {
-            return "(" + clazz.name() + ")" + toHex(id);
-        }
+        if (clazz == null)
+            return String.format ("%#x", id);
+        else
+            return String.format ("(%s)%#x", clazz.name(), id);
     }
 
-    /** Convert a long to a hexadecimal string. */
-    static String toHex(long n) {
-        char s1[] = new char[16];
-        char s2[] = new char[18];
-
-        /* Store digits in reverse order. */
-        int i = 0;
-        do {
-            long d = n & 0xf;
-            s1[i++] = (char)((d < 10) ? ('0' + d) : ('a' + d - 10));
-        } while ((n >>>= 4) > 0);
-
-        /* Now reverse the array. */
-        s2[0] = '0';
-        s2[1] = 'x';
-        int j = 2;
-        while (--i >= 0) {
-            s2[j++] = s1[i];
-        }
-        return new String(s2, 0, j);
-    }
-
-    /** Convert hexadecimal strings to longs. */
-    static long fromHex(String hexStr) {
-        String str = hexStr.startsWith("0x") ?
-            hexStr.substring(2).toLowerCase() : hexStr.toLowerCase();
-        if (hexStr.length() == 0) {
-            throw new NumberFormatException();
-        }
-    
-        long ret = 0;
-        for (int i = 0; i < str.length(); i++) {
-            int c = str.charAt(i);
-            if (c >= '0' && c <= '9') {
-                ret = (ret * 16) + (c - '0');
-            } else if (c >= 'a' && c <= 'f') {
-                ret = (ret * 16) + (c - 'a' + 10);
-            } else {
-                throw new NumberFormatException();
-            }
-        }
-        return ret;
-    }
-    
     static ReferenceType getReferenceTypeFromToken(String idToken) {
         ReferenceType cls = null;
         if (Character.isDigit(idToken.charAt(0))) {
@@ -418,18 +375,6 @@ class Env {
         if (connection == null)
             return true;
         return connection.classMayExist (name);
-    }
-
-    static Set<String> getSaveKeys() {
-        return savedValues.keySet();
-    }
-
-    static Value getSavedValue(String key) {
-        return savedValues.get(key);
-    }
-
-    static void setSavedValue(String key, Value value) {
-        savedValues.put(key, value);
     }
 
     /** A list of all current event request specifications with the same
