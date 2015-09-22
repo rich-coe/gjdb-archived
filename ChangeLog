@@ -1,3 +1,21 @@
+2008-12-10  Paul Hilfinger  <hilfingr@tully.CS.Berkeley.EDU>
+
+	* Makefile.in (VERSION): Bump to 6.1.2.
+	
+	* src/ucb/gjdb/CommandException.java (ERROR): Should return the
+	exception, not throw it.
+	* src/ucb/gjdb/CommandParser.y (execute): Split into two, one of which
+	allows for passing up CommandExceptions.
+	* src/ucb/gjdb/Commands.java (commandRepeat): Allow exception to halt
+	repetitions.
+
+2008-11-17  Paul Hilfinger  <hilfingr@tully.CS.Berkeley.EDU>
+
+	* Makefile.in (VERSION): Bump to 6.1.1.
+	
+	* src/ucb/gjdb/CommandParser.y: Fix argument parsing for classpath,
+	sourcepath, source.
+
 2008-03-12  Paul Hilfinger  <hilfingr@tully.CS.Berkeley.EDU>
 
 	* Makefile.in (VERSION): Bump to 6.1.0.

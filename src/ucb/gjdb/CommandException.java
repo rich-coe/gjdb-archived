@@ -29,9 +29,9 @@ class CommandException extends RuntimeException {
 	static CommandException ERROR (Throwable e, String format, Object... args)
 	{
 		if (format == null)
-			throw new CommandException (e);
+			return new CommandException (e);
 		else
-			throw new CommandException (String.format (format, args), e);
+			return new CommandException (String.format (format, args), e);
 	}
 
 	static CommandException ERROR (String format, Object... args) {

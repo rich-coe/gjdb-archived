@@ -1713,7 +1713,7 @@ class Commands implements EventNotifier {
 
 	void commandRepeat (int repeats, String cmnd, BufferedReader reader) {
      	for (int i = 0; i < repeats; i += 1)
-			CommandParser.execute (cmnd, this, reader, false);
+			CommandParser.execute (cmnd, this, reader, false, true);
 	}
 
 

@@ -1,4 +1,4 @@
-/* A Bison parser, made by GNU Bison 2.3j5.  */
+/* A Bison parser, made by GNU Bison 2.3j6.  */
 
 /* Skeleton parser for Yacc-like parsing with Bison, Java version
 
@@ -131,7 +131,7 @@ static int YYLTYPE_INIT;
 
 
 /* Line 221 of yacc.java.  */
-// _line_ 115 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.java"
+// _line_ 115 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.java"
 
 
 
@@ -211,17 +211,17 @@ static final char yyprhs[] =
      253, 258, 264, 268, 272, 276, 279, 283, 287, 290,
      292, 296, 300, 305, 309, 313, 317, 321, 324, 327,
      334, 342, 347, 352, 355, 359, 362, 366, 369, 373,
-     377, 380, 383, 386, 389, 394, 398, 403, 408, 410,
-     413, 415, 418, 421, 425, 428, 431, 434, 437, 440,
-     444, 449, 455, 462, 464, 466, 468, 471, 475, 477,
-     478, 480, 481, 483, 485, 488, 490, 492, 494, 497,
-     499, 501, 503, 505, 509, 511, 514, 517, 520, 524,
-     525, 527, 528, 532, 535, 537, 541, 543, 546, 548,
-     552, 558, 563, 565, 568, 570, 575, 579, 583, 585,
-     589, 592, 594, 598, 599, 601, 603, 605, 607, 611,
-     615, 619, 621, 622, 626, 633, 643, 644, 646, 648,
-     649, 651, 653, 656, 657, 658, 659, 660, 661, 662,
-     663
+     377, 380, 383, 386, 389, 394, 398, 403, 408, 411,
+     415, 418, 422, 425, 429, 432, 436, 439, 442, 445,
+     449, 454, 460, 467, 469, 471, 473, 476, 480, 482,
+     483, 485, 486, 488, 490, 493, 495, 497, 499, 502,
+     504, 506, 508, 510, 514, 516, 519, 522, 525, 529,
+     530, 532, 533, 537, 540, 542, 546, 548, 551, 553,
+     557, 563, 568, 570, 573, 575, 580, 584, 588, 590,
+     594, 597, 599, 603, 604, 606, 608, 610, 612, 616,
+     620, 624, 626, 627, 631, 638, 648, 649, 651, 653,
+     654, 656, 658, 661, 662, 663, 664, 665, 666, 667,
+     668
 };
 
 /* YYRHS -- A `-1'-separated list of the rules' RHS. */
@@ -267,33 +267,33 @@ static final short yyrhs[] =
       80, 21, -1, 72, 80, 114, -1, 72, 9, -1,
       72, 45, -1, 72, 53, -1, 72, 51, -1, 72,
       81, 3, 143, -1, 72, 81, 143, -1, 72, 81,
-      21, 143, -1, 82, 141, 143, 125, -1, 79, -1,
-      79, 3, -1, 83, -1, 83, 3, -1, 84, 144,
-      -1, 84, 144, 4, -1, 85, 110, -1, 86, 3,
-      -1, 87, 141, -1, 87, 110, -1, 87, 3, -1,
-      88, 141, 125, -1, 88, 141, 125, 8, -1, 89,
-     141, 143, 125, 8, -1, 89, 141, 143, 125, 90,
-       8, -1, 91, -1, 92, -1, 93, -1, 93, 3,
-      -1, 110, 145, 4, -1, 5, -1, -1, 5, -1,
-      -1, 5, -1, 110, -1, 113, 110, -1, 8, -1,
-       5, -1, 114, -1, 115, 114, -1, 110, -1, 112,
-      -1, 119, -1, 3, -1, 3, 139, 118, -1, 120,
-      -1, 119, 120, -1, 94, 3, -1, 95, 3, -1,
-      95, 96, 3, -1, -1, 3, -1, -1, 49, 123,
-      50, -1, 49, 50, -1, 124, -1, 123, 97, 124,
-      -1, 125, -1, 124, 98, -1, 8, -1, 125, 90,
-       8, -1, 129, 90, 8, 122, 134, -1, 129, 12,
-     110, 134, -1, 128, -1, 127, 128, -1, 110, -1,
-     129, 90, 8, 122, -1, 129, 12, 110, -1, 99,
-      90, 8, -1, 8, -1, 129, 90, 8, -1, 129,
-     100, -1, 132, -1, 130, 131, 132, -1, -1, 97,
-      -1, 101, -1, 8, -1, 99, -1, 132, 90, 8,
-      -1, 132, 90, 99, -1, 99, 90, 125, -1, 125,
-      -1, -1, 102, 144, 4, -1, 141, 137, 136, 125,
-      90, 8, -1, 141, 137, 136, 49, 138, 50, 141,
-      90, 8, -1, -1, 21, -1, 103, -1, -1, 104,
-      -1, 38, -1, 144, 4, -1, -1, -1, -1, -1,
-      -1, -1, -1, -1
+      21, 143, -1, 82, 141, 143, 125, -1, 79, 146,
+      -1, 79, 146, 3, -1, 83, 146, -1, 83, 146,
+       3, -1, 84, 144, -1, 84, 144, 4, -1, 85,
+     110, -1, 86, 146, 3, -1, 87, 141, -1, 87,
+     110, -1, 87, 3, -1, 88, 141, 125, -1, 88,
+     141, 125, 8, -1, 89, 141, 143, 125, 8, -1,
+      89, 141, 143, 125, 90, 8, -1, 91, -1, 92,
+      -1, 93, -1, 93, 3, -1, 110, 145, 4, -1,
+       5, -1, -1, 5, -1, -1, 5, -1, 110, -1,
+     113, 110, -1, 8, -1, 5, -1, 114, -1, 115,
+     114, -1, 110, -1, 112, -1, 119, -1, 3, -1,
+       3, 139, 118, -1, 120, -1, 119, 120, -1, 94,
+       3, -1, 95, 3, -1, 95, 96, 3, -1, -1,
+       3, -1, -1, 49, 123, 50, -1, 49, 50, -1,
+     124, -1, 123, 97, 124, -1, 125, -1, 124, 98,
+      -1, 8, -1, 125, 90, 8, -1, 129, 90, 8,
+     122, 134, -1, 129, 12, 110, 134, -1, 128, -1,
+     127, 128, -1, 110, -1, 129, 90, 8, 122, -1,
+     129, 12, 110, -1, 99, 90, 8, -1, 8, -1,
+     129, 90, 8, -1, 129, 100, -1, 132, -1, 130,
+     131, 132, -1, -1, 97, -1, 101, -1, 8, -1,
+      99, -1, 132, 90, 8, -1, 132, 90, 99, -1,
+      99, 90, 125, -1, 125, -1, -1, 102, 144, 4,
+      -1, 141, 137, 136, 125, 90, 8, -1, 141, 137,
+     136, 49, 138, 50, 141, 90, 8, -1, -1, 21,
+      -1, 103, -1, -1, 104, -1, 38, -1, 144, 4,
+      -1, -1, -1, -1, -1, -1, -1, -1, -1
 };
 
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
@@ -425,8 +425,8 @@ static final short yyr2[] =
        4, 5, 3, 3, 3, 2, 3, 3, 2, 1,
        3, 3, 4, 3, 3, 3, 3, 2, 2, 6,
        7, 4, 4, 2, 3, 2, 3, 2, 3, 3,
-       2, 2, 2, 2, 4, 3, 4, 4, 1, 2,
-       1, 2, 2, 3, 2, 2, 2, 2, 2, 3,
+       2, 2, 2, 2, 4, 3, 4, 4, 2, 3,
+       2, 3, 2, 3, 2, 3, 2, 2, 2, 3,
        4, 5, 6, 1, 1, 1, 2, 3, 1, 0,
        1, 0, 1, 1, 2, 1, 1, 1, 2, 1,
        1, 1, 1, 3, 1, 2, 2, 2, 3, 0,
@@ -447,8 +447,8 @@ static final short yydefact[] =
      200, 197, 197, 129, 129, 0, 28, 198, 196, 0,
        0, 0, 199, 197, 197, 0, 197, 195, 195, 56,
        0, 195, 195, 195, 195, 67, 0, 197, 197, 197,
-     197, 197, 197, 197, 195, 197, 197, 197, 0, 108,
-     195, 110, 198, 0, 0, 195, 195, 195, 123, 124,
+     197, 197, 197, 197, 195, 197, 197, 197, 0, 200,
+     195, 200, 198, 0, 200, 195, 195, 195, 123, 124,
      125, 0, 2, 199, 4, 139, 6, 0, 132, 140,
        8, 198, 13, 0, 15, 17, 197, 197, 20, 197,
      197, 23, 130, 197, 197, 197, 198, 30, 198, 199,
@@ -457,8 +457,8 @@ static final short yydefact[] =
      198, 60, 62, 64, 189, 66, 189, 133, 68, 0,
      189, 0, 129, 75, 129, 129, 78, 0, 198, 198,
      198, 100, 101, 103, 102, 195, 87, 88, 195, 195,
-      93, 95, 197, 97, 197, 109, 197, 111, 112, 114,
-     115, 118, 117, 116, 0, 197, 126, 1, 0, 0,
+      93, 95, 197, 97, 197, 108, 197, 110, 112, 114,
+       0, 118, 117, 116, 0, 197, 126, 1, 0, 0,
      149, 0, 10, 192, 0, 19, 21, 22, 24, 25,
       26, 27, 29, 0, 31, 0, 34, 35, 0, 0,
       38, 39, 40, 42, 43, 45, 138, 47, 49, 50,
@@ -466,26 +466,27 @@ static final short yydefact[] =
        0, 158, 0, 181, 61, 63, 191, 190, 186, 134,
       69, 0, 72, 73, 74, 76, 77, 176, 80, 81,
        0, 177, 173, 171, 84, 85, 86, 0, 197, 0,
-      94, 96, 98, 99, 197, 197, 105, 0, 113, 119,
-       0, 127, 193, 0, 0, 5, 141, 144, 150, 7,
-     198, 198, 18, 198, 198, 41, 36, 37, 0, 0,
-       0, 170, 163, 0, 0, 0, 59, 0, 0, 187,
-     188, 0, 70, 173, 174, 175, 0, 0, 91, 0,
-      92, 104, 106, 107, 120, 0, 0, 146, 147, 0,
-     145, 11, 12, 32, 33, 167, 182, 169, 166, 151,
-      58, 180, 159, 198, 0, 71, 172, 178, 179, 194,
-     121, 0, 143, 148, 198, 161, 0, 182, 165, 0,
-       0, 89, 159, 0, 153, 0, 154, 156, 160, 195,
-     159, 90, 183, 152, 0, 157, 0, 155, 0, 185
+      94, 96, 98, 99, 197, 197, 105, 109, 0, 111,
+     113, 115, 119, 0, 127, 193, 0, 0, 5, 141,
+     144, 150, 7, 198, 198, 18, 198, 198, 41, 36,
+      37, 0, 0, 0, 170, 163, 0, 0, 0, 59,
+       0, 0, 187, 188, 0, 70, 173, 174, 175, 0,
+       0, 91, 0, 92, 104, 106, 107, 120, 0, 0,
+     146, 147, 0, 145, 11, 12, 32, 33, 167, 182,
+     169, 166, 151, 58, 180, 159, 198, 0, 71, 172,
+     178, 179, 194, 121, 0, 143, 148, 198, 161, 0,
+     182, 165, 0, 0, 89, 159, 0, 153, 0, 154,
+     156, 160, 195, 159, 90, 183, 152, 0, 157, 0,
+     155, 0, 185
 };
 
 /* YYDEFGOTO[NTERM-NUM]. */
 static final short yydefgoto[] =
 {
       -1, 61, 62, 159, 164, 195, 83, 69, 118, 98,
-      99, 66, 70, 245, 246, 247, 249, 317, 325, 326,
-     203, 193, 196, 197, 198, 222, 276, 223, 204, 315,
-     113, 271, 208, 72, 286, 321, 106, 71, 78, 73,
+      99, 66, 70, 248, 249, 250, 252, 320, 328, 329,
+     203, 193, 196, 197, 198, 222, 279, 223, 204, 318,
+     113, 274, 208, 72, 289, 324, 106, 71, 78, 73,
       97, 64
 };
 
@@ -494,50 +495,51 @@ static final short yydefgoto[] =
 
 static final short yypact[] =
 {
-     289, -150, -150, 29, 38, 44, -150, -150, -150, 59,
-    -150, 33, 37, 60, 60, 29, 77, -150, -150, 168,
-      27, 96, -150, 27, 27, 27, 27, -150, -150, 29,
-      15, -150, -150, -150, -150, 29, 29, -150, -150, -150,
-    -150, -150, -150, -150, 106, -150, -150, -150, 140, 125,
-    -150, 155, -150, 29, 158, 161, -150, -150, -150, -150,
-     177, 184, -150, -150, 190, -150, -150, 182, -150, -150,
-    -150, 179, -150, 192, -150, 200, -150, -150, -150, -150,
-    -150, -150, -150, -150, -150, -150, -150, -150, 187, -150,
-     146, 153, -150, -150, -150, -150, -150, 202, -150, 27,
-    -150, 27, -150, -150, -150, -150, 9, 16, -150, -150,
-    -150, 10, 10, -150, 1, -150, 14, -150, 29, 29,
-       1, 149, 52, -150, 60, 60, -150, 17, -150, -150,
-    -150, -150, -150, -150, -150, -150, -150, -150, -150, -150,
-     201, -150, -150, 152, 48, -150, -150, -150, 204, -150,
-    -150, -150, -150, -150, 203, -150, -150, -150, 205, 50,
-     219, 165, -150, -150, 50, -150, -150, -150, -150, -150,
-    -150, -150, -150, 169, -150, 220, -150, -150, 29, 29,
-    -150, -150, -150, -150, -150, -150, -150, -150, -150, -150,
-    -150, -150, 133, -150, 62, -150, 16, -150, 65, 221,
-     222, -150, 137, 138, -150, -150, -150, -150, 26, -150,
-    -150, 171, -150, -150, -150, -150, -150, -150, -150, -150,
-      23, -150, 45, 141, -150, -150, -150, 203, -150, 203,
-    -150, -150, -150, -150, -150, -150, -150, 203, -150, 58,
-     203, -150, 232, 230, 7, -150, -4, -150, -150, -150,
-    -150, -150, -150, -150, -150, -150, -150, -150, 228, 29,
-     231, -150, -150, 29, 233, 193, -150, 203, 234, -150,
-    -150, 40, 27, 46, -150, -150, 23, 25, 138, 203,
-     138, -150, -150, 138, -150, 63, 50, -150, -150, 237,
-    -150, -150, -150, -150, -150, -150, 142, 19, -150, 92,
-    -150, 138, -150, -150, 156, -150, 141, -150, -150, 138,
-    -150, 239, -150, -150, -150, -150, 32, 142, -150, 195,
-     240, 229, 249, 247, -150, -24, 154, 138, -150, -150,
-     253, -150, -150, -150, 203, -150, 164, 154, 248, -150
+     288, -155, -155, 45, 23, 48, -155, -155, -155, 38,
+    -155, 36, 68, 53, 53, 45, 72, -155, -155, 159,
+      40, 76, -155, 40, 40, 40, 40, -155, -155, 45,
+      16, -155, -155, -155, -155, 45, 45, -155, -155, -155,
+    -155, -155, -155, -155, 84, -155, -155, -155, 155, -155,
+    -155, -155, -155, 45, -155, 51, -155, -155, -155, -155,
+     102, 129, -155, -155, 148, -155, -155, 139, -155, -155,
+    -155, 163, -155, 180, -155, 190, -155, -155, -155, -155,
+    -155, -155, -155, -155, -155, -155, -155, -155, 178, -155,
+     145, 153, -155, -155, -155, -155, -155, 191, -155, 40,
+    -155, 40, -155, -155, -155, -155, 9, 10, -155, -155,
+    -155, 26, 26, -155, -3, -155, 14, -155, 45, 45,
+      -3, 146, 160, -155, 53, 53, -155, 25, -155, -155,
+    -155, -155, -155, -155, -155, -155, -155, -155, -155, -155,
+     194, -155, -155, 41, 164, 202, -155, 204, 205, -155,
+     208, -155, -155, -155, 206, -155, -155, -155, 211, 21,
+     213, 165, -155, -155, 21, -155, -155, -155, -155, -155,
+    -155, -155, -155, 177, -155, 214, -155, -155, 45, 45,
+    -155, -155, -155, -155, -155, -155, -155, -155, -155, -155,
+    -155, -155, 127, -155, 54, -155, 10, -155, 59, 215,
+     216, -155, 131, 132, -155, -155, -155, -155, 43, -155,
+    -155, 166, -155, -155, -155, -155, -155, -155, -155, -155,
+      32, -155, 31, 133, -155, -155, -155, 206, -155, 206,
+    -155, -155, -155, -155, -155, -155, -155, -155, 206, -155,
+    -155, -155, 70, 206, -155, 225, 223, 27, -155, 97,
+    -155, -155, -155, -155, -155, -155, -155, -155, -155, -155,
+    -155, 219, 45, 231, -155, -155, 45, 234, 193, -155,
+     206, 236, -155, -155, 28, 40, 42, -155, -155, 32,
+      39, 132, 206, 132, -155, -155, 132, -155, 82, 21,
+    -155, -155, 242, -155, -155, -155, -155, -155, -155, 144,
+      19, -155, 73, -155, 132, -155, -155, 158, -155, 133,
+    -155, -155, 132, -155, 241, -155, -155, -155, -155, 24,
+     144, -155, 200, 243, 232, 252, 250, -155, -30, 157,
+     132, -155, -155, 256, -155, -155, -155, 206, -155, 167,
+     157, 251, -155
 };
 
 /* YYPGOTO[NTERM-NUM].  */
 static final short yypgoto[] =
 {
-    -150, -150, -150, -150, -150, 8, -5, -150, -150, -13,
-     236, -150, -150, -149, -150, 11, -150, -44, -150, -76,
-    -104, -150, -150, 66, 157, 41, -150, -11, 160, -51,
-     235, -150, 148, -16, -150, -150, -28, 252, 55, -50,
-     -33, 263
+    -155, -155, -155, -155, -155, 8, -5, -155, -155, -13,
+     237, -155, -155, -154, -155, 11, -155, -44, -155, -74,
+     -72, -155, -155, 75, 162, 44, -155, -10, 154, -48,
+     239, -155, 156, -16, -155, -155, -28, 257, 57, -50,
+     -38, 96
 };
 
 /* YYTABLE[YYPACT[STATE-NUM]].  What to do in state STATE-NUM.  If
@@ -548,87 +550,87 @@ static final short yypgoto[] =
 static final short yytable[] =
 {
      107, 87, 148, 111, 112, 114, 116, 95, 63, 84,
-     288, 65, 103, 104, -65, 252, 127, 191, 201, -151,
-       1, 1, 146, 85, 191, 217, 333, 153, 154, 155,
-     158, 217, 93, 307, 1, 94, 76, 108, 110, 206,
-     201, 67, 79, 117, 119, -83, -82, 269, 201, 68,
-     239, 234, 206, 242, 77, 162, 175, 82, 80, 199,
-     200, 149, 74, 152, 109, 82, 284, 81, 316, 235,
-     172, 310, 174, 334, 259, 213, 182, 263, 100, 102,
-      86, 105, 324, 218, 219, 220, 186, 189, 186, 303,
-     243, 244, 120, 121, 122, 123, 124, 125, 126, 96,
-     128, 129, 130, 289, -169, 207, -79, 227, 192, 202,
-     228, 229, 224, 225, 226, 192, 221, 214, 207, 215,
-     216, -151, 221, 278, 308, 280, 209, 210, 145, 270,
-     233, 165, 166, 283, 167, 168, 285, 312, 169, 170,
-     171, 316, 274, 274, 243, 244, 275, 275, 268, 131,
-     183, 184, 260, 311, 187, 264, 188, 93, 147, 190,
-      94, 150, 261, 301, 151, 261, 1, 304, 250, 251,
-       1, 89, 253, 232, 1, 309, 176, 177, 178, 179,
-     156, 254, -169, 90, 157, 132, 256, 257, 180, 181,
-      -3, 133, -169, 134, 160, 161, 163, 231, 135, 236,
-     -16, 237, 91, 173, 230, 92, 185, 212, 238, 241,
-     240, 201, 327, 136, 137, 138, 139, 140, 141, 142,
-     143, 144, 248, 258, 255, 265, 266, 267, 268, 272,
-     327, 277, -142, 287, 291, 292, 295, 293, 294, 297,
-     313, 299, 302, 300, 314, 329, 320, 322, 330, -122,
-     331, 332, 335, -184, 338, 318, 339, 290, 337, 305,
-     101, 273, 262, 194, 323, 306, 328, 296, 211, 115,
-      88, 298, 205, 75, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 279, 0, 0, 0, 319, 0, 281,
-     282, 0, 0, 0, 1, 0, 0, 0, 2, 3,
-       4, 336, 5, 6, 7, 0, 8, 9, 10, 11,
-       0, 12, 13, 14, 15, 16, 17, 18, 19, 0,
-       0, 0, 0, 0, 0, 0, 0, 20, 21, 22,
-      23, 24, 25, 26, 27, 28, 29, 30, 0, 0,
-      31, 32, 33, 34, 35, 36, 37, 0, 38, 39,
-      40, 41, 42, 43, 44, 0, 0, 0, 45, 46,
-      47, 48, 0, 0, 0, 0, 0, 0, 49, 0,
-       0, 50, 51, 52, 53, 54, 55, 56, 57, 0,
-      58, 59, 60
+     255, 65, 103, 104, -65, 1, 127, 191, 191, -151,
+     336, 1, 146, 85, 245, 158, 67, 153, 154, 155,
+     291, -83, 201, 217, 201, 206, 201, 108, 110, 76,
+     217, 74, -82, 117, 119, 93, 93, 310, 94, 94,
+       1, 175, 206, 68, 151, 162, 1, 77, 82, 199,
+     200, 149, 232, 152, 272, 109, 262, 337, 319, 81,
+     172, 266, 174, 79, 327, 86, 182, 306, 287, 96,
+     100, 102, 242, 105, -79, -169, 186, 189, 186, 80,
+     313, 218, 219, 220, 120, 121, 122, 123, 124, 125,
+     126, 207, 128, 129, 130, 156, 75, 227, 192, 192,
+     228, 229, 224, 225, 226, 246, 247, 214, 207, 215,
+     216, -151, 319, 292, 221, 202, 209, 210, 277, 157,
+     233, 221, 278, 165, 166, 315, 167, 168, 311, 277,
+     169, 170, 171, 278, 263, 145, 273, 147, -3, 267,
+     150, 160, 183, 184, 264, 281, 187, 283, 188, 264,
+     271, 190, 89, -169, 131, 82, 286, 234, 253, 254,
+       1, 288, 314, -169, 90, 176, 177, 178, 179, 161,
+     256, 257, 1, 213, 163, 235, 259, 260, 180, 181,
+     -16, 246, 247, 91, 173, 185, 92, 230, 304, 231,
+     132, 236, 307, 238, 212, 237, 133, 239, 134, 240,
+     312, 241, 243, 135, 201, 244, 251, 261, 258, 268,
+     269, 270, 271, 280, 275, -142, 290, 298, 136, 137,
+     138, 139, 140, 141, 142, 143, 144, 294, 295, 300,
+     296, 297, 302, 303, 305, 316, 317, 330, 323, 325,
+     332, 333, -122, 334, 335, 338, -184, 341, 321, 342,
+     293, 101, 308, 340, 276, 330, 205, 326, 194, 309,
+     299, 265, 331, 115, 301, 88, 211, 0, 0, 0,
+       0, 0, 0, 0, 0, 282, 0, 0, 0, 0,
+     322, 284, 285, 1, 0, 0, 0, 2, 3, 4,
+       0, 5, 6, 7, 339, 8, 9, 10, 11, 0,
+      12, 13, 14, 15, 16, 17, 18, 19, 0, 0,
+       0, 0, 0, 0, 0, 0, 20, 21, 22, 23,
+      24, 25, 26, 27, 28, 29, 30, 0, 0, 31,
+      32, 33, 34, 35, 36, 37, 0, 38, 39, 40,
+      41, 42, 43, 44, 0, 0, 0, 45, 46, 47,
+      48, 0, 0, 0, 0, 0, 0, 49, 0, 0,
+      50, 51, 52, 53, 54, 55, 56, 57, 0, 58,
+      59, 60
 };
 
 static final short yycheck[] =
 {
       28, 17, 52, 31, 32, 33, 34, 20, 0, 14,
-       3, 3, 25, 26, 0, 164, 44, 8, 8, 0,
-       5, 5, 50, 15, 8, 8, 50, 55, 56, 57,
-      63, 8, 5, 8, 5, 8, 3, 29, 30, 38,
-       8, 3, 5, 35, 36, 0, 0, 21, 8, 5,
-     154, 3, 38, 3, 21, 71, 89, 5, 21, 109,
-     110, 53, 3, 55, 49, 5, 8, 12, 49, 21,
-      86, 8, 88, 97, 12, 23, 92, 12, 23, 24,
-       3, 26, 50, 66, 67, 68, 99, 103, 101, 49,
-      94, 95, 37, 38, 39, 40, 41, 42, 43, 3,
-      45, 46, 47, 96, 12, 104, 0, 135, 99, 99,
-     138, 139, 128, 129, 130, 99, 99, 122, 104, 124,
-     125, 102, 99, 227, 99, 229, 118, 119, 3, 103,
-     143, 76, 77, 237, 79, 80, 240, 286, 83, 84,
-      85, 49, 97, 97, 94, 95, 101, 101, 90, 9,
-      95, 96, 90, 90, 99, 90, 101, 5, 3, 104,
-       8, 3, 100, 267, 3, 100, 5, 271, 3, 161,
-       5, 3, 3, 21, 5, 279, 30, 31, 32, 33,
-       3, 173, 90, 15, 0, 45, 178, 179, 35, 36,
-       0, 51, 100, 53, 12, 16, 4, 142, 58, 144,
-       0, 146, 34, 16, 3, 37, 4, 58, 4, 4,
-     155, 8, 316, 73, 74, 75, 76, 77, 78, 79,
-      80, 81, 3, 90, 4, 4, 4, 90, 90, 58,
-     334, 90, 0, 3, 250, 251, 8, 253, 254, 8,
-       3, 8, 8, 50, 102, 50, 90, 8, 8, 0,
-      21, 4, 98, 0, 90, 299, 8, 246, 334, 272,
-      24, 220, 196, 106, 314, 276, 317, 259, 120, 34,
-      18, 263, 112, 10, -1, -1, -1, -1, -1, -1,
-      -1, -1, -1, 228, -1, -1, -1, 303, -1, 234,
-     235, -1, -1, -1, 5, -1, -1, -1, 9, 10,
-      11, 329, 13, 14, 15, -1, 17, 18, 19, 20,
-      -1, 22, 23, 24, 25, 26, 27, 28, 29, -1,
-      -1, -1, -1, -1, -1, -1, -1, 38, 39, 40,
-      41, 42, 43, 44, 45, 46, 47, 48, -1, -1,
-      51, 52, 53, 54, 55, 56, 57, -1, 59, 60,
-      61, 62, 63, 64, 65, -1, -1, -1, 69, 70,
-      71, 72, -1, -1, -1, -1, -1, -1, 79, -1,
-      -1, 82, 83, 84, 85, 86, 87, 88, 89, -1,
-      91, 92, 93
+     164, 3, 25, 26, 0, 5, 44, 8, 8, 0,
+      50, 5, 50, 15, 3, 63, 3, 55, 56, 57,
+       3, 0, 8, 8, 8, 38, 8, 29, 30, 3,
+       8, 3, 0, 35, 36, 5, 5, 8, 8, 8,
+       5, 89, 38, 5, 3, 71, 5, 21, 5, 109,
+     110, 53, 21, 55, 21, 49, 12, 97, 49, 12,
+      86, 12, 88, 5, 50, 3, 92, 49, 8, 3,
+      23, 24, 154, 26, 0, 12, 99, 103, 101, 21,
+       8, 66, 67, 68, 37, 38, 39, 40, 41, 42,
+      43, 104, 45, 46, 47, 3, 10, 135, 99, 99,
+     138, 139, 128, 129, 130, 94, 95, 122, 104, 124,
+     125, 102, 49, 96, 99, 99, 118, 119, 97, 0,
+     143, 99, 101, 76, 77, 289, 79, 80, 99, 97,
+      83, 84, 85, 101, 90, 49, 103, 51, 0, 90,
+      54, 12, 95, 96, 100, 227, 99, 229, 101, 100,
+      90, 104, 3, 90, 9, 5, 238, 3, 3, 161,
+       5, 243, 90, 100, 15, 30, 31, 32, 33, 16,
+       3, 173, 5, 23, 4, 21, 178, 179, 35, 36,
+       0, 94, 95, 34, 16, 4, 37, 3, 270, 142,
+      45, 144, 274, 146, 58, 3, 51, 3, 53, 4,
+     282, 3, 155, 58, 8, 4, 3, 90, 4, 4,
+       4, 90, 90, 90, 58, 0, 3, 8, 73, 74,
+      75, 76, 77, 78, 79, 80, 81, 253, 254, 8,
+     256, 257, 8, 50, 8, 3, 102, 319, 90, 8,
+      50, 8, 0, 21, 4, 98, 0, 90, 302, 8,
+     249, 24, 275, 337, 220, 337, 112, 317, 106, 279,
+     262, 196, 320, 34, 266, 18, 120, -1, -1, -1,
+      -1, -1, -1, -1, -1, 228, -1, -1, -1, -1,
+     306, 234, 235, 5, -1, -1, -1, 9, 10, 11,
+      -1, 13, 14, 15, 332, 17, 18, 19, 20, -1,
+      22, 23, 24, 25, 26, 27, 28, 29, -1, -1,
+      -1, -1, -1, -1, -1, -1, 38, 39, 40, 41,
+      42, 43, 44, 45, 46, 47, 48, -1, -1, 51,
+      52, 53, 54, 55, 56, 57, -1, 59, 60, 61,
+      62, 63, 64, 65, -1, -1, -1, 69, 70, 71,
+      72, -1, -1, -1, -1, -1, -1, 79, -1, -1,
+      82, 83, 84, 85, 86, 87, 88, 89, -1, 91,
+      92, 93
 };
 
 /* YYSTOS[STATE-NUM] -- The (internal number of the) accessing
@@ -649,8 +651,8 @@ static final short yystos[] =
      110, 141, 141, 135, 141, 135, 141, 110, 113, 110,
      143, 143, 143, 143, 143, 143, 143, 141, 143, 143,
      143, 9, 45, 51, 53, 58, 73, 74, 75, 76,
-      77, 78, 79, 80, 81, 3, 141, 3, 144, 110,
-       3, 3, 110, 141, 141, 141, 3, 0, 145, 108,
+      77, 78, 79, 80, 81, 146, 141, 146, 144, 110,
+     146, 3, 110, 141, 141, 141, 3, 0, 145, 108,
       12, 16, 138, 4, 109, 143, 143, 143, 143, 143,
      143, 143, 138, 16, 138, 145, 30, 31, 32, 33,
       35, 36, 138, 143, 143, 4, 114, 143, 143, 138,
@@ -658,17 +660,18 @@ static final short yystos[] =
      144, 8, 99, 125, 133, 133, 38, 104, 137, 110,
      110, 137, 58, 23, 111, 111, 111, 8, 66, 67,
       68, 99, 130, 132, 138, 138, 138, 141, 141, 141,
-       3, 143, 21, 114, 3, 21, 143, 143, 4, 125,
-     143, 4, 3, 94, 95, 118, 119, 120, 3, 121,
-       3, 110, 118, 3, 110, 4, 110, 110, 90, 12,
-      90, 100, 128, 12, 90, 4, 4, 90, 90, 21,
-     103, 136, 58, 130, 97, 101, 131, 90, 125, 143,
-     125, 143, 143, 125, 8, 125, 139, 3, 3, 96,
-     120, 138, 138, 138, 138, 8, 110, 8, 110, 8,
-      50, 125, 8, 49, 125, 114, 132, 8, 99, 125,
-       8, 90, 118, 3, 102, 134, 49, 122, 122, 138,
-      90, 140, 8, 144, 50, 123, 124, 125, 134, 50,
-       8, 21, 4, 50, 97, 98, 141, 124, 90, 8
+       3, 143, 21, 114, 3, 21, 143, 3, 143, 3,
+       4, 3, 125, 143, 4, 3, 94, 95, 118, 119,
+     120, 3, 121, 3, 110, 118, 3, 110, 4, 110,
+     110, 90, 12, 90, 100, 128, 12, 90, 4, 4,
+      90, 90, 21, 103, 136, 58, 130, 97, 101, 131,
+      90, 125, 143, 125, 143, 143, 125, 8, 125, 139,
+       3, 3, 96, 120, 138, 138, 138, 138, 8, 110,
+       8, 110, 8, 50, 125, 8, 49, 125, 114, 132,
+       8, 99, 125, 8, 90, 118, 3, 102, 134, 49,
+     122, 122, 138, 90, 140, 8, 144, 50, 123, 124,
+     125, 134, 50, 8, 21, 4, 50, 97, 98, 141,
+     124, 90, 8
 };
 /* Like YYERROR except do call yyerror.  This remains here temporarily
    to ease the transition to the new meaning of YYERROR, for GCC.
@@ -911,7 +914,7 @@ case yybackup:
   /* First try to decide what to do without reference to look-ahead token.  */
 
   yyn = yypact[yystate];
-  if (yyn == -150)
+  if (yyn == -155)
     do { pc = yydefault; continue Loop; } while (false);
 
   /* Not known => get a look-ahead token if don't already have one.  */
@@ -937,7 +940,7 @@ case yybackup:
   /* If the proper action on seeing token YYTOKEN is to reduce or to
      detect an error, take that action.  */
   yyn += yytoken;
-  if (yyn < 0 || 382 < yyn || yycheck[yyn] != yytoken)
+  if (yyn < 0 || 381 < yyn || yycheck[yyn] != yytoken)
     do { pc = yydefault; continue Loop; } while (false);
   yyn = yytable[yyn];
   if (yyn <= 0)
@@ -1003,712 +1006,712 @@ case yyreduce:
   switch (yyn)
     {
         case 3:
-// _line_ 57 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 57 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandRun ();
     startHandler (); ;}
     break;
 
   case 4:
-// _line_ 59 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 59 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = new CommandLineSpec (); ;}
     break;
 
   case 5:
-// _line_ 60 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 60 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandRun (((CommandLineSpec)yyvsa[yyvsp+(-1)]));
      startHandler (); ;}
     break;
 
   case 6:
-// _line_ 63 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 63 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandAttach (((Integer)yyvsa[yyvsp+(0)]));
     startHandler (); ;}
     break;
 
   case 7:
-// _line_ 66 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 66 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandConnect (((String)yyvsa[yyvsp+(-2)]) + ":" + ((String)yyvsa[yyvsp+(0)]));
     startHandler (); ;}
     break;
 
   case 8:
-// _line_ 69 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 69 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandListen (((Integer)yyvsa[yyvsp+(0)]));
     startHandler (); ;}
     break;
 
   case 9:
-// _line_ 72 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 72 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandDetach (); ;}
     break;
 
   case 10:
-// _line_ 74 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 74 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandPrint (((String)yyvsa[yyvsp+(0)]), evaluator.PRINT, ' ', false);
     showPrompt = false; ;}
     break;
 
   case 11:
-// _line_ 77 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 77 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandPrint (((String)yyvsa[yyvsp+(0)]), printDepth (((String)yyvsa[yyvsp+(-1)])), printFormat (((String)yyvsa[yyvsp+(-1)])),
        false);
     showPrompt = false; ;}
     break;
 
   case 12:
-// _line_ 81 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 81 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandPrint (((String)yyvsa[yyvsp+(0)]), ((Integer)yyvsa[yyvsp+(-1)]), ' ', false);
     showPrompt = false; ;}
     break;
 
   case 13:
-// _line_ 84 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 84 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandPrint (((String)yyvsa[yyvsp+(0)]), evaluator.NO_PRINT, ' ', false);
     showPrompt = false; ;}
     break;
 
   case 14:
-// _line_ 87 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 87 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandSetClass (""); ;}
     break;
 
   case 15:
-// _line_ 89 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 89 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandSetClass (((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 16:
-// _line_ 91 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 91 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandSetArgs (new CommandLineSpec ()); ;}
     break;
 
   case 17:
-// _line_ 92 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 92 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = new CommandLineSpec (); ;}
     break;
 
   case 18:
-// _line_ 93 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 93 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandSetArgs (((CommandLineSpec)yyvsa[yyvsp+(-1)])); ;}
     break;
 
   case 19:
-// _line_ 95 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 95 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandWhere (((String)yyvsa[yyvsp+(-1)]), false); ;}
     break;
 
   case 20:
-// _line_ 97 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 97 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandWhere (null, false); ;}
     break;
 
   case 21:
-// _line_ 99 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 99 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandWhereAll (false); ;}
     break;
 
   case 22:
-// _line_ 101 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 101 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandWhere (((String)yyvsa[yyvsp+(-1)]), true); ;}
     break;
 
   case 23:
-// _line_ 103 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 103 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandWhere (null, true); ;}
     break;
 
   case 24:
-// _line_ 105 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 105 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandWhereAll (true); ;}
     break;
 
   case 25:
-// _line_ 107 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 107 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandUp (((Integer)yyvsa[yyvsp+(-1)])); ;}
     break;
 
   case 26:
-// _line_ 109 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 109 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandUp (-((Integer)yyvsa[yyvsp+(-1)])); ;}
     break;
 
   case 27:
-// _line_ 111 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 111 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandFrame (((Integer)yyvsa[yyvsp+(-1)])); ;}
     break;
 
   case 28:
-// _line_ 113 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 113 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandSave ();
     showPrompt = false; ;}
     break;
 
   case 29:
-// _line_ 116 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 116 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandSave (((String)yyvsa[yyvsp+(-1)]), ((String)yyvsa[yyvsp+(0)]));
      showPrompt = false; ;}
     break;
 
   case 30:
-// _line_ 119 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 119 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandPtype (((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 31:
-// _line_ 121 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 121 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandPrint (((String)yyvsa[yyvsp+(0)]), evaluator.EXAMINE, ' ', true);
     showPrompt = false; ;}
     break;
 
   case 32:
-// _line_ 124 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 124 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandPrint (((String)yyvsa[yyvsp+(0)]), printDepth (((String)yyvsa[yyvsp+(-1)])),
        printFormat (((String)yyvsa[yyvsp+(-1)])), true);
     showPrompt = false; ;}
     break;
 
   case 33:
-// _line_ 128 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 128 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandPrint (((String)yyvsa[yyvsp+(0)]), ((Integer)yyvsa[yyvsp+(-1)]), ' ', true);
     showPrompt = false; ;}
     break;
 
   case 34:
-// _line_ 131 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 131 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandSet ("print", "compressed", 0); ;}
     break;
 
   case 35:
-// _line_ 133 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 133 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandSet ("print", "pretty", 0); ;}
     break;
 
   case 36:
-// _line_ 135 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 135 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandSet ("print", "elements", ((Integer)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 37:
-// _line_ 137 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 137 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandSet ("print", "max-frames", ((Integer)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 38:
-// _line_ 139 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 139 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandSet ("stdin", "on", 0); ;}
     break;
 
   case 39:
-// _line_ 141 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 141 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandSet ("stdin", "off", 0); ;}
     break;
 
   case 40:
-// _line_ 143 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 143 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandPrint (((String)yyvsa[yyvsp+(0)]), evaluator.PRINT, ' ', false); ;}
     break;
 
   case 41:
-// _line_ 145 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 145 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandPrint (((String)yyvsa[yyvsp+(-2)]) + " " + ((String)yyvsa[yyvsp+(0)]),
        evaluator.PRINT, ' ', false); ;}
     break;
 
   case 42:
-// _line_ 148 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 148 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandThread (((String)yyvsa[yyvsp+(-1)])); ;}
     break;
 
   case 43:
-// _line_ 150 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 150 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandThreadGroup (((String)yyvsa[yyvsp+(-1)])); ;}
     break;
 
   case 44:
-// _line_ 152 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 152 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandSuspend (); ;}
     break;
 
   case 45:
-// _line_ 154 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 154 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandSuspend (); ;}
     break;
 
   case 46:
-// _line_ 156 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 156 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandSuspend (); ;}
     break;
 
   case 47:
-// _line_ 158 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 158 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandSuspend (((List)yyvsa[yyvsp+(-1)])); ;}
     break;
 
   case 48:
-// _line_ 160 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 160 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandResume (); ;}
     break;
 
   case 49:
-// _line_ 162 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 162 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandResume (((List)yyvsa[yyvsp+(-1)])); ;}
     break;
 
   case 50:
-// _line_ 164 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 164 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandKill (((String)yyvsa[yyvsp+(-1)]), ((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 51:
-// _line_ 166 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 166 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandInterrupt (); ;}
     break;
 
   case 52:
-// _line_ 168 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 168 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandInterrupt (((String)yyvsa[yyvsp+(-1)])); ;}
     break;
 
   case 53:
-// _line_ 170 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 170 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandBreak (); ;}
     break;
 
   case 54:
-// _line_ 172 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 172 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandBreak (((BreakpointSpec)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 55:
-// _line_ 174 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 174 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandClear (((List)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 56:
-// _line_ 176 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 176 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandCommand (reader, false); ;}
     break;
 
   case 57:
-// _line_ 178 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 178 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandCommand (((Integer)yyvsa[yyvsp+(0)]), reader, false); ;}
     break;
 
   case 58:
-// _line_ 180 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 180 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandCond (((String)yyvsa[yyvsp+(-1)])); ;}
     break;
 
   case 59:
-// _line_ 182 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 182 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandCond (((Integer)yyvsa[yyvsp+(-2)]), ((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 60:
-// _line_ 184 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 184 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandCatch (); ;}
     break;
 
   case 61:
-// _line_ 186 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 186 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandCatch (((EventRequestSpec)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 62:
-// _line_ 188 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 188 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandPass (); ;}
     break;
 
   case 63:
-// _line_ 190 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 190 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandPass (((EventRequestSpec)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 64:
-// _line_ 192 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 192 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandWatch (((List)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 65:
-// _line_ 194 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 194 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandUnwatch (); ;}
     break;
 
   case 66:
-// _line_ 196 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 196 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandUnwatch (((List)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 67:
-// _line_ 198 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 198 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandDelete (); ;}
     break;
 
   case 68:
-// _line_ 200 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 200 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandDelete (((List)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 69:
-// _line_ 202 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 202 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandIgnore (((Integer)yyvsa[yyvsp+(-1)]), ((Integer)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 70:
-// _line_ 204 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 204 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandTrace (((Integer)yyvsa[yyvsp+(-1)]), null); ;}
     break;
 
   case 71:
-// _line_ 206 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 206 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandTrace (((Integer)yyvsa[yyvsp+(-2)]), ((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 72:
-// _line_ 208 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 208 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandUntrace (); ;}
     break;
 
   case 73:
-// _line_ 210 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 210 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandStep (StepRequest.STEP_LINE,
       StepRequest.STEP_OUT, 1); ;}
     break;
 
   case 74:
-// _line_ 213 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 213 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandStep (StepRequest.STEP_LINE,
       StepRequest.STEP_INTO, ((Integer)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 75:
-// _line_ 216 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 216 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandStep (StepRequest.STEP_LINE,
       StepRequest.STEP_OUT, 1); ;}
     break;
 
   case 76:
-// _line_ 219 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 219 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandStep (StepRequest.STEP_LINE,
       StepRequest.STEP_OVER, ((Integer)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 77:
-// _line_ 222 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 222 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandStep (StepRequest.STEP_MIN,
       StepRequest.STEP_INTO, ((Integer)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 78:
-// _line_ 225 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 225 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandCont (); ;}
     break;
 
   case 79:
-// _line_ 227 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 227 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandExclude (); ;}
     break;
 
   case 80:
-// _line_ 229 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 229 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandExcludeClear (); ;}
     break;
 
   case 81:
-// _line_ 231 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 231 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandExcludeReset (); ;}
     break;
 
   case 82:
-// _line_ 233 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 233 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandExcludeAdd (((List)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 83:
-// _line_ 235 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 235 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandExcludeSet (((List)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 84:
-// _line_ 237 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 237 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandLock (((String)yyvsa[yyvsp+(0)]));
     showPrompt = false; ;}
     break;
 
   case 85:
-// _line_ 240 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 240 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandEnableGC (((String)yyvsa[yyvsp+(0)]), false);
     showPrompt = false; ;}
     break;
 
   case 86:
-// _line_ 243 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 243 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandEnableGC (((String)yyvsa[yyvsp+(0)]), true);
     showPrompt = false; ;}
     break;
 
   case 87:
-// _line_ 246 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 246 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandLocals (); ;}
     break;
 
   case 88:
-// _line_ 248 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 248 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandClasses (); ;}
     break;
 
   case 89:
-// _line_ 250 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 250 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandClass (((String)yyvsa[yyvsp+(-1)]), false); ;}
     break;
 
   case 90:
-// _line_ 252 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 252 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandClass (((String)yyvsa[yyvsp+(-2)]), true); ;}
     break;
 
   case 91:
-// _line_ 254 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 254 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandMethods (((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 92:
-// _line_ 256 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 256 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandFields (((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 93:
-// _line_ 258 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 258 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandThreads (); ;}
     break;
 
   case 94:
-// _line_ 260 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 260 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandThreads (((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 95:
-// _line_ 262 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 262 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandThreadGroups (); ;}
     break;
 
   case 96:
-// _line_ 264 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 264 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandClasspathInfo (); ;}
     break;
 
   case 97:
-// _line_ 266 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 266 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandThreadlocks (); ;}
     break;
 
   case 98:
-// _line_ 268 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 268 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandThreadlocksAll (); ;}
     break;
 
   case 99:
-// _line_ 270 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 270 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandThreadlocks (((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 100:
-// _line_ 272 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 272 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandInfoRun (); ;}
     break;
 
   case 101:
-// _line_ 274 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 274 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.listEventSpecs (BreakpointSpec.EXMPL); ;}
     break;
 
   case 102:
-// _line_ 276 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 276 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.listEventSpecs (WatchpointSpec.EXMPL); ;}
     break;
 
   case 103:
-// _line_ 278 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 278 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.listEventSpecs (ExceptionSpec.EXMPL); ;}
     break;
 
   case 104:
-// _line_ 280 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 280 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandWhere (((String)yyvsa[yyvsp+(-1)]), false); ;}
     break;
 
   case 105:
-// _line_ 282 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 282 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandWhere (null, false); ;}
     break;
 
   case 106:
-// _line_ 284 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 284 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandWhereAll (false); ;}
     break;
 
   case 107:
-// _line_ 286 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 286 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandLoadclass (((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 108:
-// _line_ 288 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 288 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandClasspath (); ;}
     break;
 
   case 109:
-// _line_ 290 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 290 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandClasspath (((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 110:
-// _line_ 292 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 292 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandUse (); ;}
     break;
 
   case 111:
-// _line_ 294 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 294 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandUse (((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 112:
-// _line_ 296 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 296 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandMonitor (); ;}
     break;
 
   case 113:
-// _line_ 298 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 298 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandMonitor (((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 114:
-// _line_ 300 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 300 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandUnmonitor (((Integer)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 115:
-// _line_ 302 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 302 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandRead (((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 116:
-// _line_ 304 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 304 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandList (-1, null); ;}
     break;
 
   case 117:
-// _line_ 306 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 306 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandList (((Integer)yyvsa[yyvsp+(0)]), null); ;}
     break;
 
   case 118:
-// _line_ 308 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 308 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandList (-1, ((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 119:
-// _line_ 310 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 310 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandLines (((String)yyvsa[yyvsp+(0)]), null); ;}
     break;
 
   case 120:
-// _line_ 312 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 312 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandLines (((String)yyvsa[yyvsp+(-1)]), ((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 121:
-// _line_ 314 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 314 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandBytecodes (((String)yyvsa[yyvsp+(-1)]), ((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 122:
-// _line_ 316 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 316 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandBytecodes (((String)yyvsa[yyvsp+(-2)]), ((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 123:
-// _line_ 318 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 318 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandVersion (GJDB.progname, Version.value); ;}
     break;
 
   case 124:
-// _line_ 320 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 320 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandQuit (); ;}
     break;
 
   case 125:
-// _line_ 322 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 322 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { GJDB.help (); ;}
     break;
 
   case 126:
-// _line_ 324 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 324 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { GJDB.help (((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 127:
-// _line_ 326 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 326 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.commandRepeat (((Integer)yyvsa[yyvsp+(-2)]), ((String)yyvsa[yyvsp+(0)]), reader); ;}
     break;
 
   case 128:
-// _line_ 330 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 330 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = convertInt (((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 129:
-// _line_ 333 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 333 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = 1; ;}
     break;
 
   case 130:
-// _line_ 334 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 334 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = convertInt (((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 131:
-// _line_ 338 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 338 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = -1; ;}
     break;
 
   case 132:
-// _line_ 339 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 339 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = convertInt (((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 133:
-// _line_ 343 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 343 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { ArrayList<Integer> L = new ArrayList<Integer> ();
      yyval = L; L.add (((Integer)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 134:
-// _line_ 346 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 346 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = ((List)yyvsa[yyvsp+(-1)]); ((List)yyvsa[yyvsp+(-1)]).add (((Integer)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 137:
-// _line_ 355 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 355 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { ArrayList<String> v = new ArrayList<String> ();
      v.add (((String)yyvsa[yyvsp+(0)]));
      yyval = v; ;}
     break;
 
   case 138:
-// _line_ 359 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 359 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = ((List)yyvsa[yyvsp+(-1)]); ((List)yyvsa[yyvsp+(-1)]).add (((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 142:
-// _line_ 373 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 373 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { CommandLineSpec spec = ((CommandLineSpec)yyvsa[yyvsp+(-1)]);
      spec.cmdArgs += " " + shellConvert (((String)yyvsa[yyvsp+(0)]));
      yyval = spec; ;}
     break;
 
   case 143:
-// _line_ 377 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 377 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { CommandLineSpec spec = ((CommandLineSpec)yyvsa[yyvsp+(-1)]);
      spec.cmdArgs = " " + shellConvert (((String)yyvsa[yyvsp+(-2)]))
       + spec.cmdArgs;
@@ -1716,12 +1719,12 @@ case yyreduce:
     break;
 
   case 145:
-// _line_ 386 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 386 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = (yyvsa[yyvsp+(-1)]); ;}
     break;
 
   case 146:
-// _line_ 392 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 392 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { CommandLineSpec spec = ((CommandLineSpec)yyvsa[yyvsp+(-2)]);
      if (spec.inFile != null)
          throw ERROR ("Ambiguous input redirection");
@@ -1730,7 +1733,7 @@ case yyreduce:
     break;
 
   case 147:
-// _line_ 398 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 398 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { CommandLineSpec spec = ((CommandLineSpec)yyvsa[yyvsp+(-2)]);
      if (spec.outFile != null)
          throw ERROR ("Ambiguous output redirection");
@@ -1739,7 +1742,7 @@ case yyreduce:
     break;
 
   case 148:
-// _line_ 404 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 404 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { CommandLineSpec spec = ((CommandLineSpec)yyvsa[yyvsp+(-3)]);
      if (spec.outFile != null)
          throw ERROR ("Ambiguous output redirection");
@@ -1748,105 +1751,105 @@ case yyreduce:
     break;
 
   case 149:
-// _line_ 412 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 412 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = ""; ;}
     break;
 
   case 151:
-// _line_ 417 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 417 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = null; ;}
     break;
 
   case 152:
-// _line_ 419 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 419 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = ((List)yyvsa[yyvsp+(-1)]); ;}
     break;
 
   case 153:
-// _line_ 420 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 420 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = Collections.EMPTY_LIST; ;}
     break;
 
   case 154:
-// _line_ 424 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 424 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { ArrayList<String> L = new ArrayList<String> ();
      yyval = L;
      L.add (((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 155:
-// _line_ 428 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 428 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = ((List)yyvsa[yyvsp+(-2)]); ((List)yyvsa[yyvsp+(-2)]).add (((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 157:
-// _line_ 433 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 433 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = ((String)yyvsa[yyvsp+(-1)]) + "[]"; ;}
     break;
 
   case 159:
-// _line_ 438 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 438 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = ((String)yyvsa[yyvsp+(-2)]) + "." + ((String)yyvsa[yyvsp+(0)]); ;}
     break;
 
   case 160:
-// _line_ 443 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 443 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = createBreakpointSpec (((String)yyvsa[yyvsp+(-4)]), ((String)yyvsa[yyvsp+(-2)]), ((List)yyvsa[yyvsp+(-1)]), ((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 161:
-// _line_ 445 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 445 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = createBreakpointSpec (((String)yyvsa[yyvsp+(-3)]), ((Integer)yyvsa[yyvsp+(-1)]), ((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 162:
-// _line_ 450 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 450 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { ArrayList<Object> L = new ArrayList<Object> ();
         yyval = L;
         L.add (((BreakpointSpec)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 163:
-// _line_ 454 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 454 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = ((List)yyvsa[yyvsp+(-1)]); ((List)yyvsa[yyvsp+(-1)]).add (((BreakpointSpec)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 164:
-// _line_ 458 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 458 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = createBreakpointSpec (((Integer)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 165:
-// _line_ 460 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 460 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = createBreakpointSpec (((String)yyvsa[yyvsp+(-3)]), ((String)yyvsa[yyvsp+(-1)]), ((List)yyvsa[yyvsp+(0)]), null); ;}
     break;
 
   case 166:
-// _line_ 462 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 462 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = createBreakpointSpec (((String)yyvsa[yyvsp+(-2)]), ((Integer)yyvsa[yyvsp+(0)]), null); ;}
     break;
 
   case 167:
-// _line_ 466 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 466 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = "*." + ((String)yyvsa[yyvsp+(0)]); ;}
     break;
 
   case 169:
-// _line_ 469 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 469 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { if (((String)yyvsa[yyvsp+(-2)]).endsWith (".0"))
            throw ERROR ("Bad class specification");
        yyval = ((String)yyvsa[yyvsp+(-2)]) + "." + ((String)yyvsa[yyvsp+(0)]); ;}
     break;
 
   case 170:
-// _line_ 473 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 473 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { if (((String)yyvsa[yyvsp+(-1)]).endsWith (".0"))
            throw ERROR ("Bad class specification");
        yyval = ((String)yyvsa[yyvsp+(-1)]) + ".0"; ;}
     break;
 
   case 171:
-// _line_ 480 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 480 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { ArrayList<String> L = new ArrayList<String> ();
      L.add (((String)yyvsa[yyvsp+(0)]));
      yyval = L;
@@ -1854,127 +1857,127 @@ case yyreduce:
     break;
 
   case 172:
-// _line_ 485 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 485 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = ((List)yyvsa[yyvsp+(-2)]); ((List)yyvsa[yyvsp+(-2)]).add (((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 177:
-// _line_ 496 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 496 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = "*"; ;}
     break;
 
   case 178:
-// _line_ 497 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 497 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = ((String)yyvsa[yyvsp+(-2)]) + "." + ((String)yyvsa[yyvsp+(0)]); ;}
     break;
 
   case 179:
-// _line_ 498 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 498 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = ((String)yyvsa[yyvsp+(-2)]) + ".*"; ;}
     break;
 
   case 180:
-// _line_ 502 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 502 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = createExceptionSpec ("*." + ((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 181:
-// _line_ 503 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 503 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = createExceptionSpec (((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 182:
-// _line_ 507 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 507 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = null; ;}
     break;
 
   case 183:
-// _line_ 509 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 509 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = ((String)yyvsa[yyvsp+(0)]); ;}
     break;
 
   case 184:
-// _line_ 514 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 514 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = createWatchSpec (((Integer)yyvsa[yyvsp+(-4)]), ((String)yyvsa[yyvsp+(-3)]), ((String)yyvsa[yyvsp+(-2)]), null, ((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 185:
-// _line_ 517 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 517 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = createWatchSpec (((Integer)yyvsa[yyvsp+(-7)]), ((String)yyvsa[yyvsp+(-6)]), null, ((String)yyvsa[yyvsp+(-4)]), ((String)yyvsa[yyvsp+(0)])); ;}
     break;
 
   case 186:
-// _line_ 521 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 521 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = ""; ;}
     break;
 
   case 187:
-// _line_ 522 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 522 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = "all"; ;}
     break;
 
   case 188:
-// _line_ 523 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 523 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = "access"; ;}
     break;
 
   case 189:
-// _line_ 527 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 527 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = EventRequest.SUSPEND_ALL; ;}
     break;
 
   case 190:
-// _line_ 528 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 528 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = EventRequest.SUSPEND_NONE; ;}
     break;
 
   case 191:
-// _line_ 529 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 529 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = EventRequest.SUSPEND_EVENT_THREAD; ;}
     break;
 
   case 192:
-// _line_ 534 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 534 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = ((String)yyvsa[yyvsp+(0)]); ;}
     break;
 
   case 193:
-// _line_ 538 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 538 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { yyval = (yyvsa[yyvsp+(-1)]); ;}
     break;
 
   case 194:
-// _line_ 543 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 543 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { lexer.toDefaultMode (); ;}
     break;
 
   case 195:
-// _line_ 546 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 546 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { lexer.toBreakMode (); ;}
     break;
 
   case 196:
-// _line_ 550 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 550 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { lexer.toPrintMode (); ;}
     break;
 
   case 197:
-// _line_ 554 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 554 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { evaluator.checkConnect (); ;}
     break;
 
   case 198:
-// _line_ 558 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 558 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { lexer.toBalancedCollectMode (); ;}
     break;
 
   case 199:
-// _line_ 562 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 562 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { lexer.toCollectMode (); ;}
     break;
 
   case 200:
-// _line_ 566 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 566 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
     { lexer.toRunArgsMode (); ;}
     break;
 
@@ -1982,7 +1985,7 @@ case yyreduce:
     }
 
 /* Line 813 of yacc.java.  */
-// _line_ 2070 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.java"
+// _line_ 2073 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.java"
 
   yyvsp -= yylen;
   yyssp -= yylen;
@@ -2000,7 +2003,7 @@ case yyreduce:
   yyn = yyr1[yyn];
 
   yystate = yypgoto[yyn - 105] + yyssa[yyssp];
-  if (0 <= yystate && yystate <= 382 && yycheck[yystate] == yyssa[yyssp])
+  if (0 <= yystate && yystate <= 381 && yycheck[yystate] == yyssa[yyssp])
     yystate = yytable[yystate];
   else
     yystate = yydefgoto[yyn - 105];
@@ -2072,10 +2075,10 @@ case yyerrlab1:
   for (;;)
     {
       yyn = yypact[yystate];
-      if (yyn != -150)
+      if (yyn != -155)
  {
    yyn += 1;
-   if (0 <= yyn && yyn <= 382 && yycheck[yyn] == 1)
+   if (0 <= yyn && yyn <= 381 && yycheck[yyn] == 1)
      {
        yyn = yytable[yyn];
        if (0 < yyn)
@@ -2142,7 +2145,7 @@ case yyreturn:
 
 }
 
-// _line_ 569 "/home/cs/hilfingr/src/gjdb-5x/src/ucb/gjdb/CommandParser.y"
+// _line_ 569 "/home/cs/hilfingr/src/gjdb/src/ucb/gjdb/CommandParser.y"
 
 
 private Commands evaluator;
@@ -2154,21 +2157,33 @@ private static final HashMap<String, Integer> tokenMap =
 static void execute (String src, Commands evaluator, BufferedReader reader,
                      boolean prompt)
 {
+    execute (src, evaluator, reader, prompt, false);
+}
+
+static void execute (String src, Commands evaluator, BufferedReader reader,
+                     boolean prompt, boolean passException)
+{
     CommandParser parser = new CommandParser (new CommandLexer (src));
+
     try {
-        parser.reader = reader;
-        parser.evaluator = evaluator;
-        parser.showPrompt = prompt;
-        parser.parse ();
-    } catch (UnsupportedOperationException uoe) {
-        Env.errorln ("Command is not supported on the target VM");
-    } catch (VMNotConnectedException vmnse) {
-        Env.errorln ("Command is not valid until the program is started or attached");
+ try {
+     parser.reader = reader;
+     parser.evaluator = evaluator;
+     parser.showPrompt = prompt;
+     parser.parse ();
+ } catch (UnsupportedOperationException uoe) {
+     throw ERROR ("Command is not supported on the target VM");
+ } catch (VMNotConnectedException vmnse) {
+     throw ERROR ("Command is not valid until the program is started or attached");
+ } catch (Exception e) {
+     throw ERROR ("Unknown error in command: %s", e);
+        }
     } catch (CommandException e) {
-        Env.errorln (e.getMessage ());
-    } catch (Exception e) {
-        Env.errorln ("Unknown error in command: %s", e);
+ if (passException)
+     throw e;
+ Env.errorln (e.getMessage ());
     }
+
     if (parser.showPrompt)
         evaluator.printPrompt ();
 }

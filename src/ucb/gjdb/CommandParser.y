@@ -284,22 +284,22 @@ command:
 		{ evaluator.commandWhereAll (false); }
 	| "loadclass" _break_mode _check_connect class_id
 		{ evaluator.commandLoadclass ($4); }
-	| "classpath" 
+	| "classpath" _run_args_mode
 		{ evaluator.commandClasspath (); }
-	| "classpath" WORD
-		{ evaluator.commandClasspath ($2); }
-	| "sourcepath"
+	| "classpath" _run_args_mode WORD
+		{ evaluator.commandClasspath ($3); }
+	| "sourcepath" _run_args_mode
 		{ evaluator.commandUse (); }
-	| "sourcepath" WORD
-		{ evaluator.commandUse ($2); }
+	| "sourcepath" _run_args_mode WORD
+		{ evaluator.commandUse ($3); }
  	| "monitor" _balanced_collect_mode
 		{ evaluator.commandMonitor (); }
 	| "monitor" _balanced_collect_mode TEXT
 		{ evaluator.commandMonitor ($3); }
 	| "unmonitor" intlit 
 		{ evaluator.commandUnmonitor ($2); }
-	| "source" WORD
-		{ evaluator.commandRead ($2); }
+	| "source" _run_args_mode WORD
+		{ evaluator.commandRead ($3); }
 	| "list" _break_mode
 		{ evaluator.commandList (-1, null); }
 	| "list" intlit
@@ -577,21 +577,33 @@ private static final HashMap<String, Integer> tokenMap =
 static void execute (String src, Commands evaluator, BufferedReader reader,
                      boolean prompt) 
 {
+    execute (src, evaluator, reader, prompt, false);
+}
+
+static void execute (String src, Commands evaluator, BufferedReader reader,
+                     boolean prompt, boolean passException)
+{
     CommandParser parser = new CommandParser (new CommandLexer (src));
+
     try {
-        parser.reader = reader;
-        parser.evaluator = evaluator;
-        parser.showPrompt = prompt;
-        parser.parse ();
-    } catch (UnsupportedOperationException uoe) {
-        Env.errorln ("Command is not supported on the target VM");
-    } catch (VMNotConnectedException vmnse) {
-        Env.errorln ("Command is not valid until the program is started or attached");
+	try {
+	    parser.reader = reader;
+	    parser.evaluator = evaluator;
+	    parser.showPrompt = prompt;
+	    parser.parse ();
+	} catch (UnsupportedOperationException uoe) {
+	    throw ERROR ("Command is not supported on the target VM");
+	} catch (VMNotConnectedException vmnse) {
+	    throw ERROR ("Command is not valid until the program is started or attached");
+	} catch (Exception e) {
+	    throw ERROR ("Unknown error in command: %s", e);
+        }
     } catch (CommandException e) {
-        Env.errorln (e.getMessage ());
-    } catch (Exception e) {
-        Env.errorln ("Unknown error in command: %s", e);
+	if (passException) 
+	    throw e;
+	Env.errorln (e.getMessage ());
     }
+	    
     if (parser.showPrompt)
         evaluator.printPrompt ();   
 }
