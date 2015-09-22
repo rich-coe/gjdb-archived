@@ -160,7 +160,7 @@ we're in the GUD buffer)."
 	      (local-set-key [\S-f9] 'gjdb-dump)))
 
 	(local-set-key "\C-x " 'gjdb-break)
-	(mapc '(lambda (x) 
+	(mapc #'(lambda (x) 
 		(local-set-key (concat gud-key-prefix (car x)) (cadr x)))
 	      '(("\C-b" gjdb-break) ("\C-d" gjdb-remove) 
 		("\C-p" gjdb-print)
@@ -385,7 +385,8 @@ LINENO."
 	  (progn
 	    (set-buffer (find-file-noselect filename))
 	    (save-excursion 
-	      (goto-line lineno)
+              (goto-char (point-min)) 
+              (forward-line (1- lineno))
 	      (let ((name (gjdb-get-containing-class-name)))
 		(or name default-class
 		    (error "Cannot determine class name"))))))
@@ -463,6 +464,8 @@ Add local binding [menu-bar debug SYM] with label LABEL bound to COMMAND."
 	  (apply 'make-comint (concat "gud-" class-name) program nil
 		 (gjdb-massage-args nil args))
 	  (gud-mode)
+          (local-set-key "\t" 'comint-dynamic-complete)
+          (local-set-key "\M-?" 'comint-dynamic-list-filename-completions)
 	  (make-local-variable 'gud-marker-filter)
 	  (setq gud-marker-filter 'gjdb-marker-filter)
 	  (make-local-variable 'gud-find-file)
