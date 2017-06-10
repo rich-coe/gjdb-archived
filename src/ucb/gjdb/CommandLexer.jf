@@ -34,7 +34,7 @@ import static ucb.gjdb.CommandException.ERROR;
     int scan () throws java.io.IOException {
         int s0 = yystate ();        
         int tok = yylex ();
-        if (parser != null && parser.yydebug > 0) {
+        if (parser != null && 0 < parser.getDebugLevel()) {
             System.err.printf ("scan: %d->%d => %d/'%s'%n", 
                                s0, yystate (), tok, lexeme);
         }

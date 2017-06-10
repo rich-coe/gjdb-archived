@@ -31,7 +31,7 @@ JAR = jar
 JAVAC = javac 
 EMACS = emacs
 JAVACC = javacc
-JBISON = jbison
+JBISON = bison
 JFLEX = jflex
 JFLAGS = -g
 
@@ -59,7 +59,7 @@ $(JSRCDIR)/%.java: $(JSRCDIR)/%.y
 
 $(JSRCDIR)/%.java: $(JSRCDIR)/%.jf
 	rm -f $@
-	$(JFLEX) $<
+        ADDITIONAL_JARS=java_cup $(JFLEX) $<
 	chmod a-w $@
 
 Version.java: Makefile 

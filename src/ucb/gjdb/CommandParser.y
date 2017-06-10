@@ -4,6 +4,10 @@
  * For licensing terms, see the file GJDB.LICENSES, Part 2, which must
  * accompany any redistribution of this file. */
 
+%language "Java"
+%name-prefix "Command"
+%lex-param { CommandLexer cmdlexer }
+
 %token<String> WORD TEXT 
 
 %token<String> INTLIT CHARLIT STRINGLIT
@@ -19,8 +23,9 @@
 %type<String> if_clause_opt formal_type
 %type<List> formal_types_opt formal_types watchpoint_spec exclude_class_id_list
 %type<String> expr
+%type<Object> run_args file_specs _copy_two_back
 
-%header{
+%code imports {
    package ucb.gjdb;
 
    import com.sun.jdi.*;
@@ -41,10 +46,8 @@
 
    import static ucb.gjdb.CommandException.ERROR;
 
-   class CommandParser
-%}
+}
 
-%valuetype Object
 %debug
 
 %%
@@ -56,7 +59,7 @@ command:
           "run" _run_args_mode
                 { evaluator.commandRun ();
                   startHandler (); }
-        | "run" _run_args_mode { $$ = new CommandLineSpec (); } run_args
+        | "run" _run_args_mode { $<Object>$ = new CommandLineSpec (); } run_args
                 {  evaluator.commandRun ($<CommandLineSpec>3); 
                    startHandler (); }
         | "attach" address
@@ -89,7 +92,7 @@ command:
                 { evaluator.commandSetClass ($2); }
         | "exec-args" _run_args_mode
                 { evaluator.commandSetArgs (new CommandLineSpec ()); }
-        | "exec-args" _run_args_mode { $$ = new CommandLineSpec (); } run_args
+        | "exec-args" _run_args_mode { $<Object>$ = new CommandLineSpec (); } run_args
                 { evaluator.commandSetArgs ($<CommandLineSpec>3); }
         | "backtrace" WORD _check_connect
                 { evaluator.commandWhere ($2, false); }
@@ -551,7 +554,7 @@ expr:
         ;
 
 _copy_two_back:
-                          { $$ = $-1; }
+                          { $$ = $<Object>-1; }
 
         /* Mode setting commands (match the empty string) */
 
@@ -582,13 +585,11 @@ _run_args_mode:
           /* EMPTY */     { lexer.toRunArgsMode (); }
         ;
 
-%%
-
+%code {
 private Commands evaluator;
 private boolean showPrompt;
 private BufferedReader reader;
-private static final HashMap<String, Integer> tokenMap =
-        new HashMap<String, Integer> ();
+private static final HashMap<String, Integer> tokenMap = new HashMap<String, Integer> ();
 
 static void execute (String src, Commands evaluator, BufferedReader reader,
                      boolean prompt) 
@@ -599,7 +600,10 @@ static void execute (String src, Commands evaluator, BufferedReader reader,
 static void execute (String src, Commands evaluator, BufferedReader reader,
                      boolean prompt, boolean passException)
 {
-    CommandParser parser = new CommandParser (new CommandLexer (src));
+    CommandLexer llex = new CommandLexer(src);
+    CommandParser parser = new CommandParser (llex);
+    llex.parser = parser;
+    parser.lexer = llex;
 
     try {
         try {
@@ -617,6 +621,7 @@ static void execute (String src, Commands evaluator, BufferedReader reader,
             Env.shutdown (null);
             throw ERROR ("Debugged process has disconnected.");
         } catch (Exception e) {
+            e.printStackTrace();
             throw ERROR ("Unknown error in command: %s", e);
         }
     } catch (CommandException e) {
@@ -627,11 +632,6 @@ static void execute (String src, Commands evaluator, BufferedReader reader,
             
     if (parser.showPrompt)
         evaluator.printPrompt ();   
-}
-
-private CommandParser (CommandLexer lexer) {
-    this.lexer = lexer;
-    lexer.parser = this;
 }
 
 private CommandLexer lexer;
@@ -769,34 +769,6 @@ private List<EventRequestSpec> createWatchSpec (int policy, String type,
     return specs;
 }
 
-private int yylex () {
-    try {
-       int v = lexer.scan ();
-       yylval = lexer.lexeme;
-       return v;
-    } catch (CommandException e) {
-       throw e;
-    } catch (Exception e) {
-       throw ERROR ("problem reading expression: %s", e);
-    }
-}
-
-private void yyerror (int ignored0, String ignored1) {
-    if (lexer.lastCommand == null)
-        throw ERROR ("Unknown command.");
-    List<String> usage = GJDB.commandUsageMsgs (lexer.lastCommand);
-    if (usage.size () == 0)
-        throw ERROR ("Syntax error in command.");
-    Formatter result = new Formatter ();
-    String format;
-    format = "Usage: %s";
-    for (String S : usage) {
-        result.format (format, S);
-        format = "%n       %s";
-    }
-    throw ERROR ("%s", result);
-}
-
 static int findQuotedToken (String s) {
     Integer i = tokenMap.get (s);
     return i == null ? 0 : i;
@@ -833,12 +805,62 @@ static String shellConvert (String s) {
 }
 
 static {
-    for (int i = 0; i < yytname.length; i += 1) {
-        if (yytname[i] instanceof String) {
-            String token = (String) yytname[i];
+    for (int i = 0; i < yytname_.length; i += 1) {
+        if (yytname_[i] instanceof String) {
+            String token = (String) yytname_[i];
             if (token.startsWith ("\""))
-                tokenMap.put (token.substring (1, token.length () - 1),
-                              yytoknum[i]);
+                tokenMap.put (token.substring (1, token.length () - 1), new Integer(yytoken_number_[i]));
         }
     }
 }
+};
+
+%code lexer {
+
+private CommandLexer lexer;   
+
+private Object yylval;
+
+public YYLexer (CommandLexer cmdlexer)
+{
+    lexer = cmdlexer;
+}
+
+public int yylex () throws IOException
+{
+    try {
+       int v = lexer.scan ();
+       yylval = lexer.lexeme;
+       return v;
+    } catch (CommandException e) {
+       throw e;
+    } catch (Exception e) {
+       throw ERROR ("problem reading expression: %s", e);
+    }
+}
+
+public void yyerror(String s)
+{
+    if (lexer.lastCommand == null)
+        throw ERROR ("Unknown command.");
+    List<String> usage = GJDB.commandUsageMsgs (lexer.lastCommand);
+    if (usage.size () == 0)
+        throw ERROR ("Syntax error in command.");
+    Formatter result = new Formatter ();
+    String format;
+    format = "Usage: %s";
+    for (String S : usage) {
+        result.format (format, S);
+        format = "%n       %s";
+    }
+    throw ERROR ("%s", result);
+}
+
+public Object getLVal()
+{
+    return yylval;
+}
+
+};
+
+%%
