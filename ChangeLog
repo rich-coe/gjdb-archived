@@ -1,3 +1,11 @@
+2017-06-10  Rich Coe  <rich.coe2@gmail.com>
+
+        * create LICENSE file from Sun JDK
+
+2015-09-22  Rich Coe  <rich.coe2@gmail.com>
+
+        * use bison instead of jbison
+
 2014-11-13  Paul Hilfinger  <hilfingr@tully.CS.Berkeley.EDU>
 
 	Version 6.4.1
