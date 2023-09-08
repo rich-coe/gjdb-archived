@@ -81,7 +81,7 @@ import static ucb.gjdb.CommandException.ERROR;
     }
 
     private int command () {
-        int result = keyword (commandList, WORD);
+        int result = keyword (commandList, CommandParser.Lexer.WORD);
         lastCommand = lastRecognizedKeyword;
         return result;
     }
@@ -254,15 +254,15 @@ CMDSTRCHR = (\\[\"\\]|[^\\\"\n\r])
 <COMMAND,DEFAULTARGS>{
     {OCTNUM}[lL]?       |
     {HEXNUM}[lL]?       |
-    {INTNUM}[lL]?       { setVal (yytext ()); return INTLIT; }
+    {INTNUM}[lL]?       { setVal (yytext ()); return CommandParser.Lexer.INTLIT; }
     \"{CMDSTRCHR}*\"    { setVal (yytext ().substring (1, yylength () - 1)); 
-                          return WORD; }
+                          return CommandParser.Lexer.WORD; }
 }
 
 <RUNARGS>{
-    [^\"<> \t\n\r\f]+   { setVal (yytext ()); return WORD; }
+    [^\"<> \t\n\r\f]+   { setVal (yytext ()); return CommandParser.Lexer.WORD; }
     [<>]                { return yycharat (0); }
-    \"{CMDSTRCHR}*\"    { setVal (yytext ()); return WORD; }
+    \"{CMDSTRCHR}*\"    { setVal (yytext ()); return CommandParser.Lexer.WORD; }
 }
     
 <COMMAND>{
@@ -303,7 +303,7 @@ CMDSTRCHR = (\\[\"\\]|[^\\\"\n\r])
     "var"               { return symbol ("variable"); }
     "variable"          { return symbol ("variable"); }
     "watch"             { return symbol ("watch"); }
-    {LOOSEID}           { setVal (yytext ()); return WORD; }
+    {LOOSEID}           { setVal (yytext ()); return CommandParser.Lexer.WORD; }
 
     [/:+()*]            { return yycharat (0); }
 }
@@ -316,17 +316,17 @@ CMDSTRCHR = (\\[\"\\]|[^\\\"\n\r])
     "none"              { return symbol ("none"); }
     "reset"             { return symbol ("reset"); }
     "thread"            { return symbol ("thread"); }
-    {ID}                { setVal (yytext ()); return IDENT; }
+    {ID}                { setVal (yytext ()); return CommandParser.Lexer.IDENT; }
     "."{WS}*"0"         { return symbol (".0"); }
     "[]"                { return symbol ("[]"); }
-    {INTNUM}            { setVal (yytext ()); return INTLIT; }
+    {INTNUM}            { setVal (yytext ()); return CommandParser.Lexer.INTLIT; }
     [*()\[\].,:+]       { return yycharat (0); }
 }
 
 <PRINT>{
     "/"     { yybegin (DEFAULTARGS); return '/'; }
     .       { yypushback (1); yybegin (COLLECT); }
-    <<EOF>> { setVal (""); return TEXT; }
+    <<EOF>> { setVal (""); return CommandParser.Lexer.TEXT; }
 }
 
 <COLLECT>{
@@ -335,7 +335,7 @@ CMDSTRCHR = (\\[\"\\]|[^\\\"\n\r])
                   yybegin (DEFAULTARGS);
                   yypushback (1);
                   setVal (buffer.toString ().trim ());
-                  return TEXT;
+                  return CommandParser.Lexer.TEXT;
               } else {
                   buffer.append (")");
                   parens -= 1;
@@ -348,7 +348,7 @@ CMDSTRCHR = (\\[\"\\]|[^\\\"\n\r])
               yybegin (DEFAULTARGS); 
               if (text.length () > 0) {
                   setVal (text);
-                  return TEXT; 
+                  return CommandParser.Lexer.TEXT; 
                }
              }
 }

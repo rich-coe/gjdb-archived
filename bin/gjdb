@@ -1,0 +1,14 @@
+#!/bin/sh
+
+APPHOME="/usr/lib64/jvm/jdk1.8.0_66"
+UCBCLASSES="/usr/local/ext/src/github/gjdb/src/gjdb.jar"
+JDICLASSES="/usr/lib64/jvm/jdk1.8.0_66/lib/tools.jar"
+RLINEPATH="/usr/local/ext/src/sforge/java-readline/java-readline"
+RLINEJAR=${RLINEPATH}/libreadline-java.jar
+
+JAVA=${APPHOME}/bin/java
+
+CLASSPATH=".:${UCBCLASSES}:${JDICLASSES:+:${JDICLASSES}}${CLASSPATH:+:${CLASSPATH}}:${RLINEJAR}"
+export CLASSPATH
+
+exec ${JAVA} -Djava.compiler -Djava.library.path=${RLINEPATH} -Dapplication.home=${APPHOME} ucb.gjdb.GJDB $*

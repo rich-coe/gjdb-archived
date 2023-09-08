@@ -1,0 +1,5 @@
+
+java-readline
+    -> gnu readline
+    -> editline libedit-20170329-3.1.tar.gz
+    -> editline troglobit/editline  (smaller)

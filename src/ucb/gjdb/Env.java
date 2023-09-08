@@ -184,6 +184,24 @@ class Env {
         System.out.flush ();
     }
 
+    static String getPrompt() {
+        if (Env.relayingInput())
+            return "";
+
+        ThreadInfo tinfo = ThreadInfo.current;
+        StringBuffer sb = new StringBuffer("");
+        if (promptPrefix != null)
+            sb.append (promptPrefix);
+        if (!isConnected ())
+            sb.append("[-] ");
+        else if (tinfo == null)
+            sb.append("[?] ");
+        else {
+            sb.append(tinfo.thread.name()).append("[").append(tinfo.currentFrameIndex).append("] ");
+        }
+        return sb.toString();
+    }
+
     static void printPrompt() {
         ThreadInfo tinfo = ThreadInfo.current;
         if (promptPrefix != null)

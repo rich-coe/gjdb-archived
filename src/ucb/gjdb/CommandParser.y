@@ -188,9 +188,9 @@ command:
         | "clear" _break_mode delete_breakpoint_spec_list 
                 { evaluator.commandClear ($3); }
         | "command" 
-                { evaluator.commandCommand (reader, false); }
+                { evaluator.commandCommand (false); }
         | "command" intlit
-                { evaluator.commandCommand ($2, reader, false); }
+                { evaluator.commandCommand ($2, false); }
         | "condition" '(' _balanced_collect_mode TEXT ')'
                 { evaluator.commandCond ($4); }
         | "condition" intlit _balanced_collect_mode TEXT 
@@ -342,7 +342,7 @@ command:
         | "help" WORD
                 { GJDB.help ($2); }
         | intlit _collect_all_mode TEXT
-                { evaluator.commandRepeat ($1, $3, reader); }
+                { evaluator.commandRepeat ($1, $3); }
         ;
 
 intlit:
@@ -588,17 +588,14 @@ _run_args_mode:
 %code {
 private Commands evaluator;
 private boolean showPrompt;
-private BufferedReader reader;
 private static final HashMap<String, Integer> tokenMap = new HashMap<String, Integer> ();
 
-static void execute (String src, Commands evaluator, BufferedReader reader,
-                     boolean prompt) 
+static void execute (String src, Commands evaluator, boolean prompt) 
 {
-    execute (src, evaluator, reader, prompt, false);
+    execute (src, evaluator, prompt, false);
 }
 
-static void execute (String src, Commands evaluator, BufferedReader reader,
-                     boolean prompt, boolean passException)
+static void execute (String src, Commands evaluator, boolean prompt, boolean passException)
 {
     CommandLexer llex = new CommandLexer(src);
     CommandParser parser = new CommandParser (llex);
@@ -607,7 +604,6 @@ static void execute (String src, Commands evaluator, BufferedReader reader,
 
     try {
         try {
-            parser.reader = reader;
             parser.evaluator = evaluator;
             parser.showPrompt = prompt;
             parser.parse ();

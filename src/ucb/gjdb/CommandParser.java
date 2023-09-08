@@ -1,19 +1,19 @@
-/* A Bison parser, made by GNU Bison 2.7.  */
+/* A Bison parser, made by GNU Bison 3.0.4.  */
 
 /* Skeleton implementation for Bison LALR(1) parsers in Java
-   
-      Copyright (C) 2007-2012 Free Software Foundation, Inc.
-   
+
+   Copyright (C) 2007-2015 Free Software Foundation, Inc.
+
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation, either version 3 of the License, or
    (at your option) any later version.
-   
+
    This program is distributed in the hope that it will be useful,
    but WITHOUT ANY WARRANTY; without even the implied warranty of
    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
    GNU General Public License for more details.
-   
+
    You should have received a copy of the GNU General Public License
    along with this program.  If not, see <http://www.gnu.org/licenses/>.  */
 
@@ -26,15 +26,17 @@
    special exception, which will cause the skeleton and the resulting
    Bison output files to be licensed under the GNU General Public
    License without this special exception.
-   
+
    This special exception was added by the Free Software Foundation in
    version 2.2 of Bison.  */
 
 /* First part of user declarations.  */
 
+/* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.java":36  */ /* lalr1.java:91  */
+
+/* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.java":38  */ /* lalr1.java:92  */
 /* "%code imports" blocks.  */
-/* Line 32 of lalr1.java  */
-/* Line 28 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+/* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":28  */ /* lalr1.java:93  */
 
    package ucb.gjdb;
 
@@ -57,9 +59,7 @@
    import static ucb.gjdb.CommandException.ERROR;
 
 
-
-/* Line 32 of lalr1.java  */
-/* Line 63 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.java"  */
+/* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.java":63  */ /* lalr1.java:93  */
 
 /**
  * A Bison parser, automatically generated from <tt>/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y</tt>.
@@ -69,33 +69,12 @@
 class CommandParser
 {
     /** Version number for the Bison executable that generated this parser.  */
-  public static final String bisonVersion = "2.7";
+  public static final String bisonVersion = "3.0.4";
 
   /** Name of the skeleton that generated this parser.  */
   public static final String bisonSkeleton = "lalr1.java";
 
 
-  /** True if verbose error messages are enabled.  */
-  public boolean errorVerbose = false;
-
-
-
-  /** Token returned by the scanner to signal the end of its input.  */
-  public static final int EOF = 0;
-
-/* Tokens.  */
-  /** Token number, to be returned by the scanner.  */
-  public static final int WORD = 258;
-  /** Token number, to be returned by the scanner.  */
-  public static final int TEXT = 259;
-  /** Token number, to be returned by the scanner.  */
-  public static final int INTLIT = 260;
-  /** Token number, to be returned by the scanner.  */
-  public static final int CHARLIT = 261;
-  /** Token number, to be returned by the scanner.  */
-  public static final int STRINGLIT = 262;
-  /** Token number, to be returned by the scanner.  */
-  public static final int IDENT = 263;
 
 
 
@@ -106,18 +85,38 @@ class CommandParser
    * parser <tt>CommandParser</tt>.
    */
   public interface Lexer {
+    /** Token returned by the scanner to signal the end of its input.  */
+    public static final int EOF = 0;
+
+/* Tokens.  */
+    /** Token number,to be returned by the scanner.  */
+    static final int WORD = 258;
+    /** Token number,to be returned by the scanner.  */
+    static final int TEXT = 259;
+    /** Token number,to be returned by the scanner.  */
+    static final int INTLIT = 260;
+    /** Token number,to be returned by the scanner.  */
+    static final int CHARLIT = 261;
+    /** Token number,to be returned by the scanner.  */
+    static final int STRINGLIT = 262;
+    /** Token number,to be returned by the scanner.  */
+    static final int IDENT = 263;
+
+
     
 
     /**
      * Method to retrieve the semantic value of the last scanned token.
-     * @return the semantic value of the last scanned token.  */
+     * @return the semantic value of the last scanned token.
+     */
     Object getLVal ();
 
     /**
      * Entry point for the scanner.  Returns the token identifier corresponding
      * to the next token and prepares to return the semantic value
      * of the token.
-     * @return the token identifier corresponding to the next token. */
+     * @return the token identifier corresponding to the next token.
+     */
     int yylex () throws java.io.IOException;
 
     /**
@@ -125,14 +124,14 @@ class CommandParser
      * in a user-defined way.
      *
      * 
-     * @param s The string for the error message.  */
-     void yyerror (String s);
+     * @param msg The string for the error message.
+     */
+     void yyerror (String msg);
   }
 
   private class YYLexer implements Lexer {
 /* "%code lexer" blocks.  */
-/* Line 146 of lalr1.java  */
-/* Line 818 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+/* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":814  */ /* lalr1.java:236  */
 
 
 private CommandLexer lexer;   
@@ -180,13 +179,13 @@ public Object getLVal()
 }
 
 
-
-/* Line 146 of lalr1.java  */
-/* Line 186 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.java"  */
+/* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.java":183  */ /* lalr1.java:236  */
 
   }
 
-  /** The object doing lexical analysis for us.  */
+  /**
+   * The object doing lexical analysis for us.
+   */
   private Lexer yylexer;
   
   
@@ -195,7 +194,9 @@ public Object getLVal()
   /**
    * Instantiates the Bison-generated parser.
    */
-  public CommandParser (CommandLexer cmdlexer) {
+  public CommandParser (CommandLexer cmdlexer) 
+  {
+    
     this.yylexer = new YYLexer(cmdlexer);
     
   }
@@ -205,7 +206,9 @@ public Object getLVal()
    * Instantiates the Bison-generated parser.
    * @param yylexer The scanner that will supply tokens to the parser.
    */
-  protected CommandParser (Lexer yylexer) {
+  protected CommandParser (Lexer yylexer) 
+  {
+    
     this.yylexer = yylexer;
     
   }
@@ -239,14 +242,16 @@ public Object getLVal()
    */
   public final void setDebugLevel(int level) { yydebug = level; }
 
-  private final int yylex () throws java.io.IOException {
-    return yylexer.yylex ();
-  }
-  protected final void yyerror (String s) {
-    yylexer.yyerror (s);
+  /**
+   * Print an error message via the lexer.
+   *
+   * @param msg The error message.
+   */
+  public final void yyerror (String msg)
+  {
+    yylexer.yyerror (msg);
   }
 
-  
 
   protected final void yycdebug (String s) {
     if (yydebug > 0)
@@ -261,21 +266,21 @@ public Object getLVal()
     public int size = 16;
     public int height = -1;
 
-    public final void push (int state, Object value			    ) {
+    public final void push (int state, Object value                            ) {
       height++;
       if (size == height)
         {
-	  int[] newStateStack = new int[size * 2];
-	  System.arraycopy (stateStack, 0, newStateStack, 0, height);
-	  stateStack = newStateStack;
-	  
+          int[] newStateStack = new int[size * 2];
+          System.arraycopy (stateStack, 0, newStateStack, 0, height);
+          stateStack = newStateStack;
+          
 
-	  Object[] newValueStack = new Object[size * 2];
-	  System.arraycopy (valueStack, 0, newValueStack, 0, height);
-	  valueStack = newValueStack;
+          Object[] newValueStack = new Object[size * 2];
+          System.arraycopy (valueStack, 0, newValueStack, 0, height);
+          valueStack = newValueStack;
 
-	  size *= 2;
-	}
+          size *= 2;
+        }
 
       stateStack[height] = state;
       
@@ -289,7 +294,7 @@ public Object getLVal()
     public final void pop (int num) {
       // Avoid memory leaks... garbage collection is a white lie!
       if (num > 0) {
-	java.util.Arrays.fill (valueStack, height - num + 1, height + 1, null);
+        java.util.Arrays.fill (valueStack, height - num + 1, height + 1, null);
         
       }
       height -= num;
@@ -310,8 +315,8 @@ public Object getLVal()
 
       for (int i = 0; i <= height; i++)
         {
-	  out.print (' ');
-	  out.print (stateStack[i]);
+          out.print (' ');
+          out.print (stateStack[i]);
         }
       out.println ();
     }
@@ -319,21 +324,28 @@ public Object getLVal()
 
   /**
    * Returned by a Bison action in order to stop the parsing process and
-   * return success (<tt>true</tt>).  */
+   * return success (<tt>true</tt>).
+   */
   public static final int YYACCEPT = 0;
 
   /**
    * Returned by a Bison action in order to stop the parsing process and
-   * return failure (<tt>false</tt>).  */
+   * return failure (<tt>false</tt>).
+   */
   public static final int YYABORT = 1;
+
+
 
   /**
    * Returned by a Bison action in order to start error recovery without
-   * printing an error message.  */
+   * printing an error message.
+   */
   public static final int YYERROR = 2;
 
-  // Internal return codes that are not supported for user semantic
-  // actions.
+  /**
+   * Internal return codes that are not supported for user semantic
+   * actions.
+   */
   private static final int YYERRLAB = 3;
   private static final int YYNEWSTATE = 4;
   private static final int YYDEFAULT = 5;
@@ -341,15 +353,31 @@ public Object getLVal()
   private static final int YYERRLAB1 = 7;
   private static final int YYRETURN = 8;
 
+
   private int yyerrstatus_ = 0;
+
 
   /**
    * Return whether error recovery is being done.  In this state, the parser
    * reads token until it reaches a known state, and then restarts normal
-   * operation.  */
+   * operation.
+   */
   public final boolean recovering ()
   {
     return yyerrstatus_ == 0;
+  }
+
+  /** Compute post-reduction state.
+   * @param yystate   the current state
+   * @param yysym     the nonterminal to push on the stack
+   */
+  private int yy_lr_goto_state_ (int yystate, int yysym)
+  {
+    int yyr = yypgoto_[yysym - yyntokens_] + yystate;
+    if (0 <= yyr && yyr <= yylast_ && yycheck_[yyr] == yystate)
+      return yytable_[yyr];
+    else
+      return yydefgoto_[yysym - yyntokens_];
   }
 
   private int yyaction (int yyn, YYStack yystack, int yylen) 
@@ -358,7 +386,7 @@ public Object getLVal()
     
 
     /* If YYLEN is nonzero, implement the default value of the action:
-       `$$ = $1'.  Otherwise, use the top of the stack.
+       '$$ = $1'.  Otherwise, use the top of the stack.
 
        Otherwise, the following line sets YYVAL to garbage.
        This behavior is undocumented and Bison
@@ -372,10 +400,9 @@ public Object getLVal()
 
     switch (yyn)
       {
-	  case 3:
+          case 3:
   if (yyn == 3)
-    /* Line 350 of lalr1.java  */
-/* Line 60 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":60  */ /* lalr1.java:489  */
     { evaluator.commandRun ();
                   startHandler (); };
   break;
@@ -383,16 +410,14 @@ public Object getLVal()
 
   case 4:
   if (yyn == 4)
-    /* Line 350 of lalr1.java  */
-/* Line 62 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":62  */ /* lalr1.java:489  */
     { yyval = new CommandLineSpec (); };
   break;
     
 
   case 5:
   if (yyn == 5)
-    /* Line 350 of lalr1.java  */
-/* Line 63 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":63  */ /* lalr1.java:489  */
     {  evaluator.commandRun (((CommandLineSpec)(yystack.valueAt (4-(3))))); 
                    startHandler (); };
   break;
@@ -400,8 +425,7 @@ public Object getLVal()
 
   case 6:
   if (yyn == 6)
-    /* Line 350 of lalr1.java  */
-/* Line 66 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":66  */ /* lalr1.java:489  */
     { evaluator.commandAttach (((Integer)(yystack.valueAt (2-(2))))); 
                   startHandler (); };
   break;
@@ -409,8 +433,7 @@ public Object getLVal()
 
   case 7:
   if (yyn == 7)
-    /* Line 350 of lalr1.java  */
-/* Line 69 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":69  */ /* lalr1.java:489  */
     { evaluator.commandConnect (((String)(yystack.valueAt (4-(2)))) + ":" + ((String)(yystack.valueAt (4-(4))))); 
                   startHandler (); };
   break;
@@ -418,8 +441,7 @@ public Object getLVal()
 
   case 8:
   if (yyn == 8)
-    /* Line 350 of lalr1.java  */
-/* Line 72 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":72  */ /* lalr1.java:489  */
     { evaluator.commandListen (((Integer)(yystack.valueAt (2-(2)))));
                   startHandler (); };
   break;
@@ -427,16 +449,14 @@ public Object getLVal()
 
   case 9:
   if (yyn == 9)
-    /* Line 350 of lalr1.java  */
-/* Line 75 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":75  */ /* lalr1.java:489  */
     { evaluator.commandDetach (); };
   break;
     
 
   case 10:
   if (yyn == 10)
-    /* Line 350 of lalr1.java  */
-/* Line 77 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":77  */ /* lalr1.java:489  */
     { evaluator.commandPrint (((String)(yystack.valueAt (3-(3)))), evaluator.PRINT, ' ', false); 
                   showPrompt = false; };
   break;
@@ -444,8 +464,7 @@ public Object getLVal()
 
   case 11:
   if (yyn == 11)
-    /* Line 350 of lalr1.java  */
-/* Line 80 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":80  */ /* lalr1.java:489  */
     { evaluator.commandPrint (((String)(yystack.valueAt (5-(5)))), printDepth (((String)(yystack.valueAt (5-(4))))), printFormat (((String)(yystack.valueAt (5-(4))))),
                                           false);
                   showPrompt = false; };
@@ -454,8 +473,7 @@ public Object getLVal()
 
   case 12:
   if (yyn == 12)
-    /* Line 350 of lalr1.java  */
-/* Line 84 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":84  */ /* lalr1.java:489  */
     { evaluator.commandPrint (((String)(yystack.valueAt (5-(5)))), ((Integer)(yystack.valueAt (5-(4)))), ' ', false);
                   showPrompt = false; };
   break;
@@ -463,8 +481,7 @@ public Object getLVal()
 
   case 13:
   if (yyn == 13)
-    /* Line 350 of lalr1.java  */
-/* Line 87 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":87  */ /* lalr1.java:489  */
     { evaluator.commandPrint (((String)(yystack.valueAt (2-(2)))), evaluator.NO_PRINT, ' ', false);
                   showPrompt = false; };
   break;
@@ -472,120 +489,105 @@ public Object getLVal()
 
   case 14:
   if (yyn == 14)
-    /* Line 350 of lalr1.java  */
-/* Line 90 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":90  */ /* lalr1.java:489  */
     { evaluator.commandSetClass (""); };
   break;
     
 
   case 15:
   if (yyn == 15)
-    /* Line 350 of lalr1.java  */
-/* Line 92 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":92  */ /* lalr1.java:489  */
     { evaluator.commandSetClass (((String)(yystack.valueAt (2-(2))))); };
   break;
     
 
   case 16:
   if (yyn == 16)
-    /* Line 350 of lalr1.java  */
-/* Line 94 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":94  */ /* lalr1.java:489  */
     { evaluator.commandSetArgs (new CommandLineSpec ()); };
   break;
     
 
   case 17:
   if (yyn == 17)
-    /* Line 350 of lalr1.java  */
-/* Line 95 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":95  */ /* lalr1.java:489  */
     { yyval = new CommandLineSpec (); };
   break;
     
 
   case 18:
   if (yyn == 18)
-    /* Line 350 of lalr1.java  */
-/* Line 96 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":96  */ /* lalr1.java:489  */
     { evaluator.commandSetArgs (((CommandLineSpec)(yystack.valueAt (4-(3))))); };
   break;
     
 
   case 19:
   if (yyn == 19)
-    /* Line 350 of lalr1.java  */
-/* Line 98 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":98  */ /* lalr1.java:489  */
     { evaluator.commandWhere (((String)(yystack.valueAt (3-(2)))), false); };
   break;
     
 
   case 20:
   if (yyn == 20)
-    /* Line 350 of lalr1.java  */
-/* Line 100 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":100  */ /* lalr1.java:489  */
     { evaluator.commandWhere (null, false); };
   break;
     
 
   case 21:
   if (yyn == 21)
-    /* Line 350 of lalr1.java  */
-/* Line 102 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":102  */ /* lalr1.java:489  */
     { evaluator.commandWhereAll (false); };
   break;
     
 
   case 22:
   if (yyn == 22)
-    /* Line 350 of lalr1.java  */
-/* Line 104 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":104  */ /* lalr1.java:489  */
     { evaluator.commandWhere (((String)(yystack.valueAt (3-(2)))), true); };
   break;
     
 
   case 23:
   if (yyn == 23)
-    /* Line 350 of lalr1.java  */
-/* Line 106 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":106  */ /* lalr1.java:489  */
     { evaluator.commandWhere (null, true); };
   break;
     
 
   case 24:
   if (yyn == 24)
-    /* Line 350 of lalr1.java  */
-/* Line 108 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":108  */ /* lalr1.java:489  */
     { evaluator.commandWhereAll (true); };
   break;
     
 
   case 25:
   if (yyn == 25)
-    /* Line 350 of lalr1.java  */
-/* Line 110 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":110  */ /* lalr1.java:489  */
     { evaluator.commandUp (((Integer)(yystack.valueAt (3-(2))))); };
   break;
     
 
   case 26:
   if (yyn == 26)
-    /* Line 350 of lalr1.java  */
-/* Line 112 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":112  */ /* lalr1.java:489  */
     { evaluator.commandUp (-((Integer)(yystack.valueAt (3-(2))))); };
   break;
     
 
   case 27:
   if (yyn == 27)
-    /* Line 350 of lalr1.java  */
-/* Line 114 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":114  */ /* lalr1.java:489  */
     { evaluator.commandFrame (((Integer)(yystack.valueAt (3-(2))))); };
   break;
     
 
   case 28:
   if (yyn == 28)
-    /* Line 350 of lalr1.java  */
-/* Line 116 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":116  */ /* lalr1.java:489  */
     { evaluator.commandSave (); 
                   showPrompt = false; };
   break;
@@ -593,8 +595,7 @@ public Object getLVal()
 
   case 29:
   if (yyn == 29)
-    /* Line 350 of lalr1.java  */
-/* Line 119 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":119  */ /* lalr1.java:489  */
     {  evaluator.commandSave (((String)(yystack.valueAt (4-(3)))), ((String)(yystack.valueAt (4-(4)))));
                    showPrompt = false; };
   break;
@@ -602,16 +603,14 @@ public Object getLVal()
 
   case 30:
   if (yyn == 30)
-    /* Line 350 of lalr1.java  */
-/* Line 122 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":122  */ /* lalr1.java:489  */
     { evaluator.commandPtype (((String)(yystack.valueAt (2-(2))))); };
   break;
     
 
   case 31:
   if (yyn == 31)
-    /* Line 350 of lalr1.java  */
-/* Line 124 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":124  */ /* lalr1.java:489  */
     { evaluator.commandPrint (((String)(yystack.valueAt (3-(3)))), evaluator.EXAMINE, ' ', true);
                   showPrompt = false; };
   break;
@@ -619,8 +618,7 @@ public Object getLVal()
 
   case 32:
   if (yyn == 32)
-    /* Line 350 of lalr1.java  */
-/* Line 127 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":127  */ /* lalr1.java:489  */
     { evaluator.commandPrint (((String)(yystack.valueAt (5-(5)))), printDepth (((String)(yystack.valueAt (5-(4))))), 
                                           printFormat (((String)(yystack.valueAt (5-(4))))), true);
                   showPrompt = false; };
@@ -629,8 +627,7 @@ public Object getLVal()
 
   case 33:
   if (yyn == 33)
-    /* Line 350 of lalr1.java  */
-/* Line 131 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":131  */ /* lalr1.java:489  */
     { evaluator.commandPrint (((String)(yystack.valueAt (5-(5)))), ((Integer)(yystack.valueAt (5-(4)))), ' ', true);
                   showPrompt = false; };
   break;
@@ -638,112 +635,98 @@ public Object getLVal()
 
   case 34:
   if (yyn == 34)
-    /* Line 350 of lalr1.java  */
-/* Line 134 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":134  */ /* lalr1.java:489  */
     { evaluator.commandSet ("print", "compressed", 0); };
   break;
     
 
   case 35:
   if (yyn == 35)
-    /* Line 350 of lalr1.java  */
-/* Line 136 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":136  */ /* lalr1.java:489  */
     { evaluator.commandSet ("print", "pretty", 0); };
   break;
     
 
   case 36:
   if (yyn == 36)
-    /* Line 350 of lalr1.java  */
-/* Line 138 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":138  */ /* lalr1.java:489  */
     { evaluator.commandSet ("print", "elements", ((Integer)(yystack.valueAt (4-(4))))); };
   break;
     
 
   case 37:
   if (yyn == 37)
-    /* Line 350 of lalr1.java  */
-/* Line 140 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":140  */ /* lalr1.java:489  */
     { evaluator.commandSet ("print", "max-frames", ((Integer)(yystack.valueAt (4-(4))))); };
   break;
     
 
   case 38:
   if (yyn == 38)
-    /* Line 350 of lalr1.java  */
-/* Line 142 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":142  */ /* lalr1.java:489  */
     { evaluator.commandSet ("print", "return", 1); };
   break;
     
 
   case 39:
   if (yyn == 39)
-    /* Line 350 of lalr1.java  */
-/* Line 144 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":144  */ /* lalr1.java:489  */
     { evaluator.commandSet ("print", "return", 0); };
   break;
     
 
   case 40:
   if (yyn == 40)
-    /* Line 350 of lalr1.java  */
-/* Line 146 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":146  */ /* lalr1.java:489  */
     { evaluator.commandSet ("print", "prefix", 0); };
   break;
     
 
   case 41:
   if (yyn == 41)
-    /* Line 350 of lalr1.java  */
-/* Line 148 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":148  */ /* lalr1.java:489  */
     { evaluator.commandSet ("print", "prefix", 1); };
   break;
     
 
   case 42:
   if (yyn == 42)
-    /* Line 350 of lalr1.java  */
-/* Line 150 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":150  */ /* lalr1.java:489  */
     { evaluator.commandSet ("print", "prefix", 2); };
   break;
     
 
   case 43:
   if (yyn == 43)
-    /* Line 350 of lalr1.java  */
-/* Line 152 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":152  */ /* lalr1.java:489  */
     { evaluator.commandSet ("stdin", "on", 0); };
   break;
     
 
   case 44:
   if (yyn == 44)
-    /* Line 350 of lalr1.java  */
-/* Line 154 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":154  */ /* lalr1.java:489  */
     { evaluator.commandSet ("stdin", "off", 0); };
   break;
     
 
   case 45:
   if (yyn == 45)
-    /* Line 350 of lalr1.java  */
-/* Line 156 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":156  */ /* lalr1.java:489  */
     { evaluator.commandPrint (((String)(yystack.valueAt (3-(3)))), evaluator.PRINT, ' ', false); };
   break;
     
 
   case 46:
   if (yyn == 46)
-    /* Line 350 of lalr1.java  */
-/* Line 158 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":158  */ /* lalr1.java:489  */
     { evaluator.commandSet ("history", "save", ((Integer)(yystack.valueAt (3-(3))))); };
   break;
     
 
   case 47:
   if (yyn == 47)
-    /* Line 350 of lalr1.java  */
-/* Line 160 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":160  */ /* lalr1.java:489  */
     { evaluator.commandPrint (((String)(yystack.valueAt (4-(2)))) + " " + ((String)(yystack.valueAt (4-(4)))),
                                           evaluator.PRINT, ' ', false); };
   break;
@@ -751,272 +734,238 @@ public Object getLVal()
 
   case 48:
   if (yyn == 48)
-    /* Line 350 of lalr1.java  */
-/* Line 163 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":163  */ /* lalr1.java:489  */
     { evaluator.commandThread (((String)(yystack.valueAt (3-(2))))); };
   break;
     
 
   case 49:
   if (yyn == 49)
-    /* Line 350 of lalr1.java  */
-/* Line 165 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":165  */ /* lalr1.java:489  */
     { evaluator.commandThreadGroup (((String)(yystack.valueAt (3-(2))))); };
   break;
     
 
   case 50:
   if (yyn == 50)
-    /* Line 350 of lalr1.java  */
-/* Line 167 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":167  */ /* lalr1.java:489  */
     { evaluator.commandSuspend (); };
   break;
     
 
   case 51:
   if (yyn == 51)
-    /* Line 350 of lalr1.java  */
-/* Line 169 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":169  */ /* lalr1.java:489  */
     { evaluator.commandSuspend (); };
   break;
     
 
   case 52:
   if (yyn == 52)
-    /* Line 350 of lalr1.java  */
-/* Line 171 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":171  */ /* lalr1.java:489  */
     { evaluator.commandSuspend (); };
   break;
     
 
   case 53:
   if (yyn == 53)
-    /* Line 350 of lalr1.java  */
-/* Line 173 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":173  */ /* lalr1.java:489  */
     { evaluator.commandSuspend (((List)(yystack.valueAt (3-(2))))); };
   break;
     
 
   case 54:
   if (yyn == 54)
-    /* Line 350 of lalr1.java  */
-/* Line 175 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":175  */ /* lalr1.java:489  */
     { evaluator.commandResume (); };
   break;
     
 
   case 55:
   if (yyn == 55)
-    /* Line 350 of lalr1.java  */
-/* Line 177 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":177  */ /* lalr1.java:489  */
     { evaluator.commandResume (((List)(yystack.valueAt (3-(2))))); };
   break;
     
 
   case 56:
   if (yyn == 56)
-    /* Line 350 of lalr1.java  */
-/* Line 179 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":179  */ /* lalr1.java:489  */
     { evaluator.commandKill (((String)(yystack.valueAt (3-(2)))), ((String)(yystack.valueAt (3-(3))))); };
   break;
     
 
   case 57:
   if (yyn == 57)
-    /* Line 350 of lalr1.java  */
-/* Line 181 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":181  */ /* lalr1.java:489  */
     { evaluator.commandInterrupt (); };
   break;
     
 
   case 58:
   if (yyn == 58)
-    /* Line 350 of lalr1.java  */
-/* Line 183 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":183  */ /* lalr1.java:489  */
     { evaluator.commandInterrupt (((String)(yystack.valueAt (3-(2))))); };
   break;
     
 
   case 59:
   if (yyn == 59)
-    /* Line 350 of lalr1.java  */
-/* Line 185 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":185  */ /* lalr1.java:489  */
     { evaluator.commandBreak (); };
   break;
     
 
   case 60:
   if (yyn == 60)
-    /* Line 350 of lalr1.java  */
-/* Line 187 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":187  */ /* lalr1.java:489  */
     { evaluator.commandBreak (((BreakpointSpec)(yystack.valueAt (3-(3))))); };
   break;
     
 
   case 61:
   if (yyn == 61)
-    /* Line 350 of lalr1.java  */
-/* Line 189 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":189  */ /* lalr1.java:489  */
     { evaluator.commandClear (((List)(yystack.valueAt (3-(3))))); };
   break;
     
 
   case 62:
   if (yyn == 62)
-    /* Line 350 of lalr1.java  */
-/* Line 191 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
-    { evaluator.commandCommand (reader, false); };
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":191  */ /* lalr1.java:489  */
+    { evaluator.commandCommand (false); };
   break;
     
 
   case 63:
   if (yyn == 63)
-    /* Line 350 of lalr1.java  */
-/* Line 193 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
-    { evaluator.commandCommand (((Integer)(yystack.valueAt (2-(2)))), reader, false); };
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":193  */ /* lalr1.java:489  */
+    { evaluator.commandCommand (((Integer)(yystack.valueAt (2-(2)))), false); };
   break;
     
 
   case 64:
   if (yyn == 64)
-    /* Line 350 of lalr1.java  */
-/* Line 195 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":195  */ /* lalr1.java:489  */
     { evaluator.commandCond (((String)(yystack.valueAt (5-(4))))); };
   break;
     
 
   case 65:
   if (yyn == 65)
-    /* Line 350 of lalr1.java  */
-/* Line 197 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":197  */ /* lalr1.java:489  */
     { evaluator.commandCond (((Integer)(yystack.valueAt (4-(2)))), ((String)(yystack.valueAt (4-(4))))); };
   break;
     
 
   case 66:
   if (yyn == 66)
-    /* Line 350 of lalr1.java  */
-/* Line 199 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":199  */ /* lalr1.java:489  */
     { evaluator.commandCatch (); };
   break;
     
 
   case 67:
   if (yyn == 67)
-    /* Line 350 of lalr1.java  */
-/* Line 201 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":201  */ /* lalr1.java:489  */
     { evaluator.commandCatch (((EventRequestSpec)(yystack.valueAt (3-(3))))); };
   break;
     
 
   case 68:
   if (yyn == 68)
-    /* Line 350 of lalr1.java  */
-/* Line 203 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":203  */ /* lalr1.java:489  */
     { evaluator.commandPass (); };
   break;
     
 
   case 69:
   if (yyn == 69)
-    /* Line 350 of lalr1.java  */
-/* Line 205 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":205  */ /* lalr1.java:489  */
     { evaluator.commandPass (((EventRequestSpec)(yystack.valueAt (3-(3))))); };
   break;
     
 
   case 70:
   if (yyn == 70)
-    /* Line 350 of lalr1.java  */
-/* Line 207 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":207  */ /* lalr1.java:489  */
     { evaluator.commandWatch (((List)(yystack.valueAt (2-(2))))); };
   break;
     
 
   case 71:
   if (yyn == 71)
-    /* Line 350 of lalr1.java  */
-/* Line 209 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":209  */ /* lalr1.java:489  */
     { evaluator.commandUnwatch (); };
   break;
     
 
   case 72:
   if (yyn == 72)
-    /* Line 350 of lalr1.java  */
-/* Line 211 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":211  */ /* lalr1.java:489  */
     { evaluator.commandUnwatch (((List)(yystack.valueAt (2-(2))))); };
   break;
     
 
   case 73:
   if (yyn == 73)
-    /* Line 350 of lalr1.java  */
-/* Line 213 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":213  */ /* lalr1.java:489  */
     { evaluator.commandDelete (); };
   break;
     
 
   case 74:
   if (yyn == 74)
-    /* Line 350 of lalr1.java  */
-/* Line 215 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":215  */ /* lalr1.java:489  */
     { evaluator.commandDelete (((List)(yystack.valueAt (2-(2))))); };
   break;
     
 
   case 75:
   if (yyn == 75)
-    /* Line 350 of lalr1.java  */
-/* Line 217 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":217  */ /* lalr1.java:489  */
     { evaluator.commandEnable (((Integer)(yystack.valueAt (2-(2)))), false); };
   break;
     
 
   case 76:
   if (yyn == 76)
-    /* Line 350 of lalr1.java  */
-/* Line 219 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":219  */ /* lalr1.java:489  */
     { evaluator.commandEnable (((Integer)(yystack.valueAt (2-(2)))), true); };
   break;
     
 
   case 77:
   if (yyn == 77)
-    /* Line 350 of lalr1.java  */
-/* Line 221 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":221  */ /* lalr1.java:489  */
     { evaluator.commandIgnore (((Integer)(yystack.valueAt (3-(2)))), ((Integer)(yystack.valueAt (3-(3))))); };
   break;
     
 
   case 78:
   if (yyn == 78)
-    /* Line 350 of lalr1.java  */
-/* Line 223 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":223  */ /* lalr1.java:489  */
     { evaluator.commandTrace (((Integer)(yystack.valueAt (4-(3)))), null); };
   break;
     
 
   case 79:
   if (yyn == 79)
-    /* Line 350 of lalr1.java  */
-/* Line 225 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":225  */ /* lalr1.java:489  */
     { evaluator.commandTrace (((Integer)(yystack.valueAt (5-(3)))), ((String)(yystack.valueAt (5-(5))))); };
   break;
     
 
   case 80:
   if (yyn == 80)
-    /* Line 350 of lalr1.java  */
-/* Line 227 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":227  */ /* lalr1.java:489  */
     { evaluator.commandUntrace (); };
   break;
     
 
   case 81:
   if (yyn == 81)
-    /* Line 350 of lalr1.java  */
-/* Line 229 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":229  */ /* lalr1.java:489  */
     { evaluator.commandStep (StepRequest.STEP_LINE, 
                                          StepRequest.STEP_OUT, 1); };
   break;
@@ -1024,8 +973,7 @@ public Object getLVal()
 
   case 82:
   if (yyn == 82)
-    /* Line 350 of lalr1.java  */
-/* Line 232 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":232  */ /* lalr1.java:489  */
     { evaluator.commandStep (StepRequest.STEP_LINE, 
                                          StepRequest.STEP_INTO, ((Integer)(yystack.valueAt (3-(3))))); };
   break;
@@ -1033,8 +981,7 @@ public Object getLVal()
 
   case 83:
   if (yyn == 83)
-    /* Line 350 of lalr1.java  */
-/* Line 235 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":235  */ /* lalr1.java:489  */
     { evaluator.commandStep (StepRequest.STEP_LINE, 
                                          StepRequest.STEP_OUT, 1); };
   break;
@@ -1042,8 +989,7 @@ public Object getLVal()
 
   case 84:
   if (yyn == 84)
-    /* Line 350 of lalr1.java  */
-/* Line 238 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":238  */ /* lalr1.java:489  */
     { evaluator.commandStep (StepRequest.STEP_LINE, 
                                          StepRequest.STEP_OVER, ((Integer)(yystack.valueAt (3-(3))))); };
   break;
@@ -1051,8 +997,7 @@ public Object getLVal()
 
   case 85:
   if (yyn == 85)
-    /* Line 350 of lalr1.java  */
-/* Line 241 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":241  */ /* lalr1.java:489  */
     { evaluator.commandStep (StepRequest.STEP_MIN, 
                                          StepRequest.STEP_INTO, ((Integer)(yystack.valueAt (3-(3))))); };
   break;
@@ -1060,56 +1005,49 @@ public Object getLVal()
 
   case 86:
   if (yyn == 86)
-    /* Line 350 of lalr1.java  */
-/* Line 244 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":244  */ /* lalr1.java:489  */
     { evaluator.commandCont (); };
   break;
     
 
   case 87:
   if (yyn == 87)
-    /* Line 350 of lalr1.java  */
-/* Line 246 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":246  */ /* lalr1.java:489  */
     { evaluator.commandExclude (); };
   break;
     
 
   case 88:
   if (yyn == 88)
-    /* Line 350 of lalr1.java  */
-/* Line 248 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":248  */ /* lalr1.java:489  */
     { evaluator.commandExcludeClear (); };
   break;
     
 
   case 89:
   if (yyn == 89)
-    /* Line 350 of lalr1.java  */
-/* Line 250 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":250  */ /* lalr1.java:489  */
     { evaluator.commandExcludeReset (); };
   break;
     
 
   case 90:
   if (yyn == 90)
-    /* Line 350 of lalr1.java  */
-/* Line 252 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":252  */ /* lalr1.java:489  */
     { evaluator.commandExcludeAdd (((List)(yystack.valueAt (4-(4))))); };
   break;
     
 
   case 91:
   if (yyn == 91)
-    /* Line 350 of lalr1.java  */
-/* Line 254 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":254  */ /* lalr1.java:489  */
     { evaluator.commandExcludeSet (((List)(yystack.valueAt (3-(3))))); };
   break;
     
 
   case 92:
   if (yyn == 92)
-    /* Line 350 of lalr1.java  */
-/* Line 256 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":256  */ /* lalr1.java:489  */
     { evaluator.commandLock (((String)(yystack.valueAt (3-(3))))); 
                   showPrompt = false; };
   break;
@@ -1117,8 +1055,7 @@ public Object getLVal()
 
   case 93:
   if (yyn == 93)
-    /* Line 350 of lalr1.java  */
-/* Line 259 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":259  */ /* lalr1.java:489  */
     { evaluator.commandEnableGC (((String)(yystack.valueAt (3-(3)))), false); 
                   showPrompt = false; };
   break;
@@ -1126,8 +1063,7 @@ public Object getLVal()
 
   case 94:
   if (yyn == 94)
-    /* Line 350 of lalr1.java  */
-/* Line 262 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":262  */ /* lalr1.java:489  */
     { evaluator.commandEnableGC (((String)(yystack.valueAt (3-(3)))), true); 
                   showPrompt = false; };
   break;
@@ -1135,376 +1071,329 @@ public Object getLVal()
 
   case 95:
   if (yyn == 95)
-    /* Line 350 of lalr1.java  */
-/* Line 265 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":265  */ /* lalr1.java:489  */
     { evaluator.commandLocals (); };
   break;
     
 
   case 96:
   if (yyn == 96)
-    /* Line 350 of lalr1.java  */
-/* Line 267 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":267  */ /* lalr1.java:489  */
     { evaluator.commandClasses (); };
   break;
     
 
   case 97:
   if (yyn == 97)
-    /* Line 350 of lalr1.java  */
-/* Line 269 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":269  */ /* lalr1.java:489  */
     { evaluator.commandClass (((String)(yystack.valueAt (6-(5)))), false); };
   break;
     
 
   case 98:
   if (yyn == 98)
-    /* Line 350 of lalr1.java  */
-/* Line 271 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":271  */ /* lalr1.java:489  */
     { evaluator.commandClass (((String)(yystack.valueAt (7-(5)))), true); };
   break;
     
 
   case 99:
   if (yyn == 99)
-    /* Line 350 of lalr1.java  */
-/* Line 273 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":273  */ /* lalr1.java:489  */
     { evaluator.commandMethods (((String)(yystack.valueAt (4-(4))))); };
   break;
     
 
   case 100:
   if (yyn == 100)
-    /* Line 350 of lalr1.java  */
-/* Line 275 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":275  */ /* lalr1.java:489  */
     { evaluator.commandFields (((String)(yystack.valueAt (4-(4))))); };
   break;
     
 
   case 101:
   if (yyn == 101)
-    /* Line 350 of lalr1.java  */
-/* Line 277 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":277  */ /* lalr1.java:489  */
     { evaluator.commandThreads (); };
   break;
     
 
   case 102:
   if (yyn == 102)
-    /* Line 350 of lalr1.java  */
-/* Line 279 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":279  */ /* lalr1.java:489  */
     { evaluator.commandThreads (((String)(yystack.valueAt (4-(4))))); };
   break;
     
 
   case 103:
   if (yyn == 103)
-    /* Line 350 of lalr1.java  */
-/* Line 281 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":281  */ /* lalr1.java:489  */
     { evaluator.commandThreadGroups (); };
   break;
     
 
   case 104:
   if (yyn == 104)
-    /* Line 350 of lalr1.java  */
-/* Line 283 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":283  */ /* lalr1.java:489  */
     { evaluator.commandClasspathInfo (); };
   break;
     
 
   case 105:
   if (yyn == 105)
-    /* Line 350 of lalr1.java  */
-/* Line 285 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":285  */ /* lalr1.java:489  */
     { evaluator.commandThreadlocks (); };
   break;
     
 
   case 106:
   if (yyn == 106)
-    /* Line 350 of lalr1.java  */
-/* Line 287 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":287  */ /* lalr1.java:489  */
     { evaluator.commandThreadlocksAll (); };
   break;
     
 
   case 107:
   if (yyn == 107)
-    /* Line 350 of lalr1.java  */
-/* Line 289 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":289  */ /* lalr1.java:489  */
     { evaluator.commandThreadlocks (((String)(yystack.valueAt (4-(4))))); };
   break;
     
 
   case 108:
   if (yyn == 108)
-    /* Line 350 of lalr1.java  */
-/* Line 291 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":291  */ /* lalr1.java:489  */
     { evaluator.commandInfoRun (); };
   break;
     
 
   case 109:
   if (yyn == 109)
-    /* Line 350 of lalr1.java  */
-/* Line 293 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":293  */ /* lalr1.java:489  */
     { evaluator.listEventSpecs (BreakpointSpec.EXMPL); };
   break;
     
 
   case 110:
   if (yyn == 110)
-    /* Line 350 of lalr1.java  */
-/* Line 295 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":295  */ /* lalr1.java:489  */
     { evaluator.listEventSpecs (WatchpointSpec.EXMPL); };
   break;
     
 
   case 111:
   if (yyn == 111)
-    /* Line 350 of lalr1.java  */
-/* Line 297 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":297  */ /* lalr1.java:489  */
     { evaluator.listEventSpecs (ExceptionSpec.EXMPL); };
   break;
     
 
   case 112:
   if (yyn == 112)
-    /* Line 350 of lalr1.java  */
-/* Line 299 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":299  */ /* lalr1.java:489  */
     { evaluator.commandWhere (((String)(yystack.valueAt (4-(3)))), false); };
   break;
     
 
   case 113:
   if (yyn == 113)
-    /* Line 350 of lalr1.java  */
-/* Line 301 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":301  */ /* lalr1.java:489  */
     { evaluator.commandWhere (null, false); };
   break;
     
 
   case 114:
   if (yyn == 114)
-    /* Line 350 of lalr1.java  */
-/* Line 303 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":303  */ /* lalr1.java:489  */
     { evaluator.commandWhereAll (false); };
   break;
     
 
   case 115:
   if (yyn == 115)
-    /* Line 350 of lalr1.java  */
-/* Line 305 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":305  */ /* lalr1.java:489  */
     { evaluator.commandLoadclass (((String)(yystack.valueAt (4-(4))))); };
   break;
     
 
   case 116:
   if (yyn == 116)
-    /* Line 350 of lalr1.java  */
-/* Line 307 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":307  */ /* lalr1.java:489  */
     { evaluator.commandClasspath (); };
   break;
     
 
   case 117:
   if (yyn == 117)
-    /* Line 350 of lalr1.java  */
-/* Line 309 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":309  */ /* lalr1.java:489  */
     { evaluator.commandClasspath (((String)(yystack.valueAt (3-(3))))); };
   break;
     
 
   case 118:
   if (yyn == 118)
-    /* Line 350 of lalr1.java  */
-/* Line 311 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":311  */ /* lalr1.java:489  */
     { evaluator.commandUse (); };
   break;
     
 
   case 119:
   if (yyn == 119)
-    /* Line 350 of lalr1.java  */
-/* Line 313 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":313  */ /* lalr1.java:489  */
     { evaluator.commandUse (((String)(yystack.valueAt (3-(3))))); };
   break;
     
 
   case 120:
   if (yyn == 120)
-    /* Line 350 of lalr1.java  */
-/* Line 315 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":315  */ /* lalr1.java:489  */
     { evaluator.commandMonitor (); };
   break;
     
 
   case 121:
   if (yyn == 121)
-    /* Line 350 of lalr1.java  */
-/* Line 317 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":317  */ /* lalr1.java:489  */
     { evaluator.commandMonitor (((String)(yystack.valueAt (3-(3))))); };
   break;
     
 
   case 122:
   if (yyn == 122)
-    /* Line 350 of lalr1.java  */
-/* Line 319 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":319  */ /* lalr1.java:489  */
     { evaluator.commandUnmonitor (((Integer)(yystack.valueAt (2-(2))))); };
   break;
     
 
   case 123:
   if (yyn == 123)
-    /* Line 350 of lalr1.java  */
-/* Line 321 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":321  */ /* lalr1.java:489  */
     { evaluator.commandRead (((String)(yystack.valueAt (3-(3))))); };
   break;
     
 
   case 124:
   if (yyn == 124)
-    /* Line 350 of lalr1.java  */
-/* Line 323 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":323  */ /* lalr1.java:489  */
     { evaluator.commandList (-1, null); };
   break;
     
 
   case 125:
   if (yyn == 125)
-    /* Line 350 of lalr1.java  */
-/* Line 325 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":325  */ /* lalr1.java:489  */
     { evaluator.commandList (((Integer)(yystack.valueAt (2-(2)))), null); };
   break;
     
 
   case 126:
   if (yyn == 126)
-    /* Line 350 of lalr1.java  */
-/* Line 327 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":327  */ /* lalr1.java:489  */
     { evaluator.commandList (-1, ((String)(yystack.valueAt (2-(2))))); };
   break;
     
 
   case 127:
   if (yyn == 127)
-    /* Line 350 of lalr1.java  */
-/* Line 329 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":329  */ /* lalr1.java:489  */
     { evaluator.commandLines (((String)(yystack.valueAt (3-(3)))), null); };
   break;
     
 
   case 128:
   if (yyn == 128)
-    /* Line 350 of lalr1.java  */
-/* Line 331 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":331  */ /* lalr1.java:489  */
     { evaluator.commandLines (((String)(yystack.valueAt (4-(3)))), ((String)(yystack.valueAt (4-(4))))); };
   break;
     
 
   case 129:
   if (yyn == 129)
-    /* Line 350 of lalr1.java  */
-/* Line 333 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":333  */ /* lalr1.java:489  */
     { evaluator.commandBytecodes (((String)(yystack.valueAt (5-(4)))), ((String)(yystack.valueAt (5-(5))))); };
   break;
     
 
   case 130:
   if (yyn == 130)
-    /* Line 350 of lalr1.java  */
-/* Line 335 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":335  */ /* lalr1.java:489  */
     { evaluator.commandBytecodes (((String)(yystack.valueAt (6-(4)))), ((String)(yystack.valueAt (6-(6))))); };
   break;
     
 
   case 131:
   if (yyn == 131)
-    /* Line 350 of lalr1.java  */
-/* Line 337 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":337  */ /* lalr1.java:489  */
     { evaluator.commandVersion (GJDB.progname, Version.value); };
   break;
     
 
   case 132:
   if (yyn == 132)
-    /* Line 350 of lalr1.java  */
-/* Line 339 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":339  */ /* lalr1.java:489  */
     { evaluator.commandQuit (); };
   break;
     
 
   case 133:
   if (yyn == 133)
-    /* Line 350 of lalr1.java  */
-/* Line 341 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":341  */ /* lalr1.java:489  */
     { GJDB.help (); };
   break;
     
 
   case 134:
   if (yyn == 134)
-    /* Line 350 of lalr1.java  */
-/* Line 343 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":343  */ /* lalr1.java:489  */
     { GJDB.help (((String)(yystack.valueAt (2-(2))))); };
   break;
     
 
   case 135:
   if (yyn == 135)
-    /* Line 350 of lalr1.java  */
-/* Line 345 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
-    { evaluator.commandRepeat (((Integer)(yystack.valueAt (3-(1)))), ((String)(yystack.valueAt (3-(3)))), reader); };
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":345  */ /* lalr1.java:489  */
+    { evaluator.commandRepeat (((Integer)(yystack.valueAt (3-(1)))), ((String)(yystack.valueAt (3-(3))))); };
   break;
     
 
   case 136:
   if (yyn == 136)
-    /* Line 350 of lalr1.java  */
-/* Line 349 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":349  */ /* lalr1.java:489  */
     { yyval = convertInt (((String)(yystack.valueAt (1-(1))))); };
   break;
     
 
   case 137:
   if (yyn == 137)
-    /* Line 350 of lalr1.java  */
-/* Line 352 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":352  */ /* lalr1.java:489  */
     { yyval = 1; };
   break;
     
 
   case 138:
   if (yyn == 138)
-    /* Line 350 of lalr1.java  */
-/* Line 353 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":353  */ /* lalr1.java:489  */
     { yyval = convertInt (((String)(yystack.valueAt (1-(1))))); };
   break;
     
 
   case 139:
   if (yyn == 139)
-    /* Line 350 of lalr1.java  */
-/* Line 357 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":357  */ /* lalr1.java:489  */
     { yyval = -1; };
   break;
     
 
   case 140:
   if (yyn == 140)
-    /* Line 350 of lalr1.java  */
-/* Line 358 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":358  */ /* lalr1.java:489  */
     { yyval = convertInt (((String)(yystack.valueAt (1-(1))))); };
   break;
     
 
   case 141:
   if (yyn == 141)
-    /* Line 350 of lalr1.java  */
-/* Line 362 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":362  */ /* lalr1.java:489  */
     { ArrayList<Integer> L = new ArrayList<Integer> (); 
                           yyval = L; L.add (((Integer)(yystack.valueAt (1-(1))))); };
   break;
@@ -1512,16 +1401,14 @@ public Object getLVal()
 
   case 142:
   if (yyn == 142)
-    /* Line 350 of lalr1.java  */
-/* Line 365 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":365  */ /* lalr1.java:489  */
     { yyval = ((List)(yystack.valueAt (2-(1)))); ((List)(yystack.valueAt (2-(1)))).add (((Integer)(yystack.valueAt (2-(2))))); };
   break;
     
 
   case 145:
   if (yyn == 145)
-    /* Line 350 of lalr1.java  */
-/* Line 374 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":374  */ /* lalr1.java:489  */
     { ArrayList<String> v = new ArrayList<String> ();
                           v.add (((String)(yystack.valueAt (1-(1))))); 
                           yyval = v; };
@@ -1530,16 +1417,14 @@ public Object getLVal()
 
   case 146:
   if (yyn == 146)
-    /* Line 350 of lalr1.java  */
-/* Line 378 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":378  */ /* lalr1.java:489  */
     { yyval = ((List)(yystack.valueAt (2-(1)))); ((List)(yystack.valueAt (2-(1)))).add (((String)(yystack.valueAt (2-(2))))); };
   break;
     
 
   case 150:
   if (yyn == 150)
-    /* Line 350 of lalr1.java  */
-/* Line 392 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":392  */ /* lalr1.java:489  */
     { CommandLineSpec spec = ((CommandLineSpec)(yystack.valueAt (1-(0))));
                           spec.cmdArgs += " " + shellConvert (((String)(yystack.valueAt (1-(1))))); 
                           yyval = spec; };
@@ -1548,8 +1433,7 @@ public Object getLVal()
 
   case 151:
   if (yyn == 151)
-    /* Line 350 of lalr1.java  */
-/* Line 396 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":396  */ /* lalr1.java:489  */
     { CommandLineSpec spec = ((CommandLineSpec)(yystack.valueAt (3-(2))));
                           spec.cmdArgs = " " + shellConvert (((String)(yystack.valueAt (3-(1))))) 
                                          + spec.cmdArgs; 
@@ -1559,24 +1443,21 @@ public Object getLVal()
 
   case 152:
   if (yyn == 152)
-    /* Line 350 of lalr1.java  */
-/* Line 404 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":404  */ /* lalr1.java:489  */
     { yyval = ((CommandLineSpec)(yystack.valueAt (1-(0)))); };
   break;
     
 
   case 153:
   if (yyn == 153)
-    /* Line 350 of lalr1.java  */
-/* Line 405 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":405  */ /* lalr1.java:489  */
     { yyval = ((Object)(yystack.valueAt (2-(1)))); };
   break;
     
 
   case 154:
   if (yyn == 154)
-    /* Line 350 of lalr1.java  */
-/* Line 411 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":411  */ /* lalr1.java:489  */
     { CommandLineSpec spec = ((CommandLineSpec)(yystack.valueAt (2-(0))));
                           if (spec.inFile != null)
                               throw ERROR ("Ambiguous input redirection");
@@ -1587,8 +1468,7 @@ public Object getLVal()
 
   case 155:
   if (yyn == 155)
-    /* Line 350 of lalr1.java  */
-/* Line 417 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":417  */ /* lalr1.java:489  */
     { CommandLineSpec spec = ((CommandLineSpec)(yystack.valueAt (2-(0))));
                           if (spec.outFile != null)
                               throw ERROR ("Ambiguous output redirection");
@@ -1599,8 +1479,7 @@ public Object getLVal()
 
   case 156:
   if (yyn == 156)
-    /* Line 350 of lalr1.java  */
-/* Line 423 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":423  */ /* lalr1.java:489  */
     { CommandLineSpec spec = ((CommandLineSpec)(yystack.valueAt (3-(0))));
                           if (spec.outFile != null)
                               throw ERROR ("Ambiguous output redirection");
@@ -1611,40 +1490,35 @@ public Object getLVal()
 
   case 157:
   if (yyn == 157)
-    /* Line 350 of lalr1.java  */
-/* Line 431 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":431  */ /* lalr1.java:489  */
     { yyval = ""; };
   break;
     
 
   case 159:
   if (yyn == 159)
-    /* Line 350 of lalr1.java  */
-/* Line 436 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":436  */ /* lalr1.java:489  */
     { yyval = null; };
   break;
     
 
   case 160:
   if (yyn == 160)
-    /* Line 350 of lalr1.java  */
-/* Line 438 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":438  */ /* lalr1.java:489  */
     { yyval = ((List)(yystack.valueAt (3-(2)))); };
   break;
     
 
   case 161:
   if (yyn == 161)
-    /* Line 350 of lalr1.java  */
-/* Line 439 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":439  */ /* lalr1.java:489  */
     { yyval = Collections.EMPTY_LIST; };
   break;
     
 
   case 162:
   if (yyn == 162)
-    /* Line 350 of lalr1.java  */
-/* Line 443 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":443  */ /* lalr1.java:489  */
     { ArrayList<String> L = new ArrayList<String> (); 
                           yyval = L;
                           L.add (((String)(yystack.valueAt (1-(1))))); };
@@ -1653,48 +1527,42 @@ public Object getLVal()
 
   case 163:
   if (yyn == 163)
-    /* Line 350 of lalr1.java  */
-/* Line 447 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":447  */ /* lalr1.java:489  */
     { yyval = ((List)(yystack.valueAt (3-(1)))); ((List)(yystack.valueAt (3-(1)))).add (((String)(yystack.valueAt (3-(3))))); };
   break;
     
 
   case 165:
   if (yyn == 165)
-    /* Line 350 of lalr1.java  */
-/* Line 452 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":452  */ /* lalr1.java:489  */
     { yyval = ((String)(yystack.valueAt (2-(1)))) + "[]"; };
   break;
     
 
   case 167:
   if (yyn == 167)
-    /* Line 350 of lalr1.java  */
-/* Line 457 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":457  */ /* lalr1.java:489  */
     { yyval = ((String)(yystack.valueAt (3-(1)))) + "." + ((String)(yystack.valueAt (3-(3)))); };
   break;
     
 
   case 168:
   if (yyn == 168)
-    /* Line 350 of lalr1.java  */
-/* Line 462 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":462  */ /* lalr1.java:489  */
     { yyval = createBreakpointSpec (((String)(yystack.valueAt (5-(1)))), ((String)(yystack.valueAt (5-(3)))), ((List)(yystack.valueAt (5-(4)))), ((String)(yystack.valueAt (5-(5))))); };
   break;
     
 
   case 169:
   if (yyn == 169)
-    /* Line 350 of lalr1.java  */
-/* Line 464 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":464  */ /* lalr1.java:489  */
     { yyval = createBreakpointSpec (((String)(yystack.valueAt (4-(1)))), ((Integer)(yystack.valueAt (4-(3)))), ((String)(yystack.valueAt (4-(4))))); };
   break;
     
 
   case 170:
   if (yyn == 170)
-    /* Line 350 of lalr1.java  */
-/* Line 469 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":469  */ /* lalr1.java:489  */
     { ArrayList<Object> L = new ArrayList<Object> ();
                yyval = L; 
                L.add (((BreakpointSpec)(yystack.valueAt (1-(1))))); };
@@ -1703,48 +1571,42 @@ public Object getLVal()
 
   case 171:
   if (yyn == 171)
-    /* Line 350 of lalr1.java  */
-/* Line 473 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":473  */ /* lalr1.java:489  */
     { yyval = ((List)(yystack.valueAt (2-(1)))); ((List)(yystack.valueAt (2-(1)))).add (((BreakpointSpec)(yystack.valueAt (2-(2))))); };
   break;
     
 
   case 172:
   if (yyn == 172)
-    /* Line 350 of lalr1.java  */
-/* Line 477 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":477  */ /* lalr1.java:489  */
     { yyval = createBreakpointSpec (((Integer)(yystack.valueAt (1-(1))))); };
   break;
     
 
   case 173:
   if (yyn == 173)
-    /* Line 350 of lalr1.java  */
-/* Line 479 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":479  */ /* lalr1.java:489  */
     { yyval = createBreakpointSpec (((String)(yystack.valueAt (4-(1)))), ((String)(yystack.valueAt (4-(3)))), ((List)(yystack.valueAt (4-(4)))), null); };
   break;
     
 
   case 174:
   if (yyn == 174)
-    /* Line 350 of lalr1.java  */
-/* Line 481 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":481  */ /* lalr1.java:489  */
     { yyval = createBreakpointSpec (((String)(yystack.valueAt (3-(1)))), ((Integer)(yystack.valueAt (3-(3)))), null); };
   break;
     
 
   case 175:
   if (yyn == 175)
-    /* Line 350 of lalr1.java  */
-/* Line 485 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":485  */ /* lalr1.java:489  */
     { yyval = "*." + ((String)(yystack.valueAt (3-(3)))); };
   break;
     
 
   case 177:
   if (yyn == 177)
-    /* Line 350 of lalr1.java  */
-/* Line 488 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":488  */ /* lalr1.java:489  */
     { if (((String)(yystack.valueAt (3-(1)))).endsWith (".0"))
                                       throw ERROR ("Bad class specification");
                                   yyval = ((String)(yystack.valueAt (3-(1)))) + "." + ((String)(yystack.valueAt (3-(3)))); };
@@ -1753,8 +1615,7 @@ public Object getLVal()
 
   case 178:
   if (yyn == 178)
-    /* Line 350 of lalr1.java  */
-/* Line 492 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":492  */ /* lalr1.java:489  */
     { if (((String)(yystack.valueAt (2-(1)))).endsWith (".0"))
                                       throw ERROR ("Bad class specification");
                                   yyval = ((String)(yystack.valueAt (2-(1)))) + ".0"; };
@@ -1763,8 +1624,7 @@ public Object getLVal()
 
   case 179:
   if (yyn == 179)
-    /* Line 350 of lalr1.java  */
-/* Line 499 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":499  */ /* lalr1.java:489  */
     { ArrayList<String> L = new ArrayList<String> ();
                           L.add (((String)(yystack.valueAt (1-(1))))); 
                           yyval = L;
@@ -1774,208 +1634,182 @@ public Object getLVal()
 
   case 180:
   if (yyn == 180)
-    /* Line 350 of lalr1.java  */
-/* Line 504 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":504  */ /* lalr1.java:489  */
     { yyval = ((List)(yystack.valueAt (3-(1)))); ((List)(yystack.valueAt (3-(1)))).add (((String)(yystack.valueAt (3-(3))))); };
   break;
     
 
   case 185:
   if (yyn == 185)
-    /* Line 350 of lalr1.java  */
-/* Line 515 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":515  */ /* lalr1.java:489  */
     { yyval = "*"; };
   break;
     
 
   case 186:
   if (yyn == 186)
-    /* Line 350 of lalr1.java  */
-/* Line 516 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":516  */ /* lalr1.java:489  */
     { yyval = ((String)(yystack.valueAt (3-(1)))) + "." + ((String)(yystack.valueAt (3-(3)))); };
   break;
     
 
   case 187:
   if (yyn == 187)
-    /* Line 350 of lalr1.java  */
-/* Line 517 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":517  */ /* lalr1.java:489  */
     { yyval = ((String)(yystack.valueAt (3-(1)))) + ".*"; };
   break;
     
 
   case 188:
   if (yyn == 188)
-    /* Line 350 of lalr1.java  */
-/* Line 521 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":521  */ /* lalr1.java:489  */
     { yyval = createExceptionSpec ("*." + ((String)(yystack.valueAt (3-(3))))); };
   break;
     
 
   case 189:
   if (yyn == 189)
-    /* Line 350 of lalr1.java  */
-/* Line 522 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":522  */ /* lalr1.java:489  */
     { yyval = createExceptionSpec (((String)(yystack.valueAt (1-(1))))); };
   break;
     
 
   case 190:
   if (yyn == 190)
-    /* Line 350 of lalr1.java  */
-/* Line 526 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":526  */ /* lalr1.java:489  */
     { yyval = null; };
   break;
     
 
   case 191:
   if (yyn == 191)
-    /* Line 350 of lalr1.java  */
-/* Line 528 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":528  */ /* lalr1.java:489  */
     { yyval = ((String)(yystack.valueAt (3-(3)))); };
   break;
     
 
   case 192:
   if (yyn == 192)
-    /* Line 350 of lalr1.java  */
-/* Line 533 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":533  */ /* lalr1.java:489  */
     { yyval = createWatchSpec (((Integer)(yystack.valueAt (6-(2)))), ((String)(yystack.valueAt (6-(3)))), ((String)(yystack.valueAt (6-(4)))), null, ((String)(yystack.valueAt (6-(6))))); };
   break;
     
 
   case 193:
   if (yyn == 193)
-    /* Line 350 of lalr1.java  */
-/* Line 536 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":536  */ /* lalr1.java:489  */
     { yyval = createWatchSpec (((Integer)(yystack.valueAt (9-(2)))), ((String)(yystack.valueAt (9-(3)))), null, ((String)(yystack.valueAt (9-(5)))), ((String)(yystack.valueAt (9-(9))))); };
   break;
     
 
   case 194:
   if (yyn == 194)
-    /* Line 350 of lalr1.java  */
-/* Line 540 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":540  */ /* lalr1.java:489  */
     { yyval = ""; };
   break;
     
 
   case 195:
   if (yyn == 195)
-    /* Line 350 of lalr1.java  */
-/* Line 541 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":541  */ /* lalr1.java:489  */
     { yyval = "all"; };
   break;
     
 
   case 196:
   if (yyn == 196)
-    /* Line 350 of lalr1.java  */
-/* Line 542 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":542  */ /* lalr1.java:489  */
     { yyval = "access"; };
   break;
     
 
   case 197:
   if (yyn == 197)
-    /* Line 350 of lalr1.java  */
-/* Line 546 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":546  */ /* lalr1.java:489  */
     { yyval = EventRequest.SUSPEND_ALL; };
   break;
     
 
   case 198:
   if (yyn == 198)
-    /* Line 350 of lalr1.java  */
-/* Line 547 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":547  */ /* lalr1.java:489  */
     { yyval = EventRequest.SUSPEND_NONE; };
   break;
     
 
   case 199:
   if (yyn == 199)
-    /* Line 350 of lalr1.java  */
-/* Line 548 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":548  */ /* lalr1.java:489  */
     { yyval = EventRequest.SUSPEND_EVENT_THREAD; };
   break;
     
 
   case 200:
   if (yyn == 200)
-    /* Line 350 of lalr1.java  */
-/* Line 553 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":553  */ /* lalr1.java:489  */
     { yyval = ((String)(yystack.valueAt (2-(2)))); };
   break;
     
 
   case 201:
   if (yyn == 201)
-    /* Line 350 of lalr1.java  */
-/* Line 557 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":557  */ /* lalr1.java:489  */
     { yyval = ((Object)(yystack.valueAt (0-(-1)))); };
   break;
     
 
   case 202:
   if (yyn == 202)
-    /* Line 350 of lalr1.java  */
-/* Line 562 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":562  */ /* lalr1.java:489  */
     { lexer.toDefaultMode (); };
   break;
     
 
   case 203:
   if (yyn == 203)
-    /* Line 350 of lalr1.java  */
-/* Line 565 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":565  */ /* lalr1.java:489  */
     { lexer.toBreakMode (); };
   break;
     
 
   case 204:
   if (yyn == 204)
-    /* Line 350 of lalr1.java  */
-/* Line 569 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":569  */ /* lalr1.java:489  */
     { lexer.toPrintMode (); };
   break;
     
 
   case 205:
   if (yyn == 205)
-    /* Line 350 of lalr1.java  */
-/* Line 573 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":573  */ /* lalr1.java:489  */
     { evaluator.checkConnect (); };
   break;
     
 
   case 206:
   if (yyn == 206)
-    /* Line 350 of lalr1.java  */
-/* Line 577 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":577  */ /* lalr1.java:489  */
     { lexer.toBalancedCollectMode (); };
   break;
     
 
   case 207:
   if (yyn == 207)
-    /* Line 350 of lalr1.java  */
-/* Line 581 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":581  */ /* lalr1.java:489  */
     { lexer.toCollectMode (); };
   break;
     
 
   case 208:
   if (yyn == 208)
-    /* Line 350 of lalr1.java  */
-/* Line 585 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+    /* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":585  */ /* lalr1.java:489  */
     { lexer.toRunArgsMode (); };
   break;
     
 
 
-/* Line 350 of lalr1.java  */
-/* Line 1978 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.java"  */
-	default: break;
+/* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.java":1812  */ /* lalr1.java:489  */
+        default: break;
       }
 
     yy_symbol_print ("-> $$ =", yyr1_[yyn], yyval);
@@ -1984,65 +1818,26 @@ public Object getLVal()
     yylen = 0;
 
     /* Shift the result of the reduction.  */
-    yyn = yyr1_[yyn];
-    int yystate = yypgoto_[yyn - yyntokens_] + yystack.stateAt (0);
-    if (0 <= yystate && yystate <= yylast_
-	&& yycheck_[yystate] == yystack.stateAt (0))
-      yystate = yytable_[yystate];
-    else
-      yystate = yydefgoto_[yyn - yyntokens_];
-
+    int yystate = yy_lr_goto_state_ (yystack.stateAt (0), yyr1_[yyn]);
     yystack.push (yystate, yyval);
     return YYNEWSTATE;
   }
 
-  /* Return YYSTR after stripping away unnecessary quotes and
-     backslashes, so that it's suitable for yyerror.  The heuristic is
-     that double-quoting is unnecessary unless the string contains an
-     apostrophe, a comma, or backslash (other than backslash-backslash).
-     YYSTR is taken from yytname.  */
-  private final String yytnamerr_ (String yystr)
-  {
-    if (yystr.charAt (0) == '"')
-      {
-        StringBuffer yyr = new StringBuffer ();
-        strip_quotes: for (int i = 1; i < yystr.length (); i++)
-          switch (yystr.charAt (i))
-            {
-            case '\'':
-            case ',':
-              break strip_quotes;
 
-            case '\\':
-	      if (yystr.charAt(++i) != '\\')
-                break strip_quotes;
-              /* Fall through.  */
-            default:
-              yyr.append (yystr.charAt (i));
-              break;
-
-            case '"':
-              return yyr.toString ();
-            }
-      }
-    else if (yystr.equals ("$end"))
-      return "end of input";
-
-    return yystr;
-  }
 
   /*--------------------------------.
   | Print this symbol on YYOUTPUT.  |
   `--------------------------------*/
 
   private void yy_symbol_print (String s, int yytype,
-			         Object yyvaluep				 )
+                                 Object yyvaluep                                 )
   {
     if (yydebug > 0)
     yycdebug (s + (yytype < yyntokens_ ? " token " : " nterm ")
-	      + yytname_[yytype] + " ("
-	      + (yyvaluep == null ? "(null)" : yyvaluep.toString ()) + ")");
+              + yytname_[yytype] + " ("
+              + (yyvaluep == null ? "(null)" : yyvaluep.toString ()) + ")");
   }
+
 
   /**
    * Parse input from the scanner that was specified at object construction
@@ -2051,9 +1846,13 @@ public Object getLVal()
    * @return <tt>true</tt> if the parsing succeeds.  Note that this does not
    *          imply that there were no syntax errors.
    */
-  public boolean parse () throws java.io.IOException
+   public boolean parse () throws java.io.IOException
+
   {
-    /// Lookahead and lookahead in internal form.
+    
+
+
+    /* Lookahead and lookahead in internal form.  */
     int yychar = yyempty_;
     int yytoken = 0;
 
@@ -2061,29 +1860,29 @@ public Object getLVal()
     int yyn = 0;
     int yylen = 0;
     int yystate = 0;
-
     YYStack yystack = new YYStack ();
+    int label = YYNEWSTATE;
 
     /* Error handling.  */
     int yynerrs_ = 0;
     
 
-    /// Semantic value of the lookahead.
+    /* Semantic value of the lookahead.  */
     Object yylval = null;
 
     yycdebug ("Starting parse\n");
     yyerrstatus_ = 0;
 
-
     /* Initialize the stack.  */
-    yystack.push (yystate, yylval);
+    yystack.push (yystate, yylval );
 
-    int label = YYNEWSTATE;
+
+
     for (;;)
       switch (label)
       {
         /* New state.  Unlike in the C/C++ skeletons, the state is already
-	   pushed when we come here.  */
+           pushed when we come here.  */
       case YYNEWSTATE:
         yycdebug ("Entering state " + yystate + "\n");
         if (yydebug > 0)
@@ -2098,29 +1897,31 @@ public Object getLVal()
         if (yy_pact_value_is_default_ (yyn))
           {
             label = YYDEFAULT;
-	    break;
+            break;
           }
 
         /* Read a lookahead token.  */
         if (yychar == yyempty_)
           {
-	    yycdebug ("Reading a token: ");
-	    yychar = yylex ();
-            
+
+
+            yycdebug ("Reading a token: ");
+            yychar = yylexer.yylex ();
             yylval = yylexer.getLVal ();
+
           }
 
         /* Convert token to internal form.  */
-        if (yychar <= EOF)
+        if (yychar <= Lexer.EOF)
           {
-	    yychar = yytoken = EOF;
-	    yycdebug ("Now at end of input.\n");
+            yychar = yytoken = Lexer.EOF;
+            yycdebug ("Now at end of input.\n");
           }
         else
           {
-	    yytoken = yytranslate_ (yychar);
-	    yy_symbol_print ("Next token is", yytoken,
-			     yylval);
+            yytoken = yytranslate_ (yychar);
+            yy_symbol_print ("Next token is", yytoken,
+                             yylval);
           }
 
         /* If the proper action on seeing token YYTOKEN is to reduce or to
@@ -2132,20 +1933,20 @@ public Object getLVal()
         /* <= 0 means reduce or error.  */
         else if ((yyn = yytable_[yyn]) <= 0)
           {
-	    if (yy_table_value_is_error_ (yyn))
-	      label = YYERRLAB;
-	    else
-	      {
-	        yyn = -yyn;
-	        label = YYREDUCE;
-	      }
+            if (yy_table_value_is_error_ (yyn))
+              label = YYERRLAB;
+            else
+              {
+                yyn = -yyn;
+                label = YYREDUCE;
+              }
           }
 
         else
           {
             /* Shift the lookahead token.  */
-	    yy_symbol_print ("Shifting", yytoken,
-			     yylval);
+            yy_symbol_print ("Shifting", yytoken,
+                             yylval);
 
             /* Discard the token being shifted.  */
             yychar = yyempty_;
@@ -2178,7 +1979,7 @@ public Object getLVal()
       case YYREDUCE:
         yylen = yyr2_[yyn];
         label = yyaction (yyn, yystack, yylen);
-	yystate = yystack.stateAt (0);
+        yystate = yystack.stateAt (0);
         break;
 
       /*------------------------------------.
@@ -2197,17 +1998,17 @@ public Object getLVal()
         
         if (yyerrstatus_ == 3)
           {
-	    /* If just tried and failed to reuse lookahead token after an
-	     error, discard it.  */
+        /* If just tried and failed to reuse lookahead token after an
+         error, discard it.  */
 
-	    if (yychar <= EOF)
-	      {
-	      /* Return failure if at end of input.  */
-	      if (yychar == EOF)
-	        return false;
-	      }
-	    else
-	      yychar = yyempty_;
+        if (yychar <= Lexer.EOF)
+          {
+          /* Return failure if at end of input.  */
+          if (yychar == Lexer.EOF)
+            return false;
+          }
+        else
+            yychar = yyempty_;
           }
 
         /* Else will try to reuse lookahead token after shifting the error
@@ -2215,9 +2016,9 @@ public Object getLVal()
         label = YYERRLAB1;
         break;
 
-      /*---------------------------------------------------.
+      /*-------------------------------------------------.
       | errorlab -- error raised explicitly by YYERROR.  |
-      `---------------------------------------------------*/
+      `-------------------------------------------------*/
       case YYERROR:
 
         
@@ -2233,41 +2034,46 @@ public Object getLVal()
       | yyerrlab1 -- common code for both syntax error and YYERROR.  |
       `-------------------------------------------------------------*/
       case YYERRLAB1:
-        yyerrstatus_ = 3;	/* Each real token shifted decrements this.  */
+        yyerrstatus_ = 3;       /* Each real token shifted decrements this.  */
 
         for (;;)
           {
-	    yyn = yypact_[yystate];
-	    if (!yy_pact_value_is_default_ (yyn))
-	      {
-	        yyn += yyterror_;
-	        if (0 <= yyn && yyn <= yylast_ && yycheck_[yyn] == yyterror_)
-	          {
-	            yyn = yytable_[yyn];
-	            if (0 < yyn)
-		      break;
-	          }
-	      }
+            yyn = yypact_[yystate];
+            if (!yy_pact_value_is_default_ (yyn))
+              {
+                yyn += yyterror_;
+                if (0 <= yyn && yyn <= yylast_ && yycheck_[yyn] == yyterror_)
+                  {
+                    yyn = yytable_[yyn];
+                    if (0 < yyn)
+                      break;
+                  }
+              }
 
-	    /* Pop the current state because it cannot handle the error token.  */
-	    if (yystack.height == 0)
-	      return false;
+            /* Pop the current state because it cannot handle the
+             * error token.  */
+            if (yystack.height == 0)
+              return false;
 
-	    
-	    yystack.pop ();
-	    yystate = yystack.stateAt (0);
-	    if (yydebug > 0)
-	      yystack.print (yyDebugStream);
+            
+            yystack.pop ();
+            yystate = yystack.stateAt (0);
+            if (yydebug > 0)
+              yystack.print (yyDebugStream);
           }
 
-	
+        if (label == YYABORT)
+            /* Leave the switch.  */
+            break;
+
+
 
         /* Shift the error token.  */
         yy_symbol_print ("Shifting", yystos_[yyn],
-			 yylval);
+                         yylval);
 
         yystate = yyn;
-	yystack.push (yyn, yylval);
+        yystack.push (yyn, yylval);
         label = YYNEWSTATE;
         break;
 
@@ -2279,83 +2085,14 @@ public Object getLVal()
       case YYABORT:
         return false;
       }
-  }
+}
+
+
+
 
   // Generate an error message.
   private String yysyntax_error (int yystate, int tok)
   {
-    if (errorVerbose)
-      {
-        /* There are many possibilities here to consider:
-           - Assume YYFAIL is not used.  It's too flawed to consider.
-             See
-             <http://lists.gnu.org/archive/html/bison-patches/2009-12/msg00024.html>
-             for details.  YYERROR is fine as it does not invoke this
-             function.
-           - If this state is a consistent state with a default action,
-             then the only way this function was invoked is if the
-             default action is an error action.  In that case, don't
-             check for expected tokens because there are none.
-           - The only way there can be no lookahead present (in tok) is
-             if this state is a consistent state with a default action.
-             Thus, detecting the absence of a lookahead is sufficient to
-             determine that there is no unexpected or expected token to
-             report.  In that case, just report a simple "syntax error".
-           - Don't assume there isn't a lookahead just because this
-             state is a consistent state with a default action.  There
-             might have been a previous inconsistent state, consistent
-             state with a non-default action, or user semantic action
-             that manipulated yychar.  (However, yychar is currently out
-             of scope during semantic actions.)
-           - Of course, the expected token list depends on states to
-             have correct lookahead information, and it depends on the
-             parser not to perform extra reductions after fetching a
-             lookahead from the scanner and before detecting a syntax
-             error.  Thus, state merging (from LALR or IELR) and default
-             reductions corrupt the expected token list.  However, the
-             list is correct for canonical LR with one exception: it
-             will still contain any token that will not be accepted due
-             to an error action in a later state.
-        */
-        if (tok != yyempty_)
-          {
-            // FIXME: This method of building the message is not compatible
-            // with internationalization.
-            StringBuffer res =
-              new StringBuffer ("syntax error, unexpected ");
-            res.append (yytnamerr_ (yytname_[tok]));
-            int yyn = yypact_[yystate];
-            if (!yy_pact_value_is_default_ (yyn))
-              {
-                /* Start YYX at -YYN if negative to avoid negative
-                   indexes in YYCHECK.  In other words, skip the first
-                   -YYN actions for this state because they are default
-                   actions.  */
-                int yyxbegin = yyn < 0 ? -yyn : 0;
-                /* Stay within bounds of both yycheck and yytname.  */
-                int yychecklim = yylast_ - yyn + 1;
-                int yyxend = yychecklim < yyntokens_ ? yychecklim : yyntokens_;
-                int count = 0;
-                for (int x = yyxbegin; x < yyxend; ++x)
-                  if (yycheck_[x + yyn] == x && x != yyterror_
-                      && !yy_table_value_is_error_ (yytable_[x + yyn]))
-                    ++count;
-                if (count < 5)
-                  {
-                    count = 0;
-                    for (int x = yyxbegin; x < yyxend; ++x)
-                      if (yycheck_[x + yyn] == x && x != yyterror_
-                          && !yy_table_value_is_error_ (yytable_[x + yyn]))
-                        {
-                          res.append (count++ == 0 ? ", expecting " : " or ");
-                          res.append (yytnamerr_ (yytname_[x]));
-                        }
-                  }
-              }
-            return res.toString ();
-          }
-      }
-
     return "syntax error";
   }
 
@@ -2369,20 +2106,26 @@ public Object getLVal()
   }
 
   /**
-   * Whether the given <code>yytable_</code> value indicates a syntax error.
-   * @param yyvalue   the value to check
+   * Whether the given <code>yytable_</code>
+   * value indicates a syntax error.
+   * @param yyvalue the value to check
    */
   private static boolean yy_table_value_is_error_ (int yyvalue)
   {
     return yyvalue == yytable_ninf_;
   }
 
-  /* YYPACT[STATE-NUM] -- Index in YYTABLE of the portion describing
-     STATE-NUM.  */
   private static final short yypact_ninf_ = -162;
-  private static final short yypact_[] =
+  private static final short yytable_ninf_ = -193;
+
+  /* YYPACT[STATE-NUM] -- Index in YYTABLE of the portion describing
+   STATE-NUM.  */
+  private static final short yypact_[] = yypact_init();
+  private static final short[] yypact_init()
   {
-       292,  -162,  -162,    30,    29,    78,  -162,  -162,  -162,    46,
+    return new short[]
+    {
+     292,  -162,  -162,    30,    29,    78,  -162,  -162,  -162,    46,
     -162,    50,    89,    83,    83,    30,  -162,  -162,  -162,   168,
       51,    52,  -162,    51,    51,    51,    51,  -162,  -162,    30,
       20,  -162,  -162,  -162,  -162,    30,    30,    30,    30,  -162,
@@ -2419,14 +2162,18 @@ public Object getLVal()
      209,   258,   247,   269,   266,  -162,   -36,   166,   150,  -162,
     -162,   271,  -162,  -162,  -162,   212,  -162,   175,   166,   267,
     -162
-  };
+    };
+  }
 
-  /* YYDEFACT[S] -- default reduction number in state S.  Performed when
-     YYTABLE doesn't specify something else to do.  Zero means the
-     default is an error.  */
-  private static final short yydefact_[] =
+/* YYDEFACT[STATE-NUM] -- Default reduction number in state STATE-NUM.
+   Performed when YYTABLE does not specify something else to do.  Zero
+   means the default is an error.  */
+  private static final short yydefact_[] = yydefact_init();
+  private static final short[] yydefact_init()
   {
-         0,   136,   208,     0,     0,   139,     9,   204,   206,    14,
+    return new short[]
+    {
+       0,   136,   208,     0,     0,   139,     9,   204,   206,    14,
      208,   205,   205,   137,   137,     0,   205,   206,   204,     0,
        0,     0,   207,   205,   205,     0,   205,   203,   203,    62,
        0,   203,   203,   203,   203,    73,     0,     0,     0,   205,
@@ -2463,37 +2210,46 @@ public Object getLVal()
        0,     0,    97,   167,     0,   161,     0,   162,   164,   168,
      203,   167,    98,   191,   160,     0,   165,     0,   163,     0,
      193
-  };
+    };
+  }
 
-  /* YYPGOTO[NTERM-NUM].  */
-  private static final short yypgoto_[] =
+/* YYPGOTO[NTERM-NUM].  */
+  private static final short yypgoto_[] = yypgoto_init();
+  private static final short[] yypgoto_init()
   {
-      -162,  -162,  -162,  -162,  -162,     7,    -3,  -162,  -162,   -11,
+    return new short[]
+    {
+    -162,  -162,  -162,  -162,  -162,     7,    -3,  -162,  -162,   -11,
      262,  -162,  -162,  -161,  -162,    19,  -162,   -46,  -162,   -79,
      -70,  -162,  -162,    74,   172,    59,  -162,   -14,   167,   -49,
      260,  -162,   173,   -16,  -162,  -162,   -28,   272,    56,   -52,
      -37,   119
-  };
+    };
+  }
 
-  /* YYDEFGOTO[NTERM-NUM].  */
-  private static final short
-  yydefgoto_[] =
+/* YYDEFGOTO[NTERM-NUM].  */
+  private static final short yydefgoto_[] = yydefgoto_init();
+  private static final short[] yydefgoto_init()
   {
-        -1,    63,    64,   164,   169,   203,    85,    71,   121,   101,
+    return new short[]
+    {
+      -1,    63,    64,   164,   169,   203,    85,    71,   121,   101,
      102,    68,    72,   257,   258,   259,   261,   338,   346,   347,
      211,   201,   204,   205,   206,   230,   294,   231,   212,   336,
      116,   289,   216,    74,   307,   342,   109,    73,    80,    75,
      100,    66
-  };
+    };
+  }
 
-  /* YYTABLE[YYPACT[STATE-NUM]].  What to do in state STATE-NUM.  If
-     positive, shift that token.  If negative, reduce the rule which
-     number is the opposite.  If YYTABLE_NINF_, syntax error.  */
-  private static final short yytable_ninf_ = -193;
-  private static final short
-  yytable_[] =
+/* YYTABLE[YYPACT[STATE-NUM]] -- What to do in state STATE-NUM.  If
+   positive, shift that token.  If negative, reduce the rule whose
+   number is the opposite.  If YYTABLE_NINF, syntax error.  */
+  private static final short yytable_[] = yytable_init();
+  private static final short[] yytable_init()
   {
-       110,    89,   153,   114,   115,   117,   119,    65,   264,    98,
+    return new short[]
+    {
+     110,    89,   153,   114,   115,   117,   119,    65,   264,    98,
       67,    86,  -159,   309,   106,   107,   -91,   214,   132,   287,
      354,   -71,    87,   305,   151,     1,   209,   -90,   163,   158,
      159,   160,    69,   331,  -177,     1,   111,   113,     1,   209,
@@ -2533,13 +2289,15 @@ public Object getLVal()
       48,    49,    50,     0,     0,     0,     0,     0,     0,    51,
        0,     0,    52,    53,    54,    55,    56,    57,    58,    59,
        0,    60,    61,    62
-  };
+    };
+  }
 
-  /* YYCHECK.  */
-  private static final short
-  yycheck_[] =
+private static final short yycheck_[] = yycheck_init();
+  private static final short[] yycheck_init()
   {
-        28,    17,    54,    31,    32,    33,    34,     0,   169,    20,
+    return new short[]
+    {
+      28,    17,    54,    31,    32,    33,    34,     0,   169,    20,
        3,    14,     0,     3,    25,    26,     0,    44,    46,    21,
       56,     0,    15,     8,    52,     5,     8,     0,    65,    57,
       58,    59,     3,     8,    12,     5,    29,    30,     5,     8,
@@ -2579,14 +2337,17 @@ public Object getLVal()
       78,    79,    80,    -1,    -1,    -1,    -1,    -1,    -1,    87,
       -1,    -1,    90,    91,    92,    93,    94,    95,    96,    97,
       -1,    99,   100,   101
-  };
+    };
+  }
 
-  /* STOS_[STATE-NUM] -- The (internal number of the) accessing
-     symbol of state STATE-NUM.  */
-  private static final short
-  yystos_[] =
+/* YYSTOS[STATE-NUM] -- The (internal number of the) accessing
+   symbol of state STATE-NUM.  */
+  private static final short yystos_[] = yystos_init();
+  private static final short[] yystos_init()
   {
-         0,     5,     9,    10,    11,    13,    14,    15,    17,    18,
+    return new short[]
+    {
+       0,     5,     9,    10,    11,    13,    14,    15,    17,    18,
       19,    20,    22,    23,    24,    25,    26,    27,    28,    29,
       44,    45,    46,    47,    48,    49,    50,    51,    52,    53,
       54,    57,    58,    59,    60,    61,    62,    63,    64,    65,
@@ -2623,32 +2384,16 @@ public Object getLVal()
      146,    98,   148,     8,   152,    56,   131,   132,   133,   142,
       56,     8,    21,     4,    56,   105,   106,   149,   132,    98,
        8
-  };
+    };
+  }
 
-  /* TOKEN_NUMBER_[YYLEX-NUM] -- Internal symbol number corresponding
-     to YYLEX-NUM.  */
-  private static final short
-  yytoken_number_[] =
+/* YYR1[YYN] -- Symbol number of symbol that rule YYN derives.  */
+  private static final short yyr1_[] = yyr1_init();
+  private static final short[] yyr1_init()
   {
-         0,   256,   257,   258,   259,   260,   261,   262,   263,   264,
-     265,   266,    58,   267,   268,   269,    47,   270,   271,   272,
-     273,   274,   275,   276,   277,   278,   279,   280,   281,   282,
-     283,   284,   285,   286,   287,   288,   289,   290,   291,   292,
-     293,   294,   295,   296,   297,   298,   299,   300,   301,   302,
-     303,   304,   305,   306,   307,    40,    41,   308,   309,   310,
-     311,   312,   313,   314,   315,   316,   317,   318,   319,   320,
-     321,   322,   323,   324,   325,   326,    43,   327,   328,   329,
-     330,   331,   332,   333,   334,   335,   336,   337,   338,   339,
-     340,   341,   342,   343,   344,   345,   346,   347,    46,   348,
-     349,   350,    60,    62,    38,    44,   351,    42,   352,    59,
-     353,   354,   355
-  };
-
-  /* YYR1[YYN] -- Symbol number of symbol that rule YYN derives.  */
-  private static final short
-  yyr1_[] =
-  {
-         0,   113,   114,   115,   116,   115,   115,   115,   115,   115,
+    return new short[]
+    {
+       0,   113,   114,   115,   116,   115,   115,   115,   115,   115,
      115,   115,   115,   115,   115,   115,   115,   117,   115,   115,
      115,   115,   115,   115,   115,   115,   115,   115,   115,   115,
      115,   115,   115,   115,   115,   115,   115,   115,   115,   115,
@@ -2669,13 +2414,16 @@ public Object getLVal()
      138,   139,   139,   139,   140,   140,   140,   140,   141,   141,
      142,   142,   143,   143,   144,   144,   144,   145,   145,   145,
      146,   147,   148,   149,   150,   151,   152,   153,   154
-  };
+    };
+  }
 
-  /* YYR2[YYN] -- Number of symbols composing right hand side of rule YYN.  */
-  private static final byte
-  yyr2_[] =
+/* YYR2[YYN] -- Number of symbols on the right hand side of rule YYN.  */
+  private static final byte yyr2_[] = yyr2_init();
+  private static final byte[] yyr2_init()
   {
-         0,     2,     1,     2,     0,     4,     2,     4,     2,     1,
+    return new byte[]
+    {
+       0,     2,     1,     2,     0,     4,     2,     4,     2,     1,
        3,     5,     5,     2,     1,     2,     2,     0,     4,     3,
        2,     3,     3,     2,     3,     3,     3,     3,     2,     4,
        2,     3,     5,     5,     3,     3,     4,     4,     4,     4,
@@ -2696,13 +2444,39 @@ public Object getLVal()
        3,     0,     1,     1,     1,     1,     3,     3,     3,     1,
        0,     3,     6,     9,     0,     1,     1,     0,     1,     1,
        2,     0,     0,     0,     0,     0,     0,     0,     0
-  };
+    };
+  }
+
+  /* YYTOKEN_NUMBER[YYLEX-NUM] -- Internal symbol number corresponding
+      to YYLEX-NUM.  */
+  private static final short yytoken_number_[] = yytoken_number_init();
+  private static final short[] yytoken_number_init()
+  {
+    return new short[]
+    {
+       0,   256,   257,   258,   259,   260,   261,   262,   263,   264,
+     265,   266,    58,   267,   268,   269,    47,   270,   271,   272,
+     273,   274,   275,   276,   277,   278,   279,   280,   281,   282,
+     283,   284,   285,   286,   287,   288,   289,   290,   291,   292,
+     293,   294,   295,   296,   297,   298,   299,   300,   301,   302,
+     303,   304,   305,   306,   307,    40,    41,   308,   309,   310,
+     311,   312,   313,   314,   315,   316,   317,   318,   319,   320,
+     321,   322,   323,   324,   325,   326,    43,   327,   328,   329,
+     330,   331,   332,   333,   334,   335,   336,   337,   338,   339,
+     340,   341,   342,   343,   344,   345,   346,   347,    46,   348,
+     349,   350,    60,    62,    38,    44,   351,    42,   352,    59,
+     353,   354,   355
+    };
+  }
 
   /* YYTNAME[SYMBOL-NUM] -- String name of the symbol SYMBOL-NUM.
      First, the terminals, then, starting at \a yyntokens_, nonterminals.  */
-  private static final String yytname_[] =
+  private static final String yytname_[] = yytname_init();
+  private static final String[] yytname_init()
   {
-    "$end", "error", "$undefined", "WORD", "TEXT", "INTLIT", "CHARLIT",
+    return new String[]
+    {
+  "$end", "error", "$undefined", "WORD", "TEXT", "INTLIT", "CHARLIT",
   "STRINGLIT", "IDENT", "\"run\"", "\"attach\"", "\"connect\"", "':'",
   "\"listen\"", "\"detach\"", "\"print\"", "'/'", "\"call\"",
   "\"exec-class\"", "\"exec-args\"", "\"backtrace\"", "\"all\"",
@@ -2734,116 +2508,16 @@ public Object getLVal()
   "suspend_policy", "expr", "_copy_two_back", "_default_mode",
   "_break_mode", "_print_mode", "_check_connect", "_balanced_collect_mode",
   "_collect_all_mode", "_run_args_mode", null
-  };
-
-  /* YYRHS -- A `-1'-separated list of the rules' RHS.  */
-  private static final short yyrhs_[] =
-  {
-       114,     0,    -1,   115,    -1,     9,   154,    -1,    -1,     9,
-     154,   116,   126,    -1,    10,   124,    -1,    11,     3,    12,
-     129,    -1,    13,   125,    -1,    14,    -1,    15,   150,   146,
-      -1,    15,   150,    16,     3,   146,    -1,    15,   150,    16,
-     118,   146,    -1,    17,   146,    -1,    18,    -1,    18,     3,
-      -1,    19,   154,    -1,    -1,    19,   154,   117,   126,    -1,
-      20,     3,   151,    -1,    20,   151,    -1,    20,    21,   151,
-      -1,    22,     5,   151,    -1,    22,   151,    -1,    22,    21,
-     151,    -1,    23,   119,   151,    -1,    24,   119,   151,    -1,
-      25,   118,   151,    -1,    26,   151,    -1,    26,   151,     3,
-     146,    -1,    27,   146,    -1,    28,   150,   146,    -1,    28,
-     150,    16,     3,   146,    -1,    28,   150,    16,   118,   146,
-      -1,    29,    15,    30,    -1,    29,    15,    31,    -1,    29,
-      15,    32,   118,    -1,    29,    15,    33,   118,    -1,    29,
-      15,    34,    35,    -1,    29,    15,    34,    36,    -1,    29,
-      15,    37,    38,    -1,    29,    15,    37,    39,    -1,    29,
-      15,    37,    40,    -1,    29,    41,    35,    -1,    29,    41,
-      36,    -1,    29,    42,   146,    -1,    29,    43,   118,    -1,
-      29,     3,   153,     4,    -1,    44,   122,   151,    -1,    45,
-       3,   151,    -1,    46,   153,    -1,    46,   153,     4,    -1,
-      47,   151,    -1,    47,   123,   151,    -1,    48,   151,    -1,
-      48,   123,   151,    -1,    49,   122,   146,    -1,    50,   151,
-      -1,    50,   122,   151,    -1,    51,   149,    -1,    51,   149,
-     134,    -1,    52,   149,   135,    -1,    53,    -1,    53,   118,
-      -1,    54,    55,   152,     4,    56,    -1,    54,   118,   152,
-       4,    -1,    57,   149,    -1,    57,   149,   141,    -1,    58,
-     149,    -1,    58,   149,   141,    -1,    59,   143,    -1,    60,
-     149,    -1,    60,   143,    -1,    61,    -1,    61,   121,    -1,
-      62,   118,    -1,    63,   118,    -1,    64,   118,   118,    -1,
-      65,   151,   145,    66,    -1,    65,   151,   145,    66,   122,
-      -1,    67,   151,    66,    -1,    68,   151,    23,    -1,    68,
-     151,   119,    -1,    69,   151,    -1,    70,   151,   119,    -1,
-      71,   151,   119,    -1,    72,   151,    -1,    73,    -1,    73,
-     149,    74,    -1,    73,   149,    75,    -1,    73,   149,    76,
-     138,    -1,    73,   149,   138,    -1,    77,   151,   146,    -1,
-      78,   151,   146,    -1,    79,   151,   146,    -1,    80,    81,
-     151,    -1,    80,    82,    -1,    80,    83,   149,   151,   133,
-     148,    -1,    80,    83,   149,   151,   133,   148,    21,    -1,
-      80,    66,   149,   133,    -1,    80,    84,   149,   133,    -1,
-      80,    85,   151,    -1,    80,    85,   151,     3,    -1,    80,
-      86,   151,    -1,    80,    87,   151,    -1,    80,    88,   151,
-      -1,    80,    88,   151,    21,    -1,    80,    88,   151,   122,
-      -1,    80,     9,    -1,    80,    51,    -1,    80,    59,    -1,
-      80,    57,    -1,    80,    89,     3,   151,    -1,    80,    89,
-     151,    -1,    80,    89,    21,   151,    -1,    90,   149,   151,
-     133,    -1,    87,   154,    -1,    87,   154,     3,    -1,    91,
-     154,    -1,    91,   154,     3,    -1,    92,   152,    -1,    92,
-     152,     4,    -1,    93,   118,    -1,    94,   154,     3,    -1,
-      95,   149,    -1,    95,   118,    -1,    95,     3,    -1,    96,
-     149,   133,    -1,    96,   149,   133,     8,    -1,    97,   149,
-     151,   133,     8,    -1,    97,   149,   151,   133,    98,     8,
-      -1,    99,    -1,   100,    -1,   101,    -1,   101,     3,    -1,
-     118,   153,     4,    -1,     5,    -1,    -1,     5,    -1,    -1,
-       5,    -1,   118,    -1,   121,   118,    -1,     8,    -1,     5,
-      -1,   122,    -1,   123,   122,    -1,   118,    -1,   120,    -1,
-     127,    -1,     3,    -1,     3,   147,   126,    -1,   128,    -1,
-     127,   128,    -1,   102,     3,    -1,   103,     3,    -1,   103,
-     104,     3,    -1,    -1,     3,    -1,    -1,    55,   131,    56,
-      -1,    55,    56,    -1,   132,    -1,   131,   105,   132,    -1,
-     133,    -1,   132,   106,    -1,     8,    -1,   133,    98,     8,
-      -1,   137,    98,     8,   130,   142,    -1,   137,    12,   118,
-     142,    -1,   136,    -1,   135,   136,    -1,   118,    -1,   137,
-      98,     8,   130,    -1,   137,    12,   118,    -1,   107,    98,
-       8,    -1,     8,    -1,   137,    98,     8,    -1,   137,   108,
-      -1,   140,    -1,   138,   139,   140,    -1,    -1,   105,    -1,
-     109,    -1,     8,    -1,   107,    -1,   140,    98,     8,    -1,
-     140,    98,   107,    -1,   107,    98,   133,    -1,   133,    -1,
-      -1,   110,   152,     4,    -1,   149,   145,   144,   133,    98,
-       8,    -1,   149,   145,   144,    55,   146,    56,   149,    98,
-       8,    -1,    -1,    21,    -1,   111,    -1,    -1,   112,    -1,
-      44,    -1,   152,     4,    -1,    -1,    -1,    -1,    -1,    -1,
-      -1,    -1,    -1
-  };
-
-  /* YYPRHS[YYN] -- Index of the first RHS symbol of rule number YYN in
-     YYRHS.  */
-  private static final short yyprhs_[] =
-  {
-         0,     0,     3,     5,     8,     9,    14,    17,    22,    25,
-      27,    31,    37,    43,    46,    48,    51,    54,    55,    60,
-      64,    67,    71,    75,    78,    82,    86,    90,    94,    97,
-     102,   105,   109,   115,   121,   125,   129,   134,   139,   144,
-     149,   154,   159,   164,   168,   172,   176,   180,   185,   189,
-     193,   196,   200,   203,   207,   210,   214,   218,   221,   225,
-     228,   232,   236,   238,   241,   247,   252,   255,   259,   262,
-     266,   269,   272,   275,   277,   280,   283,   286,   290,   295,
-     301,   305,   309,   313,   316,   320,   324,   327,   329,   333,
-     337,   342,   346,   350,   354,   358,   362,   365,   372,   380,
-     385,   390,   394,   399,   403,   407,   411,   416,   421,   424,
-     427,   430,   433,   438,   442,   447,   452,   455,   459,   462,
-     466,   469,   473,   476,   480,   483,   486,   489,   493,   498,
-     504,   511,   513,   515,   517,   520,   524,   526,   527,   529,
-     530,   532,   534,   537,   539,   541,   543,   546,   548,   550,
-     552,   554,   558,   560,   563,   566,   569,   573,   574,   576,
-     577,   581,   584,   586,   590,   592,   595,   597,   601,   607,
-     612,   614,   617,   619,   624,   628,   632,   634,   638,   641,
-     643,   647,   648,   650,   652,   654,   656,   660,   664,   668,
-     670,   671,   675,   682,   692,   693,   695,   697,   698,   700,
-     702,   705,   706,   707,   708,   709,   710,   711,   712
-  };
+    };
+  }
 
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
-  private static final short yyrline_[] =
+  private static final short yyrline_[] = yyrline_init();
+  private static final short[] yyrline_init()
   {
-         0,    55,    55,    59,    62,    62,    65,    68,    71,    74,
+    return new short[]
+    {
+       0,    55,    55,    59,    62,    62,    65,    68,    71,    74,
       76,    79,    83,    86,    89,    91,    93,    95,    95,    97,
       99,   101,   103,   105,   107,   109,   111,   113,   115,   118,
      121,   123,   126,   130,   133,   135,   137,   139,   141,   143,
@@ -2864,7 +2538,9 @@ public Object getLVal()
      503,   507,   509,   510,   514,   515,   516,   517,   521,   522,
      526,   527,   532,   534,   540,   541,   542,   546,   547,   548,
      552,   557,   562,   565,   569,   573,   577,   581,   585
-  };
+    };
+  }
+
 
   // Report on the debug stream that the rule yyrule is going to be reduced.
   private void yy_reduce_print (int yyrule, YYStack yystack)
@@ -2876,19 +2552,22 @@ public Object getLVal()
     int yynrhs = yyr2_[yyrule];
     /* Print the symbols being reduced, and their result.  */
     yycdebug ("Reducing stack by rule " + (yyrule - 1)
-	      + " (line " + yylno + "), ");
+              + " (line " + yylno + "), ");
 
     /* The symbols being reduced.  */
     for (int yyi = 0; yyi < yynrhs; yyi++)
       yy_symbol_print ("   $" + (yyi + 1) + " =",
-		       yyrhs_[yyprhs_[yyrule] + yyi],
-		       ((yystack.valueAt (yynrhs-(yyi + 1)))));
+                       yystos_[yystack.stateAt(yynrhs - (yyi + 1))],
+                       ((yystack.valueAt (yynrhs-(yyi + 1)))));
   }
 
   /* YYTRANSLATE(YYLEX) -- Bison symbol number corresponding to YYLEX.  */
-  private static final byte yytranslate_table_[] =
+  private static final byte yytranslate_table_[] = yytranslate_table_init();
+  private static final byte[] yytranslate_table_init()
   {
-         0,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+    return new byte[]
+    {
+       0,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,   104,     2,
@@ -2924,7 +2603,8 @@ public Object getLVal()
       80,    81,    82,    83,    84,    85,    86,    87,    88,    89,
       90,    91,    92,    93,    94,    95,    96,    97,    99,   100,
      101,   106,   108,   110,   111,   112
-  };
+    };
+  }
 
   private static final byte yytranslate_ (int t)
   {
@@ -2947,22 +2627,18 @@ public Object getLVal()
 
 /* User implementation code.  */
 /* Unqualified %code blocks.  */
-/* Line 922 of lalr1.java  */
-/* Line 588 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
+/* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":588  */ /* lalr1.java:1066  */
 
 private Commands evaluator;
 private boolean showPrompt;
-private BufferedReader reader;
 private static final HashMap<String, Integer> tokenMap = new HashMap<String, Integer> ();
 
-static void execute (String src, Commands evaluator, BufferedReader reader,
-                     boolean prompt) 
+static void execute (String src, Commands evaluator, boolean prompt) 
 {
-    execute (src, evaluator, reader, prompt, false);
+    execute (src, evaluator, prompt, false);
 }
 
-static void execute (String src, Commands evaluator, BufferedReader reader,
-                     boolean prompt, boolean passException)
+static void execute (String src, Commands evaluator, boolean prompt, boolean passException)
 {
     CommandLexer llex = new CommandLexer(src);
     CommandParser parser = new CommandParser (llex);
@@ -2971,7 +2647,6 @@ static void execute (String src, Commands evaluator, BufferedReader reader,
 
     try {
         try {
-            parser.reader = reader;
             parser.evaluator = evaluator;
             parser.showPrompt = prompt;
             parser.parse ();
@@ -3178,13 +2853,9 @@ static {
     }
 }
 
-
-/* Line 922 of lalr1.java  */
-/* Line 3184 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.java"  */
+/* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.java":2857  */ /* lalr1.java:1066  */
 
 }
 
-/* Line 926 of lalr1.java  */
-/* Line 866 of "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y"  */
-
+/* "/usr/local/ext/src/github/gjdb/src/ucb/gjdb/CommandParser.y":862  */ /* lalr1.java:1070  */
 
